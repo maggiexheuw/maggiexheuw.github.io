@@ -100,5 +100,7 @@ friends: [
 {
         title: "Dr. Vadim Kaplunovsky",
         href: "https://web2.ph.utexas.edu/~vadim/"
+    },{title: "Kevin Fossez",
+        href: "https://kevinfossez.github.io/"
     }
 ]
