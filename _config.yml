@@ -95,16 +95,10 @@ chrome-tab-theme-color: "#000000"
 service-worker: true
 
 
-
 # Friends
 friends: [
-   {
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Dr. Vadim Kaplunovsky",
-        href: "https://web2.ph.utexas.edu/~vadim/"
+{
+        title: "Apple Developer",
+        href: "https://developer.apple.com/"
     }
 ]
-
-# abc
