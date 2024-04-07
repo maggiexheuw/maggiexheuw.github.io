@@ -4,7 +4,7 @@ title:      Condense matter theory
 subtitle:   Condense matter theory note
 date:       2024-04-07
 author:     Maggie
-header-img: img/post-bg-cook.jpg
+header-img: img/Andersonphoto.jpg
 catalog: true
 tags:
     - Condense matter theory
