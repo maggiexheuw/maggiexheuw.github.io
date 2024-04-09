@@ -75,7 +75,7 @@ https://eduardo.physics.illinois.edu/phys583/ch20.pdf"> Fradkin chiral anomaly
 
 
 <li><a href="
-https://www.icts.res.in/sites/default/files/comprty2018-2018-02-02-David-B-Kaplan-3.pdf"> The mystery of chiral gauge theories(David Kaplan)
+https://www.icts.res.in/sites/default/files/comprty2018-2018-02-02-David-B-Kaplan-3.pdf"> (The mystery of chiral gauge theories David Kaplan)
 </a></li>
 
 
@@ -101,5 +101,5 @@ https://www3.nd.edu/~lnicolae/ind-thm.pdf"> Nicolaescu note
 </a></li>
 
 <li><a href="
-https://www3.nd.edu/~lnicolae/"> Nicolaescu note
+https://www3.nd.edu/~lnicolae/"> Nicolaescu homepage
 </a></li>
