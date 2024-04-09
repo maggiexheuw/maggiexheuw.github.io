@@ -23,7 +23,7 @@ tags:
 
 ###  Condense matter physics
 
-<li><a href="https://mareknarozniak.com/tagged/#qutip">marek narozniak's homepage
+<li><a href="https://mareknarozniak.com/tagged/#qutip">Marek narozniak's homepage
 </a></li>
 
 <li><a href="https://www.openmx-square.org/">Open MX
@@ -46,4 +46,60 @@ tags:
 
 
 <li><a href="https://edu.itp.phys.ethz.ch/hs13/Symmetries/">  Symmetry in physics
+</a></li>
+
+
+
+### Topological phases
+
+<li><a href="
+https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.88.035001">  Witten(2016)
+</a></li>
+
+
+### Field theory 
+
+
+<li><a href="
+https://archive.int.washington.edu/users/dbkaplan/"> Kaplan homepage
+</a></li>
+
+
+<li><a href="
+https://archive.int.washington.edu/users/dbkaplan/572_16/"> Kaplan field theory
+</a></li>
+
+<li><a href="
+https://eduardo.physics.illinois.edu/phys583/ch20.pdf"> Fradkin chiral anomaly
+</a></li>
+
+
+<li><a href="
+https://www.icts.res.in/sites/default/files/comprty2018-2018-02-02-David-B-Kaplan-3.pdf"> The mystery of chiral gauge theories(David Kaplan)
+</a></li>
+
+
+<li><a href="
+http://fma.if.usp.br/~burdman/QFT2/qft2index.html"> Gustavo Burdman
+</a></li>
+
+<li><a href="
+https://indico.cern.ch/event/615296/contributions/2606797/attachments/1470593/2275403/Chiral_Anomalies.pdf"> Chiral anomaly lecture 
+</a></li>
+
+<li><a href="
+https://www.math.umd.edu/~tadmor/ki_net/activities/presentations/"> Field theory talks
+</a></li>
+
+
+
+
+### Atiyah Singer index theorem 
+
+<li><a href="
+https://www3.nd.edu/~lnicolae/ind-thm.pdf"> Nicolaescu note
+</a></li>
+
+<li><a href="
+https://www3.nd.edu/~lnicolae/"> Nicolaescu note
 </a></li>
