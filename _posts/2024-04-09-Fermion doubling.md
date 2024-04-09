@@ -27,13 +27,13 @@ Here, I will post some useful literatures.
 
 <li>
 <a href="https://maggiexheuw.github.io/pdf/nielsen1981.pdf">
-Absence of neutrinos on a lattice: (I). Proof by homotopy theory". 
+Absence of neutrinos on a lattice:(I). Proof by homotopy theory". 
 </a></li>
 
 
 <li>
-<a href=“https://maggiexheuw.github.io/pdf/nielsen1981-1.pdf”> 
-Absence of neutrinos on a lattice: (II). Intuitive topological proof
+<a href=“https://maggiexheuw.github.io/pdf/nielsen19812.pdf”> 
+Absence of neutrinos on a lattice:(II). Intuitive topological proof
 </a></li>
 
 
