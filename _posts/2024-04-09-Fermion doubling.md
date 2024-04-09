@@ -25,33 +25,33 @@ Here, I will post some useful literatures.
 
 
 
-
 <li>
-<a href=“"https://maggiexheuw.github.io/pdf/nielsen1981.pdf"”> 
+<a href="https://maggiexheuw.github.io/pdf/nielsen1981.pdf">
 Absence of neutrinos on a lattice: (I). Proof by homotopy theory". 
 </a></li>
 
 
 <li>
-<a href=“"https://maggiexheuw.github.io/pdf/nielsen1981 -1.pdf"”> 
+<a href=“https://maggiexheuw.github.io/pdf/nielsen1981-1.pdf”> 
 Absence of neutrinos on a lattice: (II). Intuitive topological proof
 </a></li>
 
+
 <li>
-<a href=“"https://maggiexheuw.github.io/pdf/nielsen1981 (1).pdf"”> 
+<a href="https://maggiexheuw.github.io/pdf/nielsen19811.pdf"> 
 A no-go theorem for regularizing chiral fermions
 </a></li>
 
 
 <li>
-<a href=“"https://maggiexheuw.github.io/pdf/Friedan.pdf"”> 
+<a href="https://maggiexheuw.github.io/pdf/Friedan.pdf"> 
 A Proof of the Nielsen-Ninomiya Theorem
 </a></li>
 
 
 
 <li>
-<a href=“"https://maggiexheuw.github.io/pdf/Fermion Doubling.pdf"”> Fermion Doubling in Condensed
+<a href="https://maggiexheuw.github.io/pdf/Fermion Doubling.pdf"> Fermion Doubling in Condensed
             Matter Physics
 </a></li>
 
