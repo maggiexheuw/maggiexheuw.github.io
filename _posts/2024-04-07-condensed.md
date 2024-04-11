@@ -32,6 +32,13 @@ tags:
 <li><a href="https://verse-and-dimensions.fandom.com/wiki/Quaternionic_projective_line">Quaternionic projective line
 </a></li>
 
+<li><a href="https://bingweb.binghamton.edu/~suzuki/SolidStatePhysicsLN.html"> Magnetism
+</a></li>
+
+<li><a href="http://txiang.iphy.ac.cn/"> Taoxiang
+</a></li>
+
+
 
 ### Group theory
 
@@ -102,4 +109,28 @@ https://www3.nd.edu/~lnicolae/ind-thm.pdf"> Nicolaescu note
 
 <li><a href="
 https://www3.nd.edu/~lnicolae/"> Nicolaescu homepage
+</a></li>
+
+### Teaching
+
+
+<li><a href="
+https://phas.ubc.ca/~stamp/TEACHING/"> Quantum mechanics
+</a></li>
+
+<li><a href="
+https://www.math.uci.edu/~brusso/"> Bernard Russo (Lie algebra)
+</a></li>
+
+<li><a href="
+http://www.math.columbia.edu/~woit/"> Peter Woit (Lie algebra)
+</a></li>
+
+
+<li><a href="
+http://staff.ustc.edu.cn/~wangzuoq/Courses/"> Zuoqin Wang (Lie algebra)
+</a></li>
+
+<li><a href="
+https://bingweb.binghamton.edu/~suzuki/SolidStatePhysicsLN.html"> Suzuki's homepage(Solid physics)
 </a></li>
