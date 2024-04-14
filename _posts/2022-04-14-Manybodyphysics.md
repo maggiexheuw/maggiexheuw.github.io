@@ -2,7 +2,7 @@
 layout:     post
 title:      Condense many body physics
 subtitle:   
-date:       2024-04-09
+date:       2024-04-14
 author:     Maggie
 header-img: img/kaplan.png
 catalog: true
@@ -17,3 +17,4 @@ tags:
 <a href=“https://maggiexheuw.github.io/pdf/Green.pdf”> 
 Green function
 </a></li>
+
