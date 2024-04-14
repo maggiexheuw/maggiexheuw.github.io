@@ -18,3 +18,9 @@ tags:
 Green function
 </a></li>
 
+
+
+<li>
+<a href=“https://maggiexheuw.github.io/pdf/gren1.pdf”> 
+Green function
+</a></li>
