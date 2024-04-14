@@ -14,7 +14,7 @@ tags:
 ## Condense matter field theory
 
 <li>
-<a href=“https://maggiexheuw.github.io/pdf/green.pdf”> 
+<a href=“https://maggiexheuw.github.io/pdf1/green.pdf”> 
 Green function
 </a></li>
 
