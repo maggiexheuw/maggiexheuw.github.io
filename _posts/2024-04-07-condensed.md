@@ -15,7 +15,35 @@ tags:
 
 # Condense matter physics notes
 
-<embed src="https://maggiexheuw.github.io/pdf/condense.pdf" type="application/pdf" width="100%" height="600px" />
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/condense-19-26.pdf">
+Fermi liquid
+</a></li>
+
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/condense-27-41.pdf">
+Superconducivity
+</a></li>
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/condense-43-53.pdf">
+Green function 
+</a></li>
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/condense-71-77.pdf">
+KT transition
+</a></li>
+
+
 
 
 
