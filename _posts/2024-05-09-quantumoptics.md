@@ -39,7 +39,7 @@ Exact Microscopic Wave Function for a Topological Quantum Membrane--Schou Cheng 
 
 
 <li>
-<a href="https://maggiexheuw.github.io/pdf/Cardy1986.pdf">
+<a href="https://maggiexheuw.github.io/pdf/cardy1986.pdf">
 Operator content of two-dimensional conformally invariant theories--John Cardy,1986
 </a></li>
 
