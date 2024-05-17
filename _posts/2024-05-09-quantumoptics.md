@@ -37,7 +37,7 @@ Exact Microscopic Wave Function for a Topological Quantum Membrane--Schou Cheng 
 ### Superfluid
 <li>
 <a href="https://maggiexheuw.github.io/pdf/RevModPhys.47.331.pdf">
-A theoritical description of new phase $^3He$  
+A theoritical description of new phase $^3He$  ---Legget
 </a></li>
 
 
