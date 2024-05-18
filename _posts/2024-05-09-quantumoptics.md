@@ -21,6 +21,13 @@ tags:
 Wigner flow on the sphere 
 </a></li>
 
+<li>
+<a href="https://maggiexheuw.github.io/pdf/science.aaw1611.pdf">
+Strongly correlated quantum
+walks with a 12-qubit
+superconducting processor
+</a></li>
+
 
 
 ## Quantum Hall effect
@@ -39,6 +46,10 @@ Fractional Quantum Hall States of Bosons
 Exact Microscopic Wave Function for a Topological Quantum Membrane--Schou Cheng Zhang 
 </a></li>
 
+<li>
+<a href="https://maggiexheuw.github.io/pdf/2104.01860v2.pdf">
+Ergodic Edge Modes in the 4D Quantum Hall Effect
+</a></li>
 
 ### Superfluid
 <li>
