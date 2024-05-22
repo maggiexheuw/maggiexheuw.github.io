@@ -94,6 +94,25 @@ Euler-Chern correspondence via topological superconductivity--Fan yang
 
 <li>
 <a href="https://maggiexheuw.github.io/pdf2/RevModPhys.88.035005 pdf">
+Classification of topological insulators and superconductors in three spatial dimensions--Andreas W. W. Ludwig
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf2/Kitaev2009p8192Advances_In_Theoretical_Physics.pdf">
+Periodic table for topological insulators and superconductors--Kitaev
+</a></li>
+
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf2/RevModPhys.88.035005 pdf">
+Topological insulators and superconductors: tenfold way and dimensional hierarchy--Shinsei Ryu
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf2/RevModPhys.88.035005 pdf">
 Classification of topological quantum matter with symmetries--Shinsei Ryu
 </a></li>
 
