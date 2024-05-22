@@ -106,7 +106,7 @@ Periodic table for topological insulators and superconductors--Kitaev
 
 
 <li>
-<a href="https://maggiexheuw.github.io/pdf2/ryu2010 pdf">
+<a href="https://maggiexheuw.github.io/pdf2/ryu2010.pdf">
 Topological insulators and superconductors: tenfold way and dimensional hierarchy--Shinsei Ryu
 </a></li>
 
