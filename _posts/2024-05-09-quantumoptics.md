@@ -90,7 +90,12 @@ Quantized Nonlinear Conductance in Ballistic Metals--Charles Kane
 Euler-Chern correspondence via topological superconductivity--Fan yang
 </a></li>
 
-## Topological classification
+
+## Topological physics
+
+
+
+### Topological classification
 
 <li>
 <a href="https://maggiexheuw.github.io/pdf2/schnyder2008 (1).pdf">
@@ -101,8 +106,6 @@ Classification of topological insulators and superconductors in three spatial di
 <a href="https://maggiexheuw.github.io/pdf2/Kitaev2009p8192Advances_In_Theoretical_Physics.pdf">
 Periodic table for topological insulators and superconductors--Kitaev
 </a></li>
-
-
 
 
 <li>
@@ -116,3 +119,16 @@ Topological insulators and superconductors: tenfold way and dimensional hierarch
 Classification of topological quantum matter with symmetries--Shinsei Ryu
 </a></li>
 
+### Topological invariant 
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf2/streda1982.pdf">
+Theory of quantised Hall conductivity in two dimensions--Streda(1982)
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf2/PhysRevX.2.031008.pdf">
+Simplified Topological Invariants for Interacting Insulators--Zhong Wang
+</a></li>
