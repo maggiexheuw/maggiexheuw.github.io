@@ -55,7 +55,7 @@ Ergodic Edge Modes in the 4D Quantum Hall Effect
 
 ### Quantum hall on the sphere 
 <li>
-<a href="https://maggiexheuw.github.io/pdf/Spherical Harmonics and Monopole Harmonics.pdf">
+<a href="https://maggiexheuw.github.io/pdf2/Spherical Harmonics and Monopole Harmonics.pdf">
 Spherical Harmonics and Monopole Harmonics--M.K.Fung
 </a></li>
 
