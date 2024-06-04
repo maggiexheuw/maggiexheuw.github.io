@@ -51,6 +51,18 @@ Exact Microscopic Wave Function for a Topological Quantum Membrane--Schou Cheng 
 Ergodic Edge Modes in the 4D Quantum Hall Effect
 </a></li>
 
+
+
+### Quantum hall on the sphere 
+<li>
+<a href="https://maggiexheuw.github.io/pdf/Spherical Harmonics and Monopole Harmonics.pdf">
+Spherical Harmonics and Monopole Harmonics--M.K.Fung
+</a></li>
+
+
+
+
+
 ### Superfluid
 <li>
 <a href="https://maggiexheuw.github.io/pdf/RevModPhys.47.331.pdf">
