@@ -60,6 +60,21 @@ Spherical Harmonics and Monopole Harmonics--M.K.Fung
 </a></li>
 
 
+### Noncommutative geometry on Quantum hall effects
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf2/PhysRevB.67.125314.pdf">
+Noncommutative geometry, extended $W_{\infty}$ algebra, and Grassmannian solitons
+in multicomponent quantum Hall systems
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf2/PhysRevD.93.125005.pdf">
+Noncommutative Chern-Simons theory and exotic geometry emerging
+from the lowest Landau level
+</a></li>
+
 
 
 
