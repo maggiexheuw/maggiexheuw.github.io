@@ -65,14 +65,14 @@ Spherical Harmonics and Monopole Harmonics--M.K.Fung
 <li>
 <a href="https://maggiexheuw.github.io/pdf2/PhysRevB.67.125314.pdf">
 Noncommutative geometry, extended $W_{\infty}$ algebra, and Grassmannian solitons
-in multicomponent quantum Hall systems
+in multicomponent quantum Hall systems --Hesebe
 </a></li>
 
 
 <li>
 <a href="https://maggiexheuw.github.io/pdf2/PhysRevD.93.125005.pdf">
 Noncommutative Chern-Simons theory and exotic geometry emerging
-from the lowest Landau level
+from the lowest Landau level--Yue Yu 
 </a></li>
 
 
