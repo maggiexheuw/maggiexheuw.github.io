@@ -18,12 +18,12 @@ tags:
 
 <li>
 <a href="https://maggiexheuw.github.io/Group/King-Group_Theory_Lectures_Day_2.pdf">
-SO(N) spinor representation 
+$SO(N)$ spinor representation 
 </a></li>
 
 <li>
 <a href="https://maggiexheuw.github.io/Group/SML_Tom_Yesui.pdf">
-SU(2) to SO(3) homomorphism
+$SU(2)$ to $SO(3)$ homomorphism
 </a></li>
 
 
