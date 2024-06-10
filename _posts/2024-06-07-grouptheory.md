@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Lecture
+title:      Group theory Lecture
 subtitle:   
 date:       2024-06-07
 author:     Maggie
