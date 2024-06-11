@@ -32,6 +32,10 @@ $SU(2)$ to $SO(3)$ homomorphism
 Final Exam(2019)
 </a></li>
 
+<li>
+<a href="https://maggiexheuw.github.io/Group/GNotes (1).pdf">
+Group Theory Lecture Notes
+</a></li>
 
 
 ### Website link
@@ -45,6 +49,12 @@ Serge Richard
 </a></li>
 
 <li><a href="https://qchu.wordpress.com/2011/02/05/so3-and-su2/"> 
-Serge Richard
+$SU(2)$ and $SO(3)$ 
+</a></li>
+
+
+
+<li><a href="http://quantum.phys.unm.edu/523-18/"> 
+Lie group notes
 </a></li>
 
