@@ -98,7 +98,7 @@ The theory of group characters and matrix representations of groups --Littlewood
 </li>
 
 <li>
-<a href="Lie Algebras in Particle Ph_ (Z-Library).pdf">
+<a href="https://maggiexheuw.github.io/Group/Lie Algebras in Particle Ph_ (Z-Library).pdf">
 Lie Algebras in Particle Physics --Georgu
 </a>
 </li>
