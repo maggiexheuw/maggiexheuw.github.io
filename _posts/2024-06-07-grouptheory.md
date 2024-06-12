@@ -58,3 +58,59 @@ $SU(2)$ and $SO(3)$
 Lie group notes
 </a></li>
 
+### Group theory textbooks recommended 
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/(Lecture Notes in Physics) Francesco Iachello - Lie Algebras and Applications-Springer (2010).pdf">
+Lie group Lectures for physicists
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/Brian G. Wybourne - Classical Groups for Physicists-John Wiley & Sons Inc (1974).djvu">
+Classical groups for physicists--Wybourne
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/Pero.pdf">
+Gernalized coherent states and their applications--Perelomov (1986)  
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/Gilmore.djvu">
+Lie algebra and Lie group (BCH formula) --Gilmore(1974)
+</a></li>
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/symmetry.pdf">
+<p style="color:blue;">Symmetry, Representations,
+and Invariants , for mathematical techniques -- Goodman </p>
+</a>
+</li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/The theory of group characters and matrix representations of groups (Dudley E. Littlewood) (Z-Library).djvu">
+The theory of group characters and matrix representations of groups --Littlewood 
+</a>
+</li>
+
+<li>
+<a href="Lie Algebras in Particle Ph_ (Z-Library).pdf">
+Lie Algebras in Particle Physics --Georgu
+</a>
+</li>
+
+
+
+
+### Clliford Algebra recommended
+
+
+<li>
+<a href="https://maggiexheuw.github.io/pdf/
+clifford.pdf">
+Clliford algebra 
+</a></li>
