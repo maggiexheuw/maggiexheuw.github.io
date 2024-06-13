@@ -92,7 +92,7 @@ and Invariants , for mathematical techniques -- Goodman </p>
 
 
 <li>
-<a href="https://maggiexheuw.github.io/pdf/The theory of group characters and matrix representations of groups (Dudley E. Littlewood) (Z-Library).djvu">
+<a href="https://maggiexheuw.github.io/pdf2/The theory of group characters and matrix representations of groups (Dudley E. Littlewood) (Z-Library).djvu">
 The theory of group characters and matrix representations of groups --Littlewood 
 </a>
 </li>
