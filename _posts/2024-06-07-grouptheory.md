@@ -38,6 +38,10 @@ Group Theory Lecture Notes
 </a></li>
 
 
+
+
+
+
 ### Website link
 
 <li><a href="http://mf23.web.rice.edu/"> 
@@ -57,6 +61,17 @@ $SU(2)$ and $SO(3)$
 <li><a href="http://quantum.phys.unm.edu/523-18/"> 
 Lie group notes
 </a></li>
+
+
+<li><a href="https://phas.ubc.ca/~seme/521/PHYS_521_Tutorial_3.pdf"> 
+$sp(2N)$ group 
+</a></li>
+
+<li><a href="https://empg.maths.ed.ac.uk/Activities/BRST/"> 
+Sympletic reduction 
+</a></li>
+
+
 
 ### Group theory textbooks recommended 
 
