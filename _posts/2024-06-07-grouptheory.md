@@ -113,8 +113,8 @@ The theory of group characters and matrix representations of groups --Littlewood
 </li>
 
 <li>
-<a href="https://maggiexheuw.github.io/Group/Lie Algebras in Particle Ph_ (Z-Library).pdf">
-Lie Algebras in Particle Physics --Georgi
+<a href="https://maggiexheuw.github.io/Group/Analysis on Lie Groups_ An introduction -- Jacques Faraut -- Cambridge Studies in Advanced Mathematics 110, 1, 2008 -- Cambridge University Press -- 9780511423987 -- b733a04e1e815e9cf6902a030b58877e -- Anna’s Archive.pdf">
+Analysis on Lie group 
 </a>
 </li>
 
