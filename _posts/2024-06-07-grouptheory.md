@@ -37,6 +37,46 @@ Final Exam(2019)
 Group Theory Lecture Notes
 </a></li>
 
+<li>
+<a href="https://maggiexheuw.github.io/Group/honors_thesis.pdf">
+Branching Rules of Classical Lie Groups in Two Ways
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/Representation.pdf">
+$SP(2,\mathbf{R})$ representation 
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/424.pdf">
+Notes for Group Representations
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/jmaddox.SP4.pdf">
+An Elementary Approach to the Weight
+Multiplicities for $Sp(4)$
+</a></li>
+
+
+
+### Tensor representation 
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/kumar60.pdf">
+Tensor Product Decomposition
+</a></li>
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/App-SU(N).pdf">
+Tensor Product Decomposition
+</a></li>
+
 
 
 
