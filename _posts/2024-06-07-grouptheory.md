@@ -130,7 +130,23 @@ Sympletic reduction
 Particle physic-Wallon
 </a></li>
 
+<li><a href="
+https://sites.ualberta.ca/~vbouchar/MAPH464/section-projective-spin.html"> 
+Projective representation
+</a></li>
 
+
+<li><a href="
+https://kantohm11.github.io/symmetry_review/wigners-theorem.html"> 
+Projective phases
+</a></li>
+
+
+<li><a href="
+https://www.cis.upenn.edu/~cis5150/cis5150-notes-24.html
+"> 
+Group theory and Machine learing 
+</a></li>
 
 ### Group theory textbooks recommended 
 
