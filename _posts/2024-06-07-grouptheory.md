@@ -13,6 +13,14 @@ tags:
 
 ## Group theory lecture
 
+### Symmetry 
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/M1-symetries-12-3-2020.pdf">
+Symmetry on physics
+</a></li>
+
+
 ### Lie group 
 
 
@@ -58,6 +66,12 @@ Notes for Group Representations
 An Elementary Approach to the Weight
 Multiplicities for $Sp(4)$
 </a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/Fierz_transform (1).pdf">
+Fierz identity 
+</a></li>
+
 
 
 
