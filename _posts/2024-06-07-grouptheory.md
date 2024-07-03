@@ -93,6 +93,23 @@ Tensor Product Decomposition
 
 
 
+### Cleasbach -Gordon coefficient 
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/1.1664703.pdf">
+Irreducible Representations of the FiveDimensional Rotation Group. I
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/1.1664704.pdf">
+Irreducible Representations of the FiveDimensional Rotation Group. II
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/0201048v4 (1).pdf">
+Coupling coefficients of $SO(n)$ and integrals
+involving Jacobi and Gegenbauer polynomials--Sigitas Ališauskas
+</a></li>
 
 
 
