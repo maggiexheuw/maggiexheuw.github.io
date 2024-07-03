@@ -112,9 +112,10 @@ involving Jacobi and Gegenbauer polynomials--Sigitas Ališauskas
 </a></li>
 
 <li>
-<a href="https://maggiexheuw.github.io/Group/">
-Review of $SO(5)$ group theory
+<a href="https://maggiexheuw.github.io/Group/Hu_SO5Group.pdf">
+Review of $SO(5)$ group theory-Hu 
 </a></li>
+
 
 ### Website link
 
