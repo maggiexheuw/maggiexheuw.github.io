@@ -111,7 +111,10 @@ Coupling coefficients of $SO(n)$ and integrals
 involving Jacobi and Gegenbauer polynomials--Sigitas Ališauskas
 </a></li>
 
-
+<li>
+<a href="https://maggiexheuw.github.io/Group/">
+Review of $SO(5)$ group theory
+</a></li>
 
 ### Website link
 
@@ -123,7 +126,7 @@ Modern mathematical phsyics: Group represemntation theory
 Serge Richard
 </a></li>
 
-<li><a href="https://qchu.wordpress.com/2011/02/05/so3-and-su2/"> 
+<li><a href="https://qchu.wordpress.com/2011/02/05/so3-and-su2/Hu_SO5Group.ps"> 
 $SU(2)$ and $SO(3)$ 
 </a></li>
 
