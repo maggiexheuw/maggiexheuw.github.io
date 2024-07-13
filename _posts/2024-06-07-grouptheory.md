@@ -223,6 +223,14 @@ Analysis on Lie group
 
 
 
+<li>
+<a href="https://maggiexheuw.github.io/Group/3-D Spinors, Spin-Weighted Functions and their Applications -- G_ F_ Torres del Castillo (auth_) -- Progress in Mathematical Physics 32, 1, 2003 -- 9781461264163 -- 49aa39cde897aff0dc6bbab78efd1018 -- Anna’s Archive.pdf">
+3-D Spinors,
+Spin-Weighted Functions
+and their Applications
+</a>
+</li>
+
 
 ### Clliford Algebra recommended
 

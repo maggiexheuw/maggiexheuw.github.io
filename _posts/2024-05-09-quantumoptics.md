@@ -175,3 +175,12 @@ Theory of quantised Hall conductivity in two dimensions--Streda(1982)
 <a href="https://maggiexheuw.github.io/pdf2/PhysRevX.2.031008.pdf">
 Simplified Topological Invariants for Interacting Insulators--Zhong Wang
 </a></li>
+
+
+
+### Monopole
+
+<li>
+<a href="https://maggiexheuw.github.io/Group/L_H_Ryder_1980_J._Phys._A__Math._Gen._13_437.pdf">
+Dirac monopole from $S^3$ to $S^2$  -- Ryder
+</a></li>
