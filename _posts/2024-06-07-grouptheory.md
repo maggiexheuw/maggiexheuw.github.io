@@ -169,6 +169,13 @@ https://www.cis.upenn.edu/~cis5150/cis5150-notes-24.html
 Group theory and Machine learing 
 </a></li>
 
+<li><a href="
+https://www.math.ru.nl/~heckman/
+"> 
+Lie algebra and classical differential geometry
+</a></li>
+
+
 ### Group theory textbooks recommended 
 
 <li>
