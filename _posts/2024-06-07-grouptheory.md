@@ -117,6 +117,13 @@ Review of $SO(5)$ group theory-Hu
 </a></li>
 
 
+<li>
+<a href="https://maggiexheuw.github.io/Group/clebsch18 (1).pdf">
+Review of $SO(5)$ group theory-Hu 
+</a></li>
+
+
+
 ### Website link
 
 <li><a href="http://mf23.web.rice.edu/"> 
@@ -174,6 +181,14 @@ https://www.math.ru.nl/~heckman/
 "> 
 Lie algebra and classical differential geometry
 </a></li>
+
+
+<li>
+<a href="https://scipp.ucsc.edu/~haber/ph215/">
+Advance quantum mechanics-Santa Babara
+</a></li>
+
+
 
 
 ### Group theory textbooks recommended 
