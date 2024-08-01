@@ -123,6 +123,13 @@ Review of $SO(5)$ group theory-Hu
 </a></li>
 
 
+<li>
+<a href="https://maggiexheuw.github.io/Group/buehlmann_bachelor (1).pdf">
+Graphical Tensor Product Reduction
+Scheme for the Lie Algebra $so(5)$
+</a></li>
+
+
 
 ### Website link
 
