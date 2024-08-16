@@ -2,7 +2,7 @@
 layout:     post
 title:     MAthematical physics
 subtitle:   
-date:       2024-06-08
+date:       2024-08-14s
 author:     Maggie
 header-img: img/Andersonphoto.jpg
 catalog: true
