@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:     MAthematical physics
+title:     Mathematical physics
 subtitle:   
 date:       2024-08-14
 author:     Maggie
