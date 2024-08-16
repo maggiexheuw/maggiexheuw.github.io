@@ -4,7 +4,7 @@ title:     MAthematical physics
 subtitle:   
 date:       2024-08-14s
 author:     Maggie
-header-img: img/Andersonphoto.jpg
+header-img: img/EdWitten.jpg
 catalog: true
 tags:
     - 
