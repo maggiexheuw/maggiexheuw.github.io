@@ -2,7 +2,7 @@
 layout:     post
 title:     MAthematical physics
 subtitle:   
-date:       2024-08-14s
+date:       2024-08-14
 author:     Maggie
 header-img: img/EdWitten.jpg
 catalog: true
