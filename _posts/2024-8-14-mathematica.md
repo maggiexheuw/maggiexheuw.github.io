@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:     Field theory lecture
+title:     MAthematical physics
 subtitle:   
 date:       2024-06-08
 author:     Maggie
