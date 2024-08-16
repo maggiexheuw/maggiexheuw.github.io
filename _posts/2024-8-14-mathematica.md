@@ -13,19 +13,19 @@ tags:
 
 ### Some notes
 <li>
-<a href="https://maggiexheuw.github.io/Napkin.pdf">
+<a href="https://maggiexheuw.github.io/Conformal/Napkin.pdf">
 Evan Chen 
 </a></li>
 
 ### Topology
 
 <li>
-<a href="https://maggiexheuw.github.io/1_homotopy.pdf">
+<a href="https://maggiexheuw.github.io/Conformal/1_homotopy.pdf">
 Homotopy 
 </a></li>
 
 <li>
-<a href="https://maggiexheuw.github.io/1_homology.pdff">
+<a href="https://maggiexheuw.github.io/Conformal/1_homology.pdf">
 Homology
 </a></li>
 
