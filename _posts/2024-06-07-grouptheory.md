@@ -72,6 +72,10 @@ Multiplicities for $Sp(4)$
 Fierz identity 
 </a></li>
 
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/GROUP_THEORY.pdf">
+Arovas 
+</a></li>
 
 
 
@@ -195,6 +199,10 @@ Lie algebra and classical differential geometry
 Advance quantum mechanics-Santa Babara
 </a></li>
 
+<li>
+<a href="https://courses.physics.ucsd.edu/2016/Spring/physics220/">
+Arovas
+</a></li>
 
 
 
@@ -267,6 +275,7 @@ Clliford algebra
 #### $SO(5)$ Clesbach Gordon coefficients
 
 
+
 <li>
 <a href="https://maggiexheuw.github.io/pdf/
 clifford.pdf">
@@ -278,4 +287,3 @@ Clliford algebra
 978-0-387-26308-3.pdf">
 Atomic,Molecular,and optic physics
 </a></li>
-
