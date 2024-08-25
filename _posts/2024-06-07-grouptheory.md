@@ -73,8 +73,8 @@ Fierz identity
 </a></li>
 
 <li>
-<a href="https://maggiexheuw.github.io/Conformal/GROUP_THEORY.pdf">
-Arovas 
+<a href="https://maggiexheuw.github.io/Conformal/GROUP.pdf">
+Arovas lecture
 </a></li>
 
 
