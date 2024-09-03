@@ -42,5 +42,13 @@ Homology
 
 <li>
 <a href="https://maggiexheuw.github.io/Conformal/diff.pdf">
-Homology
+物理学家用的微分几何
+</a></li>
+
+
+### Group and symmetry 
+
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/Physics from Symmetry by Jakob Schwichtenberg (z-lib.org).pdf">
+Physics from Symmetry--- Schwichtenberg 
 </a></li>
