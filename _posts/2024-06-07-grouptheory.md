@@ -21,6 +21,22 @@ Symmetry on physics
 </a></li>
 
 
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/g-lecture.pdf">
+With Applications to Quantum Mechanics
+and Solid State Physics
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/GROUP_THEORY.pdf">
+Lecture Notes on Group Theory in Physics--Arovas
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/05.pdf">
+分子对称性和群论基础
+</a></li>
+
 ### Lie group 
 
 
