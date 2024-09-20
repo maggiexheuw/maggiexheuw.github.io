@@ -94,6 +94,12 @@ Arovas lecture
 </a></li>
 
 
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/group.pdf">
+Introduction to Group Theory--Stony Brook New York
+for Physicists
+</a></li>
+
 
 ### Tensor representation 
 
