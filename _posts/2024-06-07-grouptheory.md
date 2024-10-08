@@ -101,6 +101,18 @@ for Physicists
 </a></li>
 
 
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/180208.pdf">
+Group Representations in Physics---Stefan Keppeler
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/evbgroups.pdf">
+Some notes on group theory.--Eef van Beveren
+</a></li>
+
+
 ### Tensor representation 
 
 
