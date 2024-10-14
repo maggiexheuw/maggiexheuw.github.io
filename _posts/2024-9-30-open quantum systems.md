@@ -24,3 +24,12 @@ Prof. Gabriel T. Landi
 </a></li>
 
 
+## Books
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/Heinz-Peter Breuer, Francesco Petruccione - The theory of open quantum systems-Oxford University Press (2002).pdf">
+The quantum theory of open system --2007
+</a></li>
+
+
