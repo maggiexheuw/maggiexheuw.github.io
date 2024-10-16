@@ -29,6 +29,11 @@ Prof. Gabriel T. Landi
 Matteo A. C. Rossi
 </a></li>
 
+<li>
+<a href="https://matteoacrossi.github.io/oqs-jupyterbook/introduction.html">
+Open quantum systems
+</a></li>
+
 ## Books
 
 
