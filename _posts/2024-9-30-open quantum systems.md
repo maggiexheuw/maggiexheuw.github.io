@@ -24,6 +24,11 @@ Prof. Gabriel T. Landi
 </a></li>
 
 
+<li>
+<a href="https://www.matteoacrossi.com/research/open_quantum_systems/">
+Matteo A. C. Rossi
+</a></li>
+
 ## Books
 
 
