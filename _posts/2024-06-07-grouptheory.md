@@ -305,6 +305,14 @@ clifford.pdf">
 Clliford algebra 
 </a></li>
 
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/
+Lie Groups and Lie Algebras_ (Z-Library).pdf">
+Lie Groups and Lie Algebras:
+A Physicist's Perspective
+--Adam M. Bincer
+</a></li>
+
 
 #### $SO(5)$ Clesbach Gordon coefficients
 
