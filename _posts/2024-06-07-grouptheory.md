@@ -307,7 +307,7 @@ Clliford algebra
 
 <li>
 <a href="https://maggiexheuw.github.io/Conformal/
-Lie Groups and Lie Algebras_ (Z-Library).pdf">
+Lie Groups.pdf">
 Lie Groups and Lie Algebras:
 A Physicist's Perspective
 --Adam M. Bincer
