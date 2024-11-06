@@ -52,3 +52,13 @@ Homology
 <a href="https://maggiexheuw.github.io/Conformal/Physics from Symmetry by Jakob Schwichtenberg (z-lib.org).pdf">
 Physics from Symmetry--- Schwichtenberg 
 </a></li>
+
+
+
+
+###
+
+<li>
+<a href="https://maggiexheuw.github.io/https://4gravitons.com/n8-thats-a-whole-lot-of-symmetry/">
+4 gravitons 
+</a></li>
