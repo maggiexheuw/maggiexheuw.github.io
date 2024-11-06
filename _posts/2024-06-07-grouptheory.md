@@ -329,3 +329,73 @@ Clliford algebra
 978-0-387-26308-3.pdf">
 Atomic,Molecular,and optic physics
 </a></li>
+
+
+#### $SO(8)$ triality
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+loun112.pdf">
+Octanion and triality--Pertti Lounesto
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+varadarajan2001.pdf">
+Spin(7)-subgroups of SO(8) and Spin(8)--V. S. Varadarajan
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+L23_MagicSquare.pdf">
+Lecture 23 - The Magic Square
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+clifford (1).pdf">
+Notes on Clifford algebra, spin group, triality. 
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+pjm-v34-n1-p09-s.pdf">
+Sphere transitive structures and the triality automorphisms
+</a></li>
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+presentacion-alvaro-anton.pdf">
+Triality and fixed points of
+Spin-bundles
+</a></li>
+
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+dray.pdf">
+Octonionic Cayley spinors and $E_6$
+</a></li>
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+lens.pdf">
+Notes on triality
+</a></li>
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Triality/
+2018-003.pdf">
+Octonions, triality, the
+exceptional Lie algebraF4,
+and polar actions on the
+Cayley hyperbolic plane
+</a></li>
