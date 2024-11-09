@@ -296,7 +296,7 @@ and their Applications
 </li>
 
 <li>
-<a href="https://maggiexheuw.github.io/Group/International Tables for Crystallography, Mathematical, Physical and Chemical Tables (E. Prince) (Z-Library).pdf">
+<a href="https://maggiexheuw.github.io/Conformal/International Tables for Crystallography, Mathematical, Physical and Chemical Tables (E. Prince) (Z-Library).pdf">
 International Tables for Crystallography
 </a>
 </li>
