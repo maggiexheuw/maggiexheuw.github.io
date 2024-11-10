@@ -112,6 +112,11 @@ Group Representations in Physics---Stefan Keppeler
 Some notes on group theory.--Eef van Beveren
 </a></li>
 
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/Jin-Quan_Chen,_Jialun_Ping,_Fan_Wang_Group_Representation_Theory_for_Physicists,_2nd_Edition__2002.pdf">
+Group theory--Jinquan Chen
+</a>
+</li>
 
 ### Tensor representation 
 
@@ -167,11 +172,7 @@ Graphical Tensor Product Reduction
 Scheme for the Lie Algebra $so(5)$
 </a></li>
 
-<li>
-<a href="https://maggiexheuw.github.io/Conformal/Jin-Quan_Chen,_Jialun_Ping,_Fan_Wang_Group_Representation_Theory_for_Physicists,_2nd_Edition__2002.pdf">
-Group theory--Jinquan Chen
-</a>
-</li>
+
 
 ### Website link
 
