@@ -2,7 +2,7 @@
 layout:     post
 title:     Open quantum system
 subtitle:   
-date:       2024-09-30
+date:       2025-04-17
 author:     Maggie
 header-img: img/EdWitten.jpg
 catalog: true
