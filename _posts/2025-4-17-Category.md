@@ -29,6 +29,8 @@ Physics,Geometry and Topology--Hai.C.Lee
 
 
 <li>
-<a href="https://maggiexheuw.github.io/Conformal/(NATO ASI Series 238) Ian Affleck (auth.), H. C. Lee (eds.) - Physics, Geometry and Topology-Springer US (1990).pdf">
-Physics,Geometry and Topology--Hai.C.Lee
+<a href="https://maggiexheuw.github.io/Conformal/(Mathematical Lectures from Peking University) N. Andruskiewitsch, I. Angiono (auth.), Chengming Bai, Jürgen Fuchs, Yi-Zhi Huang, Liang Kong, Ingo Runkel, Christoph Schweigert (eds.) - Conformal Field.pdf">
+Conformal Field
+Theories and Tensor
+Categories---YiZhi Huang
 </a></li>
