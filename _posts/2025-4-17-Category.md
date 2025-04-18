@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:     Open quantum system
+title:     Category and conformal field theory 
 subtitle:   
 date:       2025-04-17
 author:     Maggie
@@ -33,4 +33,11 @@ Physics,Geometry and Topology--Hai.C.Lee
 Conformal Field
 Theories and Tensor
 Categories---YiZhi Huang
+</a></li>
+
+
+
+<li>
+<a href="https://maggiexheuw.github.io/Conformal/TASI-ChernSimons-StudentNotes (3).pdf">
+Introduction To Chern-Simons Theories---Gregory Moore
 </a></li>
