@@ -1,0 +1,211 @@
+---
+layout:     post
+title:      CCMP Reports – Condensed Matter Physics Conference 2026
+subtitle:   Collected lecture notes from Liyang CCMP 2026
+date:       2026-06-27
+author:     Maggie
+header-img: img/EdWitten.jpg
+catalog: true
+tags: 
+    - CCMP 2026
+    - condensed matter physics
+    - high-Tc superconductivity
+    - topological phases
+    - quantum many-body
+---
+
+<style>
+  .report-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 30px 0;
+    max-width: 900px;
+  }
+
+  .report-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 22px 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-left: 6px solid #1a3a6b;
+    transition: all 0.2s ease;
+  }
+
+  .report-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    transform: translateY(-3px);
+  }
+
+  .report-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a3a6b;
+    margin-bottom: 4px;
+  }
+
+  .report-author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+
+  .report-abstract {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #2d2d2d;
+    margin: 8px 0 14px 0;
+  }
+
+  .report-link {
+    display: inline-block;
+    background: #1a3a6b;
+    color: #ffffff !important;
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    border: none;
+  }
+
+  .report-link:hover {
+    background: #2a5298;
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+
+  .report-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  hr.divider {
+    margin: 40px 0 20px 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #e0e0e0, #ffffff);
+  }
+</style>
+
+<p style="font-size: 1.05rem; color: #333; margin-bottom: 10px;">
+  This page collects my personal notes from selected talks at the <strong>CCMP 2026</strong> conference held in Liyang. 
+  Click the button below each entry to view or download the corresponding PDF note.
+</p>
+
+<hr class="divider">
+
+<div class="report-grid">
+
+  <!-- 1. Tao Xiang -->
+  <div class="report-card">
+    <div class="report-title">σ‑bonding High‑Tc Superconductivity and Neural Tensor Network State</div>
+    <div class="report-author">Tao Xiang</div>
+    <div class="report-abstract">
+      This talk connects two frontiers: material design via metallizing σ-bonding electrons (exemplified by MgB₂), and variational many-body solvers using Neural Tensor Network States (νTNS). Xiang emphasizes that hole doping in cuprates creates Zhang-Rice singlets rather than simple rigid-band carriers. He presents recent νTNS benchmarks on the frustrated J₁-J₂ square-lattice Heisenberg model at J₂/J₁ ~ 0.5, where the numerical data favor a gapless quantum spin liquid over competing VBS or Néel orders.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(11).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 2. Uemura -->
+  <div class="report-card">
+    <div class="report-title">Phase Stiffness, Soft Modes, and Competing Orders in High‑Tc Superconductors</div>
+    <div class="report-author">Yasutomo Uemura</div>
+    <div class="report-abstract">
+      Uemura argues that T<sub>c</sub> in underdoped cuprates is controlled primarily by superfluid density (phase stiffness) rather than by the pairing gap. Using μSR measurements of λ⁻² ∝ n<sub>s</sub>/m*, he presents the empirical Uemura relation T<sub>c</sub> ∝ n<sub>s</sub>/m*. The talk covers the Emery-Kivelson phase-fluctuation picture, Nernst-effect evidence for vortex-like excitations above T<sub>c</sub>, and the role of stripe/CDW competing orders in suppressing global phase coherence.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(10).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 3. Yanase -->
+  <div class="report-card">
+    <div class="report-title">Electric Current‑Induced Superconductivity and Perfect Superconducting Diode</div>
+    <div class="report-author">Youichi Yanase</div>
+    <div class="report-abstract">
+      Yanase systematically introduces the superconducting diode effect (SDE) arising from finite-momentum Cooper pairs, including Rashba helical states and FFLO-type pairing. He highlights the Daido-Yanase bilayer dissipation model that achieves perfect SDE (vanishing critical current in one direction), and the trigonal Fulde-Ferrell scenario where a finite current selects a single FF domain to produce a zero-resistance state. Light-driven and correlation-induced nonreciprocal mechanisms are also discussed.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(9).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 4. Song Zhida -->
+  <div class="report-card">
+    <div class="report-title">Stable Topology in Exactly Flat Bands (CTFB)</div>
+    <div class="report-author">Zhida Song</div>
+    <div class="report-abstract">
+      Song addresses the no-go theorem that forbids strictly flat, finite-range, gapped bands with stable topology. By relaxing the gapped condition and allowing critical band touching, he constructs Critical Topological Flat Bands (CTFB) where the projector remains continuous (though non-analytic) at the touching point. Using bipartite kernel constructions and symmetry indicators (ΔB), he shows how stable Chern/Z₂ topology can coexist with exact flatness, providing a rigorous starting point for fractional Chern insulators.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(8).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 5. Liu Qihang -->
+  <div class="report-card">
+    <div class="report-title">Spin Space Group, Altermagnetism, and Symmetry Classification of Magnetic Orders</div>
+    <div class="report-author">Qihang Liu</div>
+    <div class="report-abstract">
+      Liu introduces spin space groups to redefine ferromagnets and antiferromagnets based on spin-space operations rather than net magnetization. He focuses on altermagnetism — a collinear compensated phase with zero net moment but momentum-dependent spin splitting, arising from nonrelativistic crystal symmetry. The talk also covers spin translational groups for classifying complex AFM geometries (spiral, multi-q), and how oriented spin space groups diagnose allowed responses such as AHE, magnetoelectricity, and topology.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(7).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 6. Shi Likun -->
+  <div class="report-card">
+    <div class="report-title">Driven Fermions, Baths, Floquet Steady States, and Dissipation‑Shaped Quantum Geometry</div>
+    <div class="report-author">Likun Shi</div>
+    <div class="report-abstract">
+      Shi shows that Floquet band structure alone does not determine occupation; the nature of the bath (fermionic vs. bosonic) selects distinct non-equilibrium steady states. Fermionic baths yield Floquet Fermi liquids with nested Fermi surfaces, while bosonic baths produce ultracritical Floquet non-Fermi liquids with sharp but non-Fermi singularities. In the second half, he warns that the Γ⁰ term in second-order nonlinear transport — often assumed to be purely quantum-geometric — is in fact shaped by dissipation, making bath identification essential for extracting quantum metrics.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(6).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 7. Fractonic FQH -->
+  <div class="report-card">
+    <div class="report-title">Fractonic Fractional Quantum Hall Effect – from Kane wires to lineons</div>
+    <div class="report-author">[Unknown Speaker]</div>
+    <div class="report-abstract">
+      This talk generalizes Kane's coupled-wire construction by gluing adjacent Laughlin strips with different filling fractions 1/mⱼ, using Haldane's null-vector criterion. The non-uniform gluing generates position-dependent anyon condensation rules, which split the ordinary 2D FQH anyons into mobility-restricted excitations: lineons (1D motion), spread lineons (local interface crossing), and fully mobile C-anyons. This provides a natural route to fractonic topological order without requiring crystalline translation symmetry.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(5).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 8. Cheong -->
+  <div class="report-card">
+    <div class="report-title">Chirality Trinity – Chirality, Time Chirality, and Chirality Prime</div>
+    <div class="report-author">Sang‑Wook Cheong</div>
+    <div class="report-abstract">
+      Cheong classifies handedness using P (parity), T (time-reversal), and PT symmetries. Ordinary chirality (H·k) is P-odd/T-even; time chirality (k·E) is P-even/T-odd; chirality prime (E·H) is P-odd/T-odd. Superchirality occurs when all three are broken. He applies this framework to ferro-rotational (electric toroidal) orders, circular dichroism, chiral vs. time-chiral phonons, and shows how these selection rules dictate Hall, Edelstein, and magnetoelectric responses without detailed microscopic calculations.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(4).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 9. Chen Xianhui -->
+  <div class="report-card">
+    <div class="report-title">Kagome CDW, Loop Current, and Superconductivity in CsV₃Sb₅</div>
+    <div class="report-author">Xianhui Chen</div>
+    <div class="report-abstract">
+      Chen presents experimental evidence that the CDW in CsV₃Sb₅ is not a simple Peierls nesting instability. The transition is accompanied by a giant anomalous Hall effect, NMR-detected orbital ordering, electronic nematicity, and a double-dome superconducting phase under pressure. He interprets the CDW as a multi-component order parameter involving charge, bond, orbital, and possibly loop-current modulations, drawing on the Capponi-Wu-Zhang bilayer model where Im⟨cᵢ†cⱼ⟩ serves as the order parameter for spontaneous circulating currents.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(3).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+  <!-- 10. BCFT -->
+  <div class="report-card">
+    <div class="report-title">Boundary Conformal Field Theory – Cardy condition and anomaly</div>
+    <div class="report-author">[Unknown Speaker]</div>
+    <div class="report-abstract">
+      This is a pedagogical note on BCFT, starting from the gluing condition T(z) = T̄(z̄) on the boundary, leading to Ishibashi states and Cardy states. The annulus partition function is computed in both open and closed channels, and their equality yields the Cardy condition, which is then solved via the Verlinde formula. The final section explains Oshikawa's criterion: existence of a G-invariant Cardy boundary state diagnoses the absence of 't Hooft anomaly, illustrated with SU(N)ₖ WZW models where center symmetry dictates k ∈ Nℤ for anomaly-free gapping.
+    </div>
+    <a class="report-link" href="https://maggiexheuw.github.io/Report/Classical_paper_reading%20(2).pdf" target="_blank">📄 View PDF</a>
+  </div>
+
+</div>
+
+<hr class="divider">
+
+<p style="font-size: 0.9rem; color: #666; text-align: center;">
+  <em>Last updated: 27 June 2026</em>
+</p>
