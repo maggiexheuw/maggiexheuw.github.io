@@ -91,11 +91,22 @@ service-worker: true
 
 
 # Friends
+# Friends
 friends: [
-{
-        title: "Dr. Vadim Kaplunovsky",
-        href: "https://web2.ph.utexas.edu/~vadim/"
-    },{title: "Kevin Fossez",
-        href: "https://kevinfossez.github.io/"
-    }
+  {
+    title: "Dr. Vadim Kaplunovsky",
+    href: "https://web2.ph.utexas.edu/~vadim/"
+  },
+  {
+    title: "Kevin Fossez",
+    href: "https://kevinfossez.github.io/"
+  },
+  {
+    title: "Yihao Wang",
+    href: "https://kairoswong.github.io/"
+  },
+  {
+    title: "Liqiang Chen",
+    href: "https://clq9920.github.io/page2/"
+  }
 ]
