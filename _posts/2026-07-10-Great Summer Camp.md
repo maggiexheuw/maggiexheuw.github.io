@@ -6,8 +6,6 @@ date: 2026-07-19
 author: Maggie
 header-img: img/EdWitten.jpg
 catalog: true
-
-
 ---
 
 <!-- ========================================================== -->
@@ -19,66 +17,66 @@ catalog: true
 <style>
   /* Page Introduction Styling */
   .lecture-intro {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #4a5568;
-    margin-bottom: 2.5rem;
+    font-size: 1.4rem;          /* 原 1.1rem → 放大 */
+    line-height: 1.8;           /* 增加行高更舒适 */
+    color: #2d3748;
+    margin-bottom: 2.8rem;
   }
   
   /* Grid Layout for Cards */
   .lecture-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;                  /* 卡片间距增大 */
   }
 
   /* Modern Card Design */
   .lecture-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 1.75rem;
+    border-radius: 12px;
+    padding: 2rem 2.2rem;       /* 内边距加大 */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
-  /* Card Hover Effect */
   .lecture-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.10);
   }
 
   /* Subtle Top Border Accents */
-  .card-blue   { border-top: 4px solid #3b8bba; }
-  .card-orange { border-top: 4px solid #e67e22; }
-  .card-purple { border-top: 4px solid #8e44ad; }
-  .card-red    { border-top: 4px solid #c0392b; }
+  .card-blue   { border-top: 5px solid #3b8bba; }
+  .card-orange { border-top: 5px solid #e67e22; }
+  .card-purple { border-top: 5px solid #8e44ad; }
+  .card-red    { border-top: 5px solid #c0392b; }
 
   /* Typography */
   .lecture-title {
     margin-top: 0 !important;
-    margin-bottom: 0.75rem !important;
-    font-size: 1.3rem !important;
-    color: #2d3748;
-    font-weight: 600;
+    margin-bottom: 0.8rem !important;
+    font-size: 1.8rem !important;    /* 原 1.3rem → 放大 */
+    color: #1a202c;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
   
   .lecture-desc {
-    color: #4a5568;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    color: #2d3748;
+    font-size: 1.2rem;              /* 原 1rem → 放大 */
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
   }
 
   /* Button Styling */
   .download-btn {
     display: inline-block;
     color: #ffffff !important;
-    padding: 0.5rem 1.25rem;
-    border-radius: 6px;
+    padding: 0.6rem 1.8rem;         /* 按钮内边距加大 */
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1.05rem;             /* 原 0.9rem → 放大 */
+    font-weight: 600;
     transition: filter 0.2s ease;
   }
   
@@ -91,12 +89,25 @@ catalog: true
   .btn-orange { background-color: #e67e22; }
   .btn-purple { background-color: #8e44ad; }
   .btn-red    { background-color: #c0392b; }
+
+  /* 额外：适配移动端，防止溢出 */
+  @media (max-width: 600px) {
+    .lecture-title {
+      font-size: 1.5rem !important;
+    }
+    .lecture-desc {
+      font-size: 1.05rem;
+    }
+    .lecture-card {
+      padding: 1.5rem;
+    }
+  }
 </style>
 
 <!-- Page Introduction -->
 <div class="lecture-intro">
   <p>
-    This page collects the PDF lecture notes from Prof. Fengcheng Wu's series of talks at the <strong>2026 Greater Bay Area Quantum Science Summer School</strong>. Topics include topological moiré bands, integer and fractional quantum anomalous Hall effects, collective excitations, and non-Abelian fractional quantum states. 
+    This page collects the PDF lecture notes from Prof. Fengcheng Wu's series of talks at the <strong>2026 Greater Bay Area Quantum Science Summer School</strong>. Topics include topological moiré bands, integer and fractional quantum anomalous Hall effects, collective excitations, and non-Abelian fractional quantum states. All files are stored in the <code>PPTX/</code> folder. Click to download or view online.
   </p>
 </div>
 
