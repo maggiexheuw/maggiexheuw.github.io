@@ -400,7 +400,7 @@ catalog: true
       <strong>Type:</strong> Presentation slides<br><br>
       Green's function derivation: Lehmann representation, free Green's function \( G_0^R(x,x';E) = -\dfrac{i}{\hbar v_E} e^{ik_E|x-x'|} \), Dyson equation, separable \( T \)-matrix \( t(E) = u/(1 + iu/\hbar v_E) \), zero‑temperature result \( \delta n(x) \sim -\dfrac{u\nu_F}{2}\dfrac{\cos(2k_F x)}{|x|} \), and finite‑temperature thermal length \( \xi_T = \hbar v_F/2\pi k_B T \).
     </p>
-    <a href="https://maggiexheuw.github.io/PPTX/L2P2FriedelOscillationsBeamer.pdf" target="_blank" class="download-btn btn-friedel">📄 Download PDF</a>
+    <a href="https://maggiexheuw.github.io/PPTX/Friedel.pdf" target="_blank" class="download-btn btn-friedel">📄 Download PDF</a>
   </div>
 
   <div class="lecture-card card-friedel">
@@ -429,7 +429,7 @@ catalog: true
       <strong>Type:</strong> Presentation slides<br><br>
       1D Anderson model: tight‑binding Hamiltonian, three‑term recurrence, transfer matrix \( T_n \in \mathrm{SL}(2,\mathbb{R}) \), Lyapunov exponent \( \gamma(E) = \lim_{N\to\infty} \frac{1}{N}\ln\|\mathcal{M}_N\| \), localization length \( \xi(E) = 1/\gamma(E) \), clean‑chain limit, weak‑disorder Thouless formula \( \xi(E) = 2(4t^2 - E^2)/\sigma^2 \), Prüfer variables, and numerical QR re‑orthogonalization.
     </p>
-    <a href="https://maggiexheuw.github.io/PPTX/L2P3Andersonlocalization1DBeamer.pdf" target="_blank" class="download-btn btn-local">📄 Download PDF</a>
+    <a href="https://maggiexheuw.github.io/PPTX/Anderrson-loc.pdf" target="_blank" class="download-btn btn-local">📄 Download PDF</a>
   </div>
 
   <div class="lecture-card card-local">
@@ -458,7 +458,7 @@ catalog: true
       <strong>Type:</strong> Presentation slides<br><br>
       High‑level summary: hierarchy of length scales from \( \lambda_F \) to \( \xi_K \), diffusive generalization, Thouless energy as the inverse dictionary, and limits of the framework (flat bands, non‑Fermi liquids, Dirac materials).
     </p>
-    <a href="https://maggiexheuw.github.io/PPTX/L2P1SolidStateLengthScaleBeamer.pdf" target="_blank" class="download-btn btn-scale">📄 Download PDF</a>
+    <a href="https://maggiexheuw.github.io/PPTX/Solid-state.pdf" target="_blank" class="download-btn btn-scale">📄 Download PDF</a>
   </div>
 
 </div>
