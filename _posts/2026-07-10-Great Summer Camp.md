@@ -4,12 +4,16 @@ title: "Topological Moiré Bands & Fractional Chern Insulators – Lecture Notes
 subtitle: "2026 Greater Bay Area Quantum Science Summer School · Fengcheng Wu (Wuhan University)"
 date: 2026-07-19
 author: Maggie
-header-img: img/EdWitten.jpg   # You can replace with your own banner image
+header-img: img/EdWitten.jpg
 catalog: true
-tags: [topological, moire, fractional, Chern, insulator, quantum, summer-school
+tags: [topological, moire, fractional, Chern, insulator, quantum, summer-school]
 ---
 
-
+<!-- ========================================================== -->
+<!-- 修改说明：链接使用绝对路径，指向 PPTX/ 文件夹               -->
+<!-- 格式与 CCMP 完全一致：https://maggiexheuw.github.io/PPTX/   -->
+<!-- 文件名保留空格，用 %20 编码                                 -->
+<!-- ========================================================== -->
 
 <!-- Page Introduction -->
 <p style="font-size: 1.1rem; margin-bottom: 2rem;">
@@ -30,7 +34,7 @@ tags: [topological, moire, fractional, Chern, insulator, quantum, summer-school
       Theory of topological bands in moiré superlattices, including continuum models, layer-pseudospin skyrmions, quantum geometry, and Wilson loop methods.
     </p>
     <p style="margin: 0.5rem 0 0 0;">
-      <a href="./PPTX/Lecture%202.2.pdf" target="_blank" style="display: inline-block; background: #3b8bba; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/Lecture%202.2.pdf" target="_blank" style="display: inline-block; background: #3b8bba; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
     </p>
   </div>
 
@@ -43,7 +47,7 @@ tags: [topological, moire, fractional, Chern, insulator, quantum, summer-school
       Quantum anomalous Hall insulators based on the Kane‑Mele‑Hubbard model, Hartree‑Fock approximation, and phase diagrams with competing orders in tMoTe₂.
     </p>
     <p style="margin: 0.5rem 0 0 0;">
-      <a href="./PPTX/Lecture%203.1.pdf" target="_blank" style="display: inline-block; background: #e67e22; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/Lecture%203.1.pdf" target="_blank" style="display: inline-block; background: #e67e22; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
     </p>
   </div>
 
@@ -56,7 +60,7 @@ tags: [topological, moire, fractional, Chern, insulator, quantum, summer-school
       Collective excitations in integer QAHIs: excitonic optical response (Bethe‑Salpeter equation) and topological magnons, plus spin models and domain walls.
     </p>
     <p style="margin: 0.5rem 0 0 0;">
-      <a href="./PPTX/Lecture%203.2.pdf" target="_blank" style="display: inline-block; background: #8e44ad; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/Lecture%203.2.pdf" target="_blank" style="display: inline-block; background: #8e44ad; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
     </p>
   </div>
 
@@ -69,9 +73,8 @@ tags: [topological, moire, fractional, Chern, insulator, quantum, summer-school
       Lattice analogs of fractional quantum Hall effects: skyrmion picture, generalized Landau levels, ideal vs. nonideal quantum geometry, and Abelian (Jain sequences) as well as non‑Abelian (ν=5/2) fractional states.
     </p>
     <p style="margin: 0.5rem 0 0 0;">
-      <a href="./PPTX/Lecture%204.pdf" target="_blank" style="display: inline-block; background: #c0392b; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/Lecture%204.pdf" target="_blank" style="display: inline-block; background: #c0392b; color: white; padding: 0.3rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">📄 Download PDF</a>
     </p>
   </div>
 
 </div>
-
