@@ -56,7 +56,7 @@
   overflow: auto;
   height: 100%;
   padding-bottom: 40px;
-  width: 195px;
+  width: 240px;             /* 从 195px 增加到 240px，显示更多文字 */
 }
 .side-catalog.fixed {
   position: fixed;
@@ -87,17 +87,25 @@
   position: relative;
   list-style: none;
 }
+/* ===== 修改后的侧边栏链接样式（允许换行，完整显示） ===== */
 .side-catalog .catalog-body li a {
   padding-left: 10px;
-  max-width: 180px;
-  display: inline-block;
+  padding-right: 5px;
+  max-width: 100%;          /* 占满父容器宽度 */
+  display: block;           /* 改为块级元素，便于换行 */
   vertical-align: middle;
-  height: 30px;
-  line-height: 30px;
-  overflow: hidden;
+  height: auto;             /* 高度自适应内容 */
+  line-height: 1.5;         /* 舒适的行高 */
+  overflow: visible;        /* 显示完整内容 */
   text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: normal;      /* 允许换行 */
+  word-wrap: break-word;    /* 长单词自动换行 */
+  text-overflow: clip;      /* 取消省略号 */
+}
+/* ===== 鼠标悬停时高亮效果 ===== */
+.side-catalog .catalog-body li a:hover {
+  background: #f0f4f8;
+  border-radius: 4px;
 }
 .side-catalog .catalog-body .h1_nav,
 .side-catalog .catalog-body .h2_nav,
@@ -115,7 +123,7 @@
 .side-catalog .catalog-body .h4_nav a,
 .side-catalog .catalog-body .h5_nav a,
 .side-catalog .catalog-body .h6_nav a {
-  max-width: 170px;
+  max-width: 100%;          /* 同样改为占满宽度 */
 }
 .side-catalog .catalog-body .active {
   border-radius: 4px;
@@ -315,10 +323,10 @@ pre code {
 }
 @media only screen and (max-width: 767px) {
   /**
-	 * Layout
-	 * Since V1.6 we use absolute positioning to prevent to expand container-fluid
-	 * which would cover tags. A absolute positioning make a new layer.
-	 */
+   * Layout
+   * Since V1.6 we use absolute positioning to prevent to expand container-fluid
+   * which would cover tags. A absolute positioning make a new layer.
+   */
   .navbar-default .navbar-collapse {
     position: absolute;
     right: 0;
@@ -330,13 +338,13 @@ pre code {
     width: 170px;
   }
   /**
-	 * Animation
-	 * HuxBlog-Navbar using genuine Material Design Animation
-	 */
+   * Animation
+   * HuxBlog-Navbar using genuine Material Design Animation
+   */
   #huxblog_navbar {
     /**
-		 * Sharable code and 'out' function
-		 */
+     * Sharable code and 'out' function
+     */
     opacity: 0;
     transform: scaleX(0);
     transform-origin: top right;
@@ -345,8 +353,8 @@ pre code {
     -webkit-transform-origin: top right;
     -webkit-transition: all 200ms cubic-bezier(0.47, 0, 0.4, 0.99) 0ms;
     /**
-		 *'In' Animation
-		 */
+     *'In' Animation
+     */
   }
   #huxblog_navbar a {
     font-size: 13px;
