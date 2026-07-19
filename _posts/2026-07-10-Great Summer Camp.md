@@ -96,7 +96,7 @@ catalog: true
 <!-- Page Introduction -->
 <div class="lecture-intro">
   <p>
-    This page collects the PDF lecture notes from Prof. Fengcheng Wu's series of talks at the <strong>2026 Greater Bay Area Quantum Science Summer School</strong>. Topics include topological moiré bands, integer and fractional quantum anomalous Hall effects, collective excitations, and non-Abelian fractional quantum states. All files are stored in the <code>PPTX/</code> folder. Click to download or view online.
+    This page collects the PDF lecture notes from Prof. Fengcheng Wu's series of talks at the <strong>2026 Greater Bay Area Quantum Science Summer School</strong>. Topics include topological moiré bands, integer and fractional quantum anomalous Hall effects, collective excitations, and non-Abelian fractional quantum states. 
   </p>
 </div>
 
