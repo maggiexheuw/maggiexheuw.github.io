@@ -1,0 +1,282 @@
+---
+layout: page
+title: "Research"
+description: "Exploring topological phases and high-dimensional quantum Hall effects."
+header-img: "img/post-bg-rwd.jpg"
+---
+
+<style>
+  /* ===== 全局样式 ===== */
+  .research-wrapper {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .research-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255,255,255,0.6);
+    margin-top: 2rem;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4rem;          /* 基础大字号 */
+    line-height: 1.9;
+    color: #1e2a3a;
+  }
+
+  .research-card h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #1e3c6f;
+    border-bottom: 4px solid #eef3f9;
+    padding-bottom: 0.5rem;
+  }
+
+  .research-card h2 {
+    font-size: 2.0rem;
+    font-weight: 700;
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+    color: #1e3c6f;
+  }
+
+  .research-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #1e3c6f;
+  }
+
+  .research-card p {
+    margin: 1.4rem 0;
+  }
+
+  .research-card blockquote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #2c3e6b;
+    border-left: 6px solid #4a6fa5;
+    padding: 0.8rem 1.8rem;
+    background: #f5f9ff;
+    border-radius: 0 12px 12px 0;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(74,111,165,0.06);
+  }
+
+  .research-card blockquote p {
+    margin: 0;
+  }
+
+  /* 研究领域网格 */
+  .research-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 1.8rem 0;
+  }
+
+  .area-item {
+    background: #f8faff;
+    border-radius: 16px;
+    padding: 1.4rem 1.6rem;
+    border-left: 5px solid #4a6fa5;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .area-item:hover {
+    background: #f0f6ff;
+    transform: translateY(-4px);
+  }
+
+  .area-item .area-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3c6f;
+    margin-bottom: 0.3rem;
+  }
+
+  .area-item .area-desc {
+    font-size: 1.15rem;
+    color: #3e5a76;
+    margin: 0;
+  }
+
+  /* 论文卡片（复用 About 样式） */
+  .pub-item {
+    background: #f8faff;
+    padding: 1.4rem 1.8rem;
+    border-radius: 16px;
+    border-left: 6px solid #4a6fa5;
+    margin: 1.4rem 0;
+    transition: background 0.2s;
+  }
+
+  .pub-item:hover {
+    background: #f0f6ff;
+  }
+
+  .pub-item .pub-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e3c6f;
+    margin-bottom: 0.2rem;
+  }
+
+  .pub-item .pub-authors {
+    font-size: 1.2rem;
+    color: #3e5a76;
+  }
+
+  .pub-item .pub-journal {
+    font-size: 1.15rem;
+    color: #6a7a8a;
+    margin: 0.2rem 0;
+  }
+
+  .pub-item .pub-links a {
+    display: inline-block;
+    margin-right: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #4a6fa5;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .pub-item .pub-links a:hover {
+    border-bottom-color: #4a6fa5;
+  }
+
+  /* 列表 */
+  .research-card ul {
+    padding-left: 1.8rem;
+    margin: 1rem 0;
+  }
+
+  .research-card ul li {
+    margin: 0.8rem 0;
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.8rem;
+    font-size: 1.3rem;
+  }
+
+  .research-card ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #4a6fa5;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  /* 响应式 */
+  @media (max-width: 768px) {
+    .research-card {
+      padding: 1.8rem 1.2rem;
+      font-size: 1.2rem;
+    }
+    .research-card h1 {
+      font-size: 2.2rem;
+    }
+    .research-card h2 {
+      font-size: 1.6rem;
+    }
+    .research-card h3 {
+      font-size: 1.3rem;
+    }
+    .research-card blockquote {
+      font-size: 1.3rem;
+    }
+    .research-areas {
+      grid-template-columns: 1fr;
+    }
+    .pub-item .pub-title {
+      font-size: 1.3rem;
+    }
+  }
+</style>
+
+<div class="research-wrapper">
+  <div class="research-card">
+
+    <h1>Research</h1>
+
+    <blockquote>
+      <p>“The real purpose of science is to understand the deep structure of nature.”</p>
+    </blockquote>
+
+    <p>
+      My research focuses on the intersection of <strong>condensed matter theory</strong>, 
+      <strong>topological phases</strong>, and <strong>quantum many-body physics</strong>. 
+      I am particularly interested in high-dimensional generalizations of the quantum Hall 
+      effect and the role of geometry and topology in strongly correlated electron systems.
+    </p>
+
+    <!-- 研究领域 -->
+    <h2>Research Areas</h2>
+    <div class="research-areas">
+      <div class="area-item">
+        <div class="area-title">Topological Phases of Matter</div>
+        <div class="area-desc">Fractional quantum Hall states, topological order, and symmetry-protected phases in 2D and 4D.</div>
+      </div>
+      <div class="area-item">
+        <div class="area-title">High-Dimensional Quantum Hall Effects</div>
+        <div class="area-desc">Generalized Laughlin wavefunctions, pseudopotential formalism on higher-dimensional spheres.</div>
+      </div>
+      <div class="area-item">
+        <div class="area-title">Differential Geometry &amp; Topology</div>
+        <div class="area-desc">Chern-Simons theory, Gauss-Bonnet, and index theorems applied to interacting electron systems.</div>
+      </div>
+      <div class="area-item">
+        <div class="area-title">Computational Many-Body Physics</div>
+        <div class="area-desc">Exact diagonalization, Monte Carlo, and tensor network methods for strongly correlated models.</div>
+      </div>
+    </div>
+
+    <!-- 代表性工作 -->
+    <h2>Highlighted Work</h2>
+    <div class="pub-item">
+      <div class="pub-title">Incompressible Quantum Hall Liquid on the Four-Dimensional Sphere</div>
+      <div class="pub-authors">Junwen Zhao, Xue Meng, <strong>Maggie Xheuw</strong>, Wei Zhu, Congjun Wu</div>
+      <div class="pub-journal"><em>Phys. Rev. Lett.</em> <strong>136</strong>, 116501 (2026)</div>
+      <div class="pub-links">
+        <a href="https://journals.aps.org/prl/abstract/10.1103/qygs-j2ys" target="_blank">DOI: 10.1103/qygs-j2ys</a>
+        <a href="https://arxiv.org/abs/2508.17989" target="_blank">arXiv:2508.17989</a>
+      </div>
+    </div>
+    <p style="font-size: 1.2rem; color: #3e5a76;">
+      In this PRL paper, we constructed microscopic wavefunctions on a four-dimensional 
+      sphere, derived an exact pseudopotential Hamiltonian, and proved the existence of 
+      an incompressible fractional quantum Hall liquid in 4D—providing a foundation for 
+      studying high-dimensional quantum Hall physics.
+    </p>
+
+    <!-- 合作与实验支持 -->
+    <h2>Collaborations &amp; Facilities</h2>
+    <p>
+      I work closely with the <a href="https://wucj.lab.westlake.edu.cn/" target="_blank"><strong>Wu Group</strong></a> 
+      at Westlake University, combining analytical field theory with large-scale numerical 
+      simulations. We also collaborate with experimental groups on topological materials 
+      and quantum devices.
+    </p>
+
+    <!-- 未来方向 -->
+    <h2>Future Directions</h2>
+    <ul>
+      <li>Exploring higher-dimensional generalizations of the fractional quantum Hall effect.</li>
+      <li>Connecting geometric invariants (e.g., Chern numbers) to observables in quantum matter.</li>
+      <li>Developing efficient numerical methods for interacting topological systems.</li>
+      <li>Understanding the role of quantum entanglement in topological order.</li>
+    </ul>
+
+  </div> <!-- /.research-card -->
+</div> <!-- /.research-wrapper -->
