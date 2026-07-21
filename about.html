@@ -22,12 +22,11 @@ header-img: "img/post-bg-rwd.jpg"
     transition: box-shadow 0.3s ease;
     border: 1px solid rgba(255,255,255,0.6);
     margin-top: 2rem;
-  }
 
-  /* 大字号 */
-  .about-card {
-    font-size: 1.2rem;        /* 基础字号 ~19px */
-    line-height: 1.8;
+    /* 字体设置：Times New Roman，更大号 */
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4rem;          /* 比原 1.2rem 更大 */
+    line-height: 1.9;
     color: #1e2a3a;
   }
 
@@ -43,7 +42,7 @@ header-img: "img/post-bg-rwd.jpg"
   }
 
   .about-card h5 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;          /* 标题也放大 */
     color: #1e3c6f;
     border-bottom: 3px solid #eef3f9;
     padding-bottom: 0.5rem;
@@ -51,7 +50,7 @@ header-img: "img/post-bg-rwd.jpg"
   }
 
   .about-card blockquote {
-    font-size: 1.5rem;
+    font-size: 1.7rem;          /* 引用放大 */
     font-style: italic;
     color: #2c3e6b;
     border-left: 6px solid #4a6fa5;
@@ -67,7 +66,7 @@ header-img: "img/post-bg-rwd.jpg"
   }
 
   .about-card p {
-    margin: 1.2rem 0;
+    margin: 1.4rem 0;
   }
 
   .about-card ul {
@@ -76,11 +75,11 @@ header-img: "img/post-bg-rwd.jpg"
   }
 
   .about-card ul li {
-    margin: 0.7rem 0;
+    margin: 0.8rem 0;
     list-style-type: none;
     position: relative;
     padding-left: 1.8rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;          /* 列表项放大 */
   }
 
   .about-card ul li::before {
@@ -89,7 +88,7 @@ header-img: "img/post-bg-rwd.jpg"
     left: 0;
     color: #4a6fa5;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   /* 社交链接美化 */
@@ -113,12 +112,12 @@ header-img: "img/post-bg-rwd.jpg"
 
   .social-links a {
     display: inline-block;
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 1.4rem;
     background: #f0f4fc;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.3rem;          /* 社交按钮字体放大 */
     color: #1e3c6f;
     transition: all 0.25s ease;
     border: 1px solid transparent;
@@ -135,10 +134,10 @@ header-img: "img/post-bg-rwd.jpg"
   /* 出版物条目 */
   .pub-item {
     background: #f8faff;
-    padding: 1.2rem 1.6rem;
+    padding: 1.4rem 1.8rem;
     border-radius: 16px;
     border-left: 6px solid #4a6fa5;
-    margin: 1.2rem 0;
+    margin: 1.4rem 0;
     transition: background 0.2s;
   }
 
@@ -147,19 +146,19 @@ header-img: "img/post-bg-rwd.jpg"
   }
 
   .pub-item .pub-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;          /* 论文标题放大 */
     font-weight: 700;
     color: #1e3c6f;
     margin-bottom: 0.2rem;
   }
 
   .pub-item .pub-authors {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     color: #3e5a76;
   }
 
   .pub-item .pub-journal {
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: #6a7a8a;
     margin: 0.2rem 0;
   }
@@ -167,7 +166,7 @@ header-img: "img/post-bg-rwd.jpg"
   .pub-item .pub-links a {
     display: inline-block;
     margin-right: 1.2rem;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: #4a6fa5;
     text-decoration: none;
@@ -181,7 +180,7 @@ header-img: "img/post-bg-rwd.jpg"
 
   /* 引用标记 sup 调整 */
   .about-card sup {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: #4a6fa5;
   }
 
@@ -189,21 +188,21 @@ header-img: "img/post-bg-rwd.jpg"
   @media (max-width: 768px) {
     .about-card {
       padding: 1.8rem 1.2rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
     .about-card blockquote {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       padding: 0.6rem 1.2rem;
     }
     .about-card h5 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
     .social-links a {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       padding: 0.3rem 1rem;
     }
     .pub-item .pub-title {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 </style>
@@ -217,11 +216,12 @@ header-img: "img/post-bg-rwd.jpg"
       <p>“There's plenty of room at the bottom.” – Richard Feynman</p>
     </blockquote>
 
-    <!-- 个人简介 -->
+    <!-- 个人简介（已修正导师信息） -->
     <p>
       Hello! I am <strong>Maggie Xheuw</strong>, a Ph.D. candidate in Physics at 
       <a href="https://www.westlake.edu.cn/" target="_blank">Westlake University</a>, 
-      supervised by Prof. Congjun Wu and Prof. Wei Zhu.
+      supervised by 
+      <a href="https://wucj.lab.westlake.edu.cn/" target="_blank"><strong>Prof. Congjun Wu</strong></a>.
     </p>
 
     <p>
