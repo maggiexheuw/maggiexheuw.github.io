@@ -2,7 +2,7 @@
 layout: post
 title: "Classical Literature Reading"
 subtitle: "A Collection of Classic Papers in Physics, Mathematics, and Beyond"
-date: 2024-05-08
+date: 2026-07-15
 author: Maggie
 header-img: img/Andersonphoto.jpg
 catalog: true
@@ -1158,4 +1158,4 @@ A collection of classic papers, historical essays, and foundational texts in
     <h3>📚 More to Come</h3>
     <p>This collection is continuously updated.<br>
     <em>"The reading of all good books is like a conversation with the finest minds of past centuries."</em></p>
-</div>  
+</div>
