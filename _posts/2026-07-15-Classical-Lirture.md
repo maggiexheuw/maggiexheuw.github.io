@@ -1158,4 +1158,4 @@ A collection of classic papers, historical essays, and foundational texts in
     <h3>📚 More to Come</h3>
     <p>This collection is continuously updated.<br>
     <em>"The reading of all good books is like a conversation with the finest minds of past centuries."</em></p>
-</div>
+</div>  
