@@ -8,556 +8,450 @@ header-img: none
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} · {{ site.title }}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ===== Google Fonts ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<title>{{ page.title }} · {{ site.title }}</title>
 
-  <style>
-    /* ================================================================
-       GLOBAL OVERRIDE – 重塑整个页面，脱离 HuxBlog 默认样式
-       ================================================================ */
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    /* ---------- 隐藏 HuxBlog 默认的 intro-header ---------- */
-    .intro-header {
-      display: none !important;
-    }
+<style>
+/* ===========================
+   SOFT ACADEMIC LUXURY THEME
+   =========================== */
 
-    /* ---------- 重置容器宽度 ---------- */
-    .container {
-      max-width: 100% !important;
-      padding: 0 !important;
-    }
+:root{
+  --bg:#f7f5ef;
+  --paper:#fffdf8;
+  --ink:#17211f;
+  --muted:#68736d;
+  --green:#214b42;
+  --gold:#b08a48;
+  --line:rgba(23,33,31,.12);
+  --shadow:0 18px 50px rgba(20,30,28,.10);
+  --radius:26px;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Inter", sans-serif;
+}
 
-    .row {
-      margin: 0 !important;
-    }
+*{
+ box-sizing:border-box;
+}
 
-    .col-lg-8, .col-lg-offset-2, .col-md-10, .col-md-offset-1 {
-      width: 100% !important;
-      margin-left: 0 !important;
-      padding: 0 !important;
-      float: none !important;
-    }
+body{
+ margin:0;
+ background:
+ radial-gradient(circle at 10% 0%,rgba(176,138,72,.12),transparent 30rem),
+ radial-gradient(circle at 90% 10%,rgba(33,75,66,.10),transparent 30rem),
+ var(--bg);
+ color:var(--ink);
+ font-family:var(--sans);
+}
 
-    /* ---------- 全局基础 ---------- */
-    body {
-      background: #f8fafc !important;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-      color: #1e293b !important;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
+.intro-header{
+ display:none!important;
+}
 
-    /* ---------- CSS 变量（学术配色） ---------- */
-    :root {
-      --navy: #12355b;
-      --slate: #274c77;
-      --gray-blue: #4b6584;
-      --light-gray: #dbe4ee;
-      --bg-body: #f8fafc;
-      --card-bg: #ffffff;
-      --radius-card: 22px;
-      --shadow-card: 0 15px 45px rgba(18, 53, 91, 0.08);
-      --shadow-hover: 0 20px 60px rgba(18, 53, 91, 0.14);
-      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      --max-width: 1180px;
-      --font-serif: 'Playfair Display', serif;
-      --font-sans: 'Inter', sans-serif;
-    }
+.container,.row{
+ width:100%!important;
+ margin:0!important;
+ padding:0!important;
+}
 
-    /* ================================================================
-       HERO 区域 – 替代原 Header
-       ================================================================ */
-    .hero {
-      padding: 80px 24px 70px;
-      background:
-        linear-gradient(135deg, rgba(18, 53, 91, 0.75), rgba(18, 53, 91, 0.88)),
-        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80')
-        center/cover no-repeat;
-      color: white;
-      border-radius: 0 0 48px 48px;
-      margin-bottom: 32px;
-      text-align: center;
-      position: relative;
-      isolation: isolate;
-    }
+.main-wrapper{
+ max-width:1280px;
+ margin:auto;
+ padding:0 32px 80px;
+}
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.05) 0%, transparent 60%);
-      border-radius: 0 0 48px 48px;
-      pointer-events: none;
-      z-index: 0;
-    }
+/* Hero */
 
-    .hero > * {
-      position: relative;
-      z-index: 1;
-    }
+.hero{
+ margin:0 auto 50px;
+ padding:90px 30px 80px;
+ text-align:center;
+ color:white;
+ background:
+ linear-gradient(135deg,rgba(16,35,34,.92),rgba(33,75,66,.82)),
+ url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1600")
+ center/cover;
+ border-radius:0 0 60px 60px;
+}
 
-    .hero h1 {
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 4.6rem;        /* ~74px */
-      letter-spacing: -0.02em;
-      margin: 0 0 0.25rem 0;
-      line-height: 1.1;
-    }
+.hero h1{
+ font-family:var(--serif);
+ font-size:88px;
+ line-height:1;
+ margin:0;
+ letter-spacing:-2px;
+}
 
-    .hero .sub {
-      font-family: var(--font-sans);
-      font-weight: 300;
-      font-size: 1.8rem;        /* ~29px */
-      opacity: 0.92;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.3px;
-    }
+.hero .sub{
+ font-size:30px;
+ font-weight:300;
+ margin:15px 0;
+}
 
-    .hero .description {
-      font-size: 1.25rem;       /* 20px */
-      opacity: 0.78;
-      max-width: 620px;
-      margin: 0.8rem auto 0;
-      line-height: 1.7;
-      font-weight: 300;
-      letter-spacing: 0.2px;
-    }
+.hero .description{
+ max-width:700px;
+ margin:auto;
+ font-size:18px;
+ opacity:.85;
+}
 
-    /* ================================================================
-       主容器 – 宽屏居中
-       ================================================================ */
-    .main-wrapper {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px 40px;
-    }
+/* Search */
 
-    /* ================================================================
-       搜索框
-       ================================================================ */
-    .search-box {
-      max-width: 480px;
-      margin: 28px auto 40px;
-      position: relative;
-    }
+.search-box{
+ max-width:620px;
+ margin:0 auto 55px;
+}
 
-    .search-box input {
-      width: 100%;
-      padding: 16px 24px;
-      font-family: var(--font-sans);
-      font-size: 1.1rem;
-      border: 2px solid var(--light-gray);
-      border-radius: 60px;
-      background: var(--card-bg);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-      transition: border-color 0.25s, box-shadow 0.25s;
-      outline: none;
-      color: #1e293b;
-    }
+.search-box input{
+ width:100%;
+ padding:20px 28px;
+ border-radius:50px;
+ border:1px solid var(--line);
+ background:rgba(255,253,248,.85);
+ box-shadow:var(--shadow);
+ font-size:18px;
+ outline:none;
+}
 
-    .search-box input:focus {
-      border-color: var(--slate);
-      box-shadow: 0 8px 28px rgba(18, 53, 91, 0.08);
-    }
+.search-box input:focus{
+ border-color:var(--gold);
+}
 
-    .search-box input::placeholder {
-      color: #94a3b8;
-      font-weight: 300;
-    }
+/* Tag cloud */
 
-    /* ================================================================
-       Tag 云 – 卡片网格（Apple Card 风格）
-       ================================================================ */
-    .tag-cloud {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 18px;
-      margin-bottom: 56px;
-    }
+.tag-cloud{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+ gap:24px;
+ margin-bottom:90px;
+}
 
-    .tag-cloud .tag-item {
-      background: var(--card-bg);
-      padding: 18px 22px;
-      border-radius: var(--radius-card);
-      box-shadow: var(--shadow-card);
-      border-left: 6px solid var(--slate);
-      transition: all var(--transition);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      color: #1e293b;
-      font-family: var(--font-sans);
-    }
+.tag-item{
+ position:relative;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:30px 32px;
+ background:var(--paper);
+ border-radius:var(--radius);
+ border:1px solid rgba(176,138,72,.18);
+ box-shadow:var(--shadow);
+ color:var(--ink);
+ text-decoration:none;
+ transition:.3s;
+ overflow:hidden;
+}
 
-    .tag-cloud .tag-item:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-      background: #ffffff;
-    }
+.tag-item:before{
+ content:"";
+ position:absolute;
+ left:0;
+ top:0;
+ bottom:0;
+ width:8px;
+ background:linear-gradient(var(--gold),var(--green));
+}
 
-    .tag-cloud .tag-name {
-      font-weight: 600;
-      font-size: 1.15rem;
-      letter-spacing: -0.2px;
-    }
+.tag-item:hover{
+ transform:translateY(-8px);
+ box-shadow:0 30px 70px rgba(20,30,28,.16);
+}
 
-    .tag-cloud .tag-count {
-      background: var(--light-gray);
-      color: var(--navy);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 2px 14px;
-      border-radius: 40px;
-      letter-spacing: 0.3px;
-    }
+.tag-name{
+ font-family:var(--serif);
+ font-size:32px;
+ font-weight:700;
+}
 
-    /* ================================================================
-       Tag 分区 – 编号 + 文章卡片
-       ================================================================ */
-    .tag-section {
-      margin-bottom: 56px;
-      scroll-margin-top: 20px;
-    }
+.tag-count{
+ background:#eee7d7;
+ color:var(--green);
+ padding:6px 18px;
+ border-radius:40px;
+ font-size:16px;
+ font-weight:700;
+}
 
-    /* ---- 分区头 ---- */
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      border-bottom: 2px solid #e9edf2;
-      padding-bottom: 12px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
+/* Sections */
 
-    .section-number {
-      font-family: var(--font-serif);
-      font-weight: 600;
-      font-size: 2.2rem;        /* ~35px */
-      color: var(--slate);
-      opacity: 0.65;
-      letter-spacing: 0.02em;
-      line-height: 1;
-    }
+.tag-section{
+ margin-bottom:75px;
+ scroll-margin-top:30px;
+}
 
-    .section-title {
-      font-family: var(--font-serif);
-      font-weight: 600;
-      font-size: 2.4rem;        /* ~38px */
-      color: var(--navy);
-      margin: 0;
-      line-height: 1.2;
-    }
+.section-header{
+ display:flex;
+ align-items:center;
+ gap:20px;
+ border-bottom:1px solid var(--line);
+ padding-bottom:18px;
+ margin-bottom:28px;
+}
 
-    .section-article-count {
-      margin-left: auto;
-      font-size: 1rem;
-      color: var(--gray-blue);
-      background: var(--light-gray);
-      padding: 4px 18px;
-      border-radius: 40px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
+.section-number{
+ font-family:var(--serif);
+ font-size:55px;
+ color:var(--gold);
+ opacity:.7;
+}
 
-    /* ---- 文章卡片列表 ---- */
-    .article-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
+.section-title{
+ font-family:var(--serif);
+ font-size:52px;
+ margin:0;
+}
 
-    .article-card {
-      background: var(--card-bg);
-      padding: 28px 32px;               /* 充裕内边距 */
-      border-radius: var(--radius-card);
-      box-shadow: var(--shadow-card);
-      border-left: 6px solid var(--slate);
-      transition: all var(--transition);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 10px 30px;
-      line-height: 1.8;                /* 行距 1.8 */
-    }
+.section-article-count{
+ margin-left:auto;
+ padding:8px 20px;
+ border-radius:50px;
+ background:#ece8dc;
+ color:var(--green);
+}
 
-    .article-card:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateX(4px);
-    }
+/* Article cards */
 
-    .article-card .post-title {
-      font-family: var(--font-serif);
-      font-weight: 600;
-      font-size: 1.45rem;             /* ~23px */
-      color: var(--navy);
-      text-decoration: none;
-      flex: 1 1 220px;
-    }
+.article-list{
+ display:flex;
+ flex-direction:column;
+ gap:18px;
+}
 
-    .article-card .post-title a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+.article-card{
+ background:var(--paper);
+ padding:32px 38px;
+ border-radius:22px;
+ border:1px solid var(--line);
+ box-shadow:0 10px 35px rgba(20,30,28,.07);
+ display:grid;
+ grid-template-columns:1.4fr 1fr auto;
+ gap:30px;
+ align-items:center;
+ transition:.3s;
+}
 
-    .article-card .post-title a:hover {
-      color: var(--slate);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
+.article-card:hover{
+ transform:translateX(8px);
+ box-shadow:var(--shadow);
+}
 
-    .article-card .post-subtitle {
-      font-size: 1.05rem;             /* ~17px */
-      color: var(--gray-blue);
-      font-weight: 400;
-      flex: 1 1 160px;
-      margin: 0;
-    }
+.post-title a{
+ font-family:var(--serif);
+ font-size:30px;
+ font-weight:700;
+ color:var(--green);
+ text-decoration:none;
+}
 
-    .article-card .post-date {
-      font-size: 1rem;                /* 16px */
-      color: #94a3b8;
-      font-weight: 400;
-      margin-left: auto;
-      white-space: nowrap;
-      font-feature-settings: "tnum";
-    }
+.post-subtitle{
+ color:var(--muted);
+ font-size:18px;
+}
 
-    /* ================================================================
-       响应式 – 手机 & 平板
-       ================================================================ */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 3.0rem;
-      }
-      .hero .sub {
-        font-size: 1.4rem;
-      }
-      .hero .description {
-        font-size: 1.05rem;
-      }
-      .hero {
-        padding: 60px 20px 50px;
-      }
+.post-date{
+ color:#9b9588;
+ font-weight:600;
+}
 
-      .tag-cloud {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 14px;
-      }
+/* mobile */
 
-      .section-title {
-        font-size: 1.8rem;
-      }
-      .section-number {
-        font-size: 1.6rem;
-      }
+@media(max-width:800px){
 
-      .article-card {
-        padding: 20px 22px;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 6px;
-      }
-      .article-card .post-date {
-        margin-left: 0;
-      }
-    }
+.main-wrapper{
+ padding:0 18px 50px;
+}
 
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-      .hero .sub {
-        font-size: 1.2rem;
-      }
-      .hero .description {
-        font-size: 0.95rem;
-      }
-      .tag-cloud {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-      .section-title {
-        font-size: 1.5rem;
-      }
-      .article-card .post-title {
-        font-size: 1.2rem;
-      }
-    }
+.hero h1{
+ font-size:55px;
+}
 
-    /* ================================================================
-       辅助类 – 隐藏/显示
-       ================================================================ */
-    .hidden {
-      display: none !important;
-    }
+.hero .sub{
+ font-size:22px;
+}
 
-    /* ================================================================
-       底部返回（可选）
-       ================================================================ */
-    .back-to-top {
-      display: block;
-      text-align: center;
-      margin: 40px 0 20px;
-      font-family: var(--font-sans);
-      font-weight: 500;
-      color: var(--slate);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .back-to-top:hover {
-      color: var(--navy);
-      text-decoration: underline;
-    }
-  </style>
+.tag-name{
+ font-size:25px;
+}
+
+.section-title{
+ font-size:36px;
+}
+
+.article-card{
+ grid-template-columns:1fr;
+ padding:25px;
+}
+
+}
+</style>
 </head>
+
 
 <body>
 
-  <!-- ==============================================================
-       HERO – 完全替代原 Header
-       ============================================================== -->
-  <header class="hero">
-    <h1>Research Topics</h1>
-    <p class="sub">A map of my research interests</p>
-    <p class="description">
-      Condensed Matter Physics · Quantum Field Theory · Topology · Mathematical Physics
-    </p>
-  </header>
+<header class="hero">
+<h1>Research Topics</h1>
+<p class="sub">A map of my research interests</p>
+<p class="description">
+Condensed Matter Physics · Quantum Field Theory · Topology · Mathematical Physics
+</p>
+</header>
 
-  <!-- ==============================================================
-       主内容区域 – 宽屏居中
-       ============================================================== -->
-  <div class="main-wrapper">
 
-    <!-- ===== 搜索框 ===== -->
-    <div class="search-box">
-      <input type="text" id="tagSearch" placeholder="Filter topics …" aria-label="Filter tags">
-    </div>
+<div class="main-wrapper">
 
-    <!-- ===== TAG 云（网格卡片） ===== -->
-    <div class="tag-cloud" id="tagCloud">
-      {% assign sorted_tags = site.tags | sort %}
-      {% for tag in sorted_tags %}
-        {% assign tag_name = tag[0] %}
-        {% assign posts = tag[1] %}
-        <a href="#{{ tag_name | slugify }}" class="tag-item" data-tag="{{ tag_name | downcase }}">
-          <span class="tag-name">{{ tag_name }}</span>
-          <span class="tag-count">{{ posts.size }}</span>
-        </a>
-      {% endfor %}
-    </div>
+<div class="search-box">
+<input id="tagSearch" placeholder="Search research topics ...">
+</div>
 
-    <!-- ===== TAG 分区（按字母排序） ===== -->
-    <main>
-      {% assign sorted_tags = site.tags | sort %}
-      {% for tag in sorted_tags %}
-        {% assign tag_name = tag[0] %}
-        {% assign posts = tag[1] %}
-        {% assign section_number = forloop.index | prepend: '00' | slice: -2, 2 %}
 
-        <section class="tag-section" id="{{ tag_name | slugify }}">
-          <div class="section-header">
-            <span class="section-number">{{ section_number }}</span>
-            <h2 class="section-title">{{ tag_name }}</h2>
-            <span class="section-article-count">{{ posts.size }} article{% if posts.size > 1 %}s{% endif %}</span>
-          </div>
+<div class="tag-cloud" id="tagCloud">
 
-          <div class="article-list">
-            {% for post in posts %}
-              <div class="article-card">
-                <span class="post-title">
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </span>
-                {% if post.subtitle %}
-                  <span class="post-subtitle">{{ post.subtitle }}</span>
-                {% endif %}
-                <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
-                  {{ post.date | date: "%Y" }}
-                </time>
-              </div>
-            {% endfor %}
-          </div>
-        </section>
-      {% endfor %}
-    </main>
+{% assign sorted_tags = site.tags | sort %}
 
-    <!-- ===== 返回顶部 ===== -->
-    <a href="#" class="back-to-top">↑ Back to top</a>
+{% for tag in sorted_tags %}
 
-  </div>
+{% assign tag_name = tag[0] %}
+{% assign posts = tag[1] %}
 
-  <!-- ==============================================================
-       JavaScript – 搜索过滤 + 平滑滚动
-       ============================================================== -->
-  <script>
-    (function() {
-      const searchInput = document.getElementById('tagSearch');
-      const tagItems = document.querySelectorAll('.tag-item');
-      const tagSections = document.querySelectorAll('.tag-section');
+<a class="tag-item"
+href="#{{tag_name | slugify}}"
+data-tag="{{tag_name | downcase}}">
 
-      // ---------- 过滤函数 ----------
-      function filterTags(query) {
-        const q = query.trim().toLowerCase();
-        let anyVisible = false;
+<span class="tag-name">{{tag_name}}</span>
 
-        tagItems.forEach(item => {
-          const tag = item.dataset.tag;
-          const match = tag.includes(q);
-          item.classList.toggle('hidden', !match);
-          if (match) anyVisible = true;
-        });
+<span class="tag-count">
+{{posts.size}}
+</span>
 
-        // 根据对应的 tag item 是否可见，控制 section 显示
-        tagSections.forEach(section => {
-          const sectionId = section.id;
-          const correspondingItem = document.querySelector(`.tag-item[href="#${sectionId}"]`);
-          if (correspondingItem) {
-            const isHidden = correspondingItem.classList.contains('hidden');
-            section.style.display = isHidden ? 'none' : '';
-          }
-        });
-      }
+</a>
 
-      // ---------- 输入事件 ----------
-      searchInput.addEventListener('input', function(e) {
-        filterTags(e.target.value);
-      });
+{% endfor %}
 
-      // ---------- 点击 tag 平滑滚动 ----------
-      tagItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
+</div>
 
-      // ---------- 初始化（显示全部） ----------
-      filterTags('');
 
-      // ---------- 返回顶部平滑 ----------
-      document.querySelector('.back-to-top')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
 
-    })();
-  </script>
+{% for tag in sorted_tags %}
+
+{% assign tag_name = tag[0] %}
+{% assign posts = tag[1] %}
+
+<section class="tag-section"
+id="{{tag_name | slugify}}">
+
+
+<div class="section-header">
+
+<span class="section-number">
+{{forloop.index | prepend:'00' | slice:-2,2}}
+</span>
+
+<h2 class="section-title">
+{{tag_name}}
+</h2>
+
+<span class="section-article-count">
+{{posts.size}} articles
+</span>
+
+</div>
+
+
+<div class="article-list">
+
+{% for post in posts %}
+
+<div class="article-card">
+
+<div class="post-title">
+<a href="{{post.url | relative_url}}">
+{{post.title}}
+</a>
+</div>
+
+<div class="post-subtitle">
+{{post.subtitle}}
+</div>
+
+<time class="post-date">
+{{post.date | date:"%Y"}}
+</time>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+{% endfor %}
+
+
+<a class="back-to-top" href="#">
+↑ Back to top
+</a>
+
+</div>
+
+
+
+<script>
+
+const input=document.getElementById("tagSearch");
+
+const tags=document.querySelectorAll(".tag-item");
+
+const sections=document.querySelectorAll(".tag-section");
+
+
+input.addEventListener("input",()=>{
+
+let q=input.value.toLowerCase();
+
+tags.forEach(t=>{
+
+let ok=t.dataset.tag.includes(q);
+
+t.style.display=ok?"flex":"none";
+
+let id=t.getAttribute("href").substring(1);
+
+let section=document.getElementById(id);
+
+if(section)
+section.style.display=ok?"block":"none";
+
+});
+
+});
+
+
+tags.forEach(t=>{
+
+t.onclick=e=>{
+
+e.preventDefault();
+
+document.querySelector(
+t.getAttribute("href")
+).scrollIntoView({
+behavior:"smooth"
+});
+
+};
+
+});
+
+
+</script>
 
 </body>
 </html>
