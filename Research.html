@@ -2,85 +2,561 @@
 layout: page
 title: "Research"
 description: "Exploring topological phases and high-dimensional quantum Hall effects."
+header-img: "img/post-bg-rwd.jpg"
+permalink: /Research/
 ---
 
 <style>
-:root{
---bg:#f8f6ef;
---card:#fffdf8;
---green:#214b42;
---gold:#b08a48;
---ink:#17211f;
---shadow:0 25px 70px rgba(20,30,28,.12);
-}
-.research-wrapper{
-max-width:1100px;margin:auto;padding:30px;
-}
-.research-card{
-background:linear-gradient(145deg,#fffdf8,#f5f0e5);
-border-radius:38px;
-padding:70px;
-box-shadow:var(--shadow);
-font-family:"Cormorant Garamond",Georgia,serif;
-font-size:1.45rem;
-line-height:1.9;
-}
-.research-card h1{
-font-size:4rem;
-color:var(--green);
-margin-top:0;
-}
-.research-card h2{
-font-size:2.5rem;
-color:var(--green);
-margin-top:55px;
-}
-.research-card blockquote{
-font-size:2rem;
-background:#f0ece0;
-border-left:8px solid var(--gold);
-padding:20px 30px;
-border-radius:0 20px 20px 0;
-}
-.research-areas{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-.area-item{
-background:white;
-padding:30px;
-border-radius:28px;
-border-top:7px solid var(--gold);
-box-shadow:0 15px 40px rgba(0,0,0,.07);
-transition:.3s;
-}
-.area-item:hover{
-transform:translateY(-8px);
-box-shadow:0 30px 70px rgba(0,0,0,.12);
-}
-.area-title{
-font-size:1.7rem;
-font-weight:700;
-color:var(--green);
-}
-.area-desc{
-font-family:Inter,Arial,sans-serif;
-color:#68736d;
-}
-.pub-item{
-background:white;
-padding:30px;
-border-radius:25px;
-border-left:8px solid var(--green);
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
-@media(max-width:700px){
-.research-card{padding:30px}
-.research-card h1{font-size:3rem}
-}
+  /* 仅作用于 Research 页面，不覆盖 Bootstrap、404、侧栏或其他文章 */
+  .mx-research,
+  .mx-research * {
+    box-sizing: border-box;
+  }
+
+  .mx-research {
+    --mx-paper: #f4f0e7;
+    --mx-card: #fffdf8;
+    --mx-ink: #17211f;
+    --mx-muted: #68736d;
+    --mx-green: #214b42;
+    --mx-green-dark: #102d28;
+    --mx-rust: #a34d3c;
+    --mx-gold: #b58c48;
+    --mx-line: rgba(23, 33, 31, 0.13);
+    --mx-shadow: 0 26px 75px rgba(21, 35, 31, 0.12);
+    --mx-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Noto Serif", Georgia, serif;
+    --mx-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif;
+
+    width: min(1160px, calc(100% - 28px));
+    margin: 44px auto 94px;
+    color: var(--mx-ink);
+    font-family: var(--mx-sans);
+  }
+
+  .mx-research a {
+    color: inherit;
+  }
+
+  .mx-research-shell {
+    overflow: hidden;
+    border: 1px solid var(--mx-line);
+    border-radius: 35px;
+    background: var(--mx-paper);
+    box-shadow: var(--mx-shadow);
+  }
+
+  .mx-research-hero {
+    position: relative;
+    min-height: 460px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+    gap: 46px;
+    align-items: end;
+    padding: clamp(43px, 8vw, 84px);
+    overflow: hidden;
+    color: #f8f3e8;
+    background:
+      linear-gradient(122deg, rgba(13, 42, 37, 0.98), rgba(25, 68, 59, 0.92) 54%, rgba(91, 54, 39, 0.9)),
+      var(--mx-green-dark);
+  }
+
+  .mx-research-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.25;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(130deg, black, transparent 78%);
+  }
+
+  .mx-research-hero::after {
+    content: "∫";
+    position: absolute;
+    right: -25px;
+    bottom: -145px;
+    color: rgba(255,255,255,0.055);
+    font-family: var(--mx-serif);
+    font-size: 27rem;
+    line-height: 1;
+    transform: rotate(9deg);
+  }
+
+  .mx-research-hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mx-research-kicker {
+    margin: 0 0 17px;
+    color: #decaa3;
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .mx-research-title {
+    margin: 0;
+    font-family: var(--mx-serif);
+    font-size: clamp(4.2rem, 10vw, 8.5rem);
+    font-weight: 600;
+    line-height: 0.8;
+    letter-spacing: -0.07em;
+  }
+
+  .mx-research-title em {
+    display: block;
+    margin-left: 0.45em;
+    color: #dfcfaf;
+    font-weight: 400;
+  }
+
+  .mx-research-summary {
+    margin: 0;
+    color: rgba(248, 243, 232, 0.78);
+    font-family: var(--mx-serif);
+    font-size: 1.16rem;
+    line-height: 1.75;
+  }
+
+  .mx-research-quote {
+    margin-top: 25px;
+    padding-top: 21px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    color: rgba(248, 243, 232, 0.66);
+    font-size: 0.76rem;
+    line-height: 1.65;
+  }
+
+  .mx-research-content {
+    padding: clamp(34px, 7vw, 78px);
+    background:
+      radial-gradient(circle at 95% 0%, rgba(181, 140, 72, 0.09), transparent 26rem),
+      var(--mx-paper);
+  }
+
+  .mx-research-overview {
+    max-width: 900px;
+    margin: 0 auto 62px;
+    color: #3f4b46;
+    font-family: var(--mx-serif);
+    font-size: clamp(1.15rem, 2vw, 1.34rem);
+    line-height: 1.9;
+  }
+
+  .mx-research-section {
+    margin-top: 68px;
+  }
+
+  .mx-research-section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 27px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--mx-line);
+  }
+
+  .mx-research-label {
+    margin: 0 0 8px;
+    color: var(--mx-rust);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .mx-research-heading {
+    margin: 0;
+    font-family: var(--mx-serif);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.045em;
+  }
+
+  .mx-research-section-index {
+    color: var(--mx-gold);
+    font-family: var(--mx-serif);
+    font-size: 2.15rem;
+    line-height: 1;
+  }
+
+  .mx-research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px;
+  }
+
+  .mx-research-area {
+    position: relative;
+    min-height: 245px;
+    padding: 30px;
+    overflow: hidden;
+    border: 1px solid var(--mx-line);
+    border-radius: 23px;
+    background: rgba(255, 253, 248, 0.9);
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  }
+
+  .mx-research-area:hover {
+    transform: translateY(-5px);
+    border-color: rgba(33, 75, 66, 0.3);
+    box-shadow: 0 22px 56px rgba(22, 35, 31, 0.11);
+  }
+
+  .mx-research-area-number {
+    display: block;
+    margin-bottom: 35px;
+    color: var(--mx-gold);
+    font-family: var(--mx-serif);
+    font-size: 2.6rem;
+    line-height: 1;
+  }
+
+  .mx-research-area-title {
+    max-width: 420px;
+    margin: 0 0 14px;
+    color: var(--mx-green);
+    font-family: var(--mx-serif);
+    font-size: 1.65rem;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .mx-research-area-desc {
+    margin: 0;
+    color: var(--mx-muted);
+    font-size: 0.87rem;
+    line-height: 1.7;
+  }
+
+  .mx-highlight {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(29px, 5vw, 52px);
+    border-radius: 27px;
+    color: #f8f3e8;
+    background: #172f2a;
+    box-shadow: 0 25px 60px rgba(16, 45, 40, 0.2);
+  }
+
+  .mx-highlight::after {
+    content: "S⁴";
+    position: absolute;
+    right: 18px;
+    bottom: -46px;
+    color: rgba(255,255,255,0.055);
+    font-family: var(--mx-serif);
+    font-size: 10rem;
+    line-height: 1;
+  }
+
+  .mx-highlight > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mx-highlight-meta {
+    margin: 0 0 20px;
+    color: #d4b778;
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .mx-highlight-title {
+    max-width: 800px;
+    margin: 0 0 16px;
+    font-family: var(--mx-serif);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.12;
+  }
+
+  .mx-highlight-authors,
+  .mx-highlight-journal,
+  .mx-highlight-description {
+    max-width: 850px;
+    color: rgba(248, 243, 232, 0.75);
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+
+  .mx-highlight-description {
+    margin-top: 22px;
+    font-family: var(--mx-serif);
+    font-size: 1.05rem;
+  }
+
+  .mx-highlight-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 23px;
+  }
+
+  .mx-highlight-links a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border: 1px solid rgba(255,255,255,0.23);
+    border-radius: 999px;
+    color: #fff8ea;
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 750;
+  }
+
+  .mx-highlight-links a:hover,
+  .mx-highlight-links a:focus-visible {
+    background: rgba(255,255,255,0.09);
+  }
+
+  .mx-research-two-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px;
+  }
+
+  .mx-research-note {
+    padding: 30px;
+    border: 1px solid var(--mx-line);
+    border-radius: 22px;
+    background: rgba(255, 253, 248, 0.82);
+  }
+
+  .mx-research-note h3 {
+    margin: 0 0 15px;
+    color: var(--mx-green);
+    font-family: var(--mx-serif);
+    font-size: 1.65rem;
+    font-weight: 600;
+  }
+
+  .mx-research-note p,
+  .mx-research-note li {
+    color: var(--mx-muted);
+    font-size: 0.87rem;
+    line-height: 1.72;
+  }
+
+  .mx-research-note ul {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mx-research-note li {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .mx-research-note li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--mx-gold);
+    font-size: 0.62rem;
+  }
+
+  .mx-research-note a {
+    color: var(--mx-green);
+    font-weight: 700;
+  }
+
+  @media (max-width: 850px) {
+    .mx-research-hero {
+      min-height: 540px;
+      grid-template-columns: 1fr;
+      align-content: end;
+    }
+
+    .mx-research-grid,
+    .mx-research-two-column {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .mx-research {
+      width: min(100% - 16px, 1160px);
+      margin-top: 18px;
+    }
+
+    .mx-research-shell {
+      border-radius: 23px;
+    }
+
+    .mx-research-hero,
+    .mx-research-content {
+      padding: 30px 23px;
+    }
+
+    .mx-research-hero {
+      min-height: 480px;
+    }
+
+    .mx-research-title {
+      font-size: clamp(3.6rem, 24vw, 6rem);
+    }
+
+    .mx-research-section-head {
+      align-items: start;
+    }
+
+    .mx-research-area,
+    .mx-research-note {
+      padding: 24px 21px;
+    }
+  }
 </style>
 
-<div class="research-wrapper"><div class="research-card">
-{{ content }}
-</div></div>
+<article class="mx-research">
+  <div class="mx-research-shell">
+    <header class="mx-research-hero">
+      <div>
+        <p class="mx-research-kicker">Geometry · topology · quantum matter</p>
+        <h1 class="mx-research-title">Research <em>programme</em></h1>
+      </div>
+
+      <div>
+        <p class="mx-research-summary">
+          Exploring topological phases, strongly correlated quantum systems,
+          and high-dimensional generalizations of the quantum Hall effect.
+        </p>
+        <p class="mx-research-quote">
+          “The real purpose of science is to understand the deep structure of nature.”
+        </p>
+      </div>
+    </header>
+
+    <div class="mx-research-content">
+      <p class="mx-research-overview">
+        My research focuses on the intersection of <strong>condensed matter theory</strong>,
+        <strong>topological phases</strong>, and <strong>quantum many-body physics</strong>.
+        I am particularly interested in high-dimensional generalizations of the quantum
+        Hall effect and in the ways geometry and topology organize strongly correlated
+        electron systems.
+      </p>
+
+      <section class="mx-research-section">
+        <div class="mx-research-section-head">
+          <div>
+            <p class="mx-research-label">Current directions</p>
+            <h2 class="mx-research-heading">Research areas</h2>
+          </div>
+          <span class="mx-research-section-index">01</span>
+        </div>
+
+        <div class="mx-research-grid">
+          <article class="mx-research-area">
+            <span class="mx-research-area-number">01</span>
+            <h3 class="mx-research-area-title">Topological Phases of Matter</h3>
+            <p class="mx-research-area-desc">
+              Fractional quantum Hall states, topological order, and symmetry-protected
+              phases in two and four spatial dimensions.
+            </p>
+          </article>
+
+          <article class="mx-research-area">
+            <span class="mx-research-area-number">02</span>
+            <h3 class="mx-research-area-title">High-Dimensional Quantum Hall Effects</h3>
+            <p class="mx-research-area-desc">
+              Generalized Laughlin wavefunctions, pseudopotential formalisms, and
+              correlated liquids on higher-dimensional spheres.
+            </p>
+          </article>
+
+          <article class="mx-research-area">
+            <span class="mx-research-area-number">03</span>
+            <h3 class="mx-research-area-title">Differential Geometry &amp; Topology</h3>
+            <p class="mx-research-area-desc">
+              Chern–Simons theory, Gauss–Bonnet structures, characteristic classes,
+              and index-theoretic ideas in interacting quantum systems.
+            </p>
+          </article>
+
+          <article class="mx-research-area">
+            <span class="mx-research-area-number">04</span>
+            <h3 class="mx-research-area-title">Computational Many-Body Physics</h3>
+            <p class="mx-research-area-desc">
+              Exact diagonalization, Monte Carlo methods, representation theory,
+              and efficient numerical tools for strongly correlated models.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-research-section">
+        <div class="mx-research-section-head">
+          <div>
+            <p class="mx-research-label">Representative result</p>
+            <h2 class="mx-research-heading">Highlighted work</h2>
+          </div>
+          <span class="mx-research-section-index">02</span>
+        </div>
+
+        <article class="mx-highlight">
+          <p class="mx-highlight-meta">Physical Review Letters · 2026</p>
+          <h3 class="mx-highlight-title">Incompressible Quantum Hall Liquid on the Four-Dimensional Sphere</h3>
+          <p class="mx-highlight-authors">Junwen Zhao, Xue Meng, <strong>Maggie Xheuw</strong>, Wei Zhu, Congjun Wu</p>
+          <p class="mx-highlight-journal"><em>Phys. Rev. Lett.</em> <strong>136</strong>, 116501 (2026)</p>
+          <p class="mx-highlight-description">
+            We constructed microscopic wavefunctions on a four-dimensional sphere,
+            derived an exact pseudopotential Hamiltonian, and established an
+            incompressible fractional quantum Hall liquid in four dimensions—providing
+            a microscopic foundation for high-dimensional quantum Hall physics.
+          </p>
+          <div class="mx-highlight-links">
+            <a href="https://journals.aps.org/prl/abstract/10.1103/qygs-j2ys" target="_blank" rel="noopener noreferrer">Journal article ↗</a>
+            <a href="https://arxiv.org/abs/2508.17989" target="_blank" rel="noopener noreferrer">arXiv preprint ↗</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="mx-research-section">
+        <div class="mx-research-section-head">
+          <div>
+            <p class="mx-research-label">Programme &amp; environment</p>
+            <h2 class="mx-research-heading">Collaboration and next questions</h2>
+          </div>
+          <span class="mx-research-section-index">03</span>
+        </div>
+
+        <div class="mx-research-two-column">
+          <article class="mx-research-note">
+            <h3>Collaborations &amp; facilities</h3>
+            <p>
+              I work closely with the
+              <a href="https://wucj.lab.westlake.edu.cn/" target="_blank" rel="noopener noreferrer">Wu Group</a>
+              at Westlake University, combining analytical field theory,
+              representation-theoretic tools, and large-scale numerical simulations.
+              We also collaborate with experimental groups studying topological
+              materials and quantum devices.
+            </p>
+          </article>
+
+          <article class="mx-research-note">
+            <h3>Future directions</h3>
+            <ul>
+              <li>Higher-dimensional generalizations of fractional quantum Hall liquids.</li>
+              <li>Connections between geometric invariants and observables in quantum matter.</li>
+              <li>Efficient numerical methods for interacting topological systems.</li>
+              <li>The role of quantum entanglement in diagnosing topological order.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</article>
