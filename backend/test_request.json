@@ -1,0 +1,22 @@
+{
+  "p": 2,
+  "P": 4,
+  "Q": 0,
+  "J": 0,
+  "M1": 0,
+  "K": 0,
+  "M2": 0,
+  "epsC4": 1e-5,
+  "epsJ": 1e-4,
+  "epsK": 1e-6,
+  "tolC": 1e-6,
+  "tolC4": 1e-6,
+  "tolJ": 1e-6,
+  "tolK": 1e-6,
+  "cg_tol": 1e-12,
+  "calibrate_C4": true,
+  "show_diagnostics": true,
+  "recognize_radicals": true,
+  "max_rows": 200,
+  "digits": 10
+}
