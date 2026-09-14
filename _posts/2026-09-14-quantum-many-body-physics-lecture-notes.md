@@ -581,8 +581,6 @@ permalink: /quantum-many-body-physics-lecture-notes/
 
   </div>
 
-  <div class="qm-footer-note">
-    PDFs are served from the <code>Wu-note/</code> directory. The layout is responsive, so the cards appear in two columns on larger screens and collapse to a single column on mobile devices.
-  </div>
+
 
 </div>
