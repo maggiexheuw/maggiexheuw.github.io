@@ -1,464 +1,594 @@
 ---
 layout: post
-title: "Lecture Notes – Topological Moiré Bands, Fractional Chern Insulators, and Advanced Topics"
-subtitle: "Collected from 2026 Summer School and various workshops"
-date: 2026-07-19
+title: "Quantum Many-Body Physics — Lecture Notes"
+subtitle: "Field Theory, Fermi Liquids, Superconductivity, Superfluidity & Renormalization Group"
+date: 2026-09-14
 author: Maggie
 header-img: img/EdWitten.jpg
 catalog: true
 ---
 
 <!-- ========================================================== -->
-<!-- 说明：所有 PDF 文件均存放在 PPTX/ 文件夹中，链接为绝对 URL -->
-<!-- 涵盖：吴冯成课程 + 补充讲义（QMC/高形式对称性/反常/CFT）  -->
-<!--       + K.T. Law 系列（Cooper/BCS/量子几何/长度尺度等）    -->
+<!-- Quantum Many-Body Physics · Lectures 01–10                 -->
+<!-- PDFs are stored in the Wu-note/ folder.                     -->
 <!-- ========================================================== -->
 
 <style>
-  .lecture-intro {
-    font-size: 1.6rem;            /* 增大 */
-    line-height: 1.8;
-    color: #2d3748;
-    margin-bottom: 2rem;
+  /* ---------- Page scope ---------- */
+  .qm-page {
+    --qm-ink: #172033;
+    --qm-muted: #667085;
+    --qm-line: #e7eaf0;
+    --qm-surface: #ffffff;
+    --qm-soft: #f7f8fb;
+    --qm-accent: #4f46e5;
+    --qm-accent-2: #7c3aed;
+    --qm-shadow: 0 18px 45px rgba(24, 32, 51, 0.08);
+    color: var(--qm-ink);
+    font-size: 18px;
+    line-height: 1.75;
   }
-  
-  .lecture-list {
+
+  .qm-page * {
+    box-sizing: border-box;
+  }
+
+  /* ---------- Hero ---------- */
+  .qm-hero {
+    position: relative;
+    overflow: hidden;
+    margin: 1.5rem 0 2.4rem;
+    padding: clamp(2rem, 5vw, 4.2rem);
+    border: 1px solid rgba(79, 70, 229, 0.13);
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 88% 14%, rgba(124, 58, 237, 0.16), transparent 30%),
+      radial-gradient(circle at 10% 88%, rgba(14, 165, 233, 0.12), transparent 32%),
+      linear-gradient(135deg, #fafaff 0%, #f7f8ff 48%, #fbfdff 100%);
+    box-shadow: var(--qm-shadow);
+  }
+
+  .qm-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(79, 70, 229, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 70, 229, 0.035) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: linear-gradient(to bottom right, rgba(0,0,0,.75), transparent 72%);
+  }
+
+  .qm-eyebrow {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(79, 70, 229, 0.15);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.74);
+    color: #5145cd;
+    font-size: 0.98rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .qm-hero-title {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 0 1rem !important;
+    color: #111827;
+    font-size: clamp(2.45rem, 5.4vw, 4.45rem) !important;
+    line-height: 1.06;
+    font-weight: 850;
+    letter-spacing: -0.045em;
+  }
+
+  .qm-hero-lead {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin: 0;
+    color: #596275;
+    font-size: clamp(1.22rem, 2.35vw, 1.52rem);
+    line-height: 1.75;
+  }
+
+  .qm-meta {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.7rem;
+  }
+
+  .qm-meta span {
+    padding: 0.48rem 0.78rem;
+    border: 1px solid #e6e8f1;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.76);
+    color: #4b5565;
+    font-size: 1.06rem;
+    font-weight: 650;
+  }
+
+  /* ---------- Section intro ---------- */
+  .qm-section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 3rem 0 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--qm-line);
+  }
+
+  .qm-section-head h2 {
+    margin: 0 !important;
+    color: #151a28;
+    font-size: clamp(1.95rem, 3.4vw, 2.55rem) !important;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .qm-section-kicker {
+    color: #8a93a4;
+    font-size: 1.03rem;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .qm-intro {
+    margin: 0 0 2rem;
+    padding: 1rem 1.15rem;
+    border-left: 3px solid #6366f1;
+    border-radius: 0 12px 12px 0;
+    background: #f8f9ff;
+    color: #566074;
+    font-size: 1.2rem;
+    line-height: 1.75;
+  }
+
+  /* ---------- Topic path ---------- */
+  .qm-path {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 0 0 2.2rem;
+  }
+
+  .qm-path span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.48rem 0.78rem;
+    border: 1px solid var(--qm-line);
+    border-radius: 10px;
+    background: var(--qm-surface);
+    color: #5e6677;
+    font-size: 1.03rem;
+    font-weight: 650;
+    box-shadow: 0 4px 12px rgba(17, 24, 39, 0.035);
+  }
+
+  .qm-path span::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--qm-accent), var(--qm-accent-2));
+  }
+
+  /* ---------- Lecture cards ---------- */
+  .qm-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.15rem;
   }
 
-  .lecture-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 2rem 2.2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .lecture-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.10);
+  .qm-card {
+    --card-accent: #4f46e5;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+    padding: 1.85rem 1.85rem 1.7rem;
+    border: 1px solid var(--qm-line);
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #fdfdff 100%);
+    box-shadow: 0 9px 28px rgba(17, 24, 39, 0.055);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   }
 
-  .section-header {
-    font-size: 1.8rem;            /* 增大 */
+  .qm-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-accent);
+  }
+
+  .qm-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--card-accent) 24%, #e7eaf0);
+    box-shadow: 0 18px 38px rgba(17, 24, 39, 0.095);
+  }
+
+  .qm-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .qm-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.1rem;
+    height: 2rem;
+    padding: 0 0.7rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--card-accent) 10%, white);
+    color: var(--card-accent);
+    font-size: 0.98rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+  }
+
+  .qm-topic {
+    color: #9299a8;
+    font-size: 0.96rem;
     font-weight: 700;
-    color: #1a202c;
-    margin-top: 2.5rem;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 3px solid #e2e8f0;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
-  .subsection-header {
-    font-size: 1.6rem;            /* 增大 */
-    font-weight: 600;
-    color: #1a202c;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
+  .qm-card h3 {
+    margin: 0 0 0.8rem !important;
+    color: #1b2232;
+    font-size: 1.66rem !important;
+    line-height: 1.35;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 
-  .section-intro {
-    font-size: 1.3rem;            /* 增大 */
-    color: #4a5568;
+  .qm-desc {
+    flex: 1;
+    margin: 0 0 1.35rem;
+    color: #687184;
+    font-size: 1.16rem;
+    line-height: 1.72;
+  }
+
+  .qm-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 0.5rem;
+    padding: 0.68rem 0.95rem;
+    border: 1px solid color-mix(in srgb, var(--card-accent) 18%, #e7eaf0);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--card-accent) 7%, white);
+    color: var(--card-accent) !important;
+    text-decoration: none !important;
+    font-size: 1.06rem;
+    font-weight: 800;
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+
+  .qm-btn:hover {
+    background: color-mix(in srgb, var(--card-accent) 12%, white);
+    transform: translateY(-1px);
+  }
+
+  .qm-btn::after {
+    content: "↗";
+    font-size: 0.95rem;
+  }
+
+  .qm-card.c1  { --card-accent: #1d4ed8; }
+  .qm-card.c2  { --card-accent: #0f766e; }
+  .qm-card.c3  { --card-accent: #2563eb; }
+  .qm-card.c4  { --card-accent: #0891b2; }
+  .qm-card.c5  { --card-accent: #7c3aed; }
+  .qm-card.c6  { --card-accent: #ea580c; }
+  .qm-card.c7  { --card-accent: #059669; }
+  .qm-card.c8  { --card-accent: #dc2626; }
+  .qm-card.c9  { --card-accent: #ca8a04; }
+  .qm-card.c10 { --card-accent: #9333ea; }
+
+  /* ---------- Footer note ---------- */
+  .qm-footer-note {
+    margin-top: 2.4rem;
+    padding: 1rem 1.2rem;
+    border: 1px dashed #d9deea;
+    border-radius: 14px;
+    background: #fafbfc;
+    color: #7a8394;
+    font-size: 1.03rem;
     line-height: 1.7;
-    margin-bottom: 1.8rem;
-    padding-left: 0.5rem;
-    border-left: 4px solid #a0aec0;
-    padding-left: 1.2rem;
   }
 
-  .lecture-title {
-    margin-top: 0 !important;
-    margin-bottom: 0.8rem !important;
-    font-size: 2.0rem !important;  /* 增大 */
-    color: #1a202c;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-  
-  .lecture-desc {
-    color: #2d3748;
-    font-size: 1.3rem;            /* 增大 */
-    line-height: 1.7;
-    margin-bottom: 1.8rem;
+  /* ---------- Compatibility fallback ---------- */
+  @supports not (color: color-mix(in srgb, red 50%, white)) {
+    .qm-number,
+    .qm-btn {
+      background: #f6f7fb;
+      border-color: #e6e8ef;
+    }
   }
 
-  .download-btn {
-    display: inline-block;
-    color: #ffffff !important;
-    padding: 0.6rem 1.8rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1.15rem;           /* 增大 */
-    font-weight: 600;
-    transition: filter 0.2s ease;
-  }
-  
-  .download-btn:hover {
-    filter: brightness(110%);
-    text-decoration: none;
-  }
+  /* ---------- Responsive ---------- */
+  @media (max-width: 820px) {
+    .qm-grid {
+      grid-template-columns: 1fr;
+    }
 
-  /* 吴冯成课程颜色 */
-  .card-blue   { border-top: 5px solid #3b8bba; }
-  .card-orange { border-top: 5px solid #e67e22; }
-  .card-purple { border-top: 5px solid #8e44ad; }
-  .card-red    { border-top: 5px solid #c0392b; }
-  /* 补充讲义颜色 */
-  .card-green  { border-top: 5px solid #2ecc71; }
-  .card-teal   { border-top: 5px solid #1abc9c; }
-  .card-gold   { border-top: 5px solid #f39c12; }
-  .card-violet { border-top: 5px solid #9b59b6; }
-  /* K.T. Law 课程颜色 */
-  .card-cooper   { border-top: 5px solid #2980b9; }
-  .card-geometry { border-top: 5px solid #8e44ad; }
-  .card-length   { border-top: 5px solid #d35400; }
-  .card-friedel  { border-top: 5px solid #27ae60; }
-  .card-local    { border-top: 5px solid #c0392b; }
-  .card-scale    { border-top: 5px solid #16a085; }
-
-  .btn-blue   { background-color: #3b8bba; }
-  .btn-orange { background-color: #e67e22; }
-  .btn-purple { background-color: #8e44ad; }
-  .btn-red    { background-color: #c0392b; }
-  .btn-green  { background-color: #2ecc71; }
-  .btn-teal   { background-color: #1abc9c; }
-  .btn-gold   { background-color: #f39c12; }
-  .btn-violet { background-color: #9b59b6; }
-  .btn-cooper   { background-color: #2980b9; }
-  .btn-geometry { background-color: #8e44ad; }
-  .btn-length   { background-color: #d35400; }
-  .btn-friedel  { background-color: #27ae60; }
-  .btn-local    { background-color: #c0392b; }
-  .btn-scale    { background-color: #16a085; }
+    .qm-card {
+      min-height: auto;
+    }
+  }
 
   @media (max-width: 600px) {
-    .lecture-title {
-      font-size: 1.6rem !important;
+    .qm-page {
+      font-size: 17px;
     }
-    .lecture-desc {
-      font-size: 1.1rem;
+
+    .qm-hero {
+      margin-top: 1rem;
+      padding: 1.55rem;
+      border-radius: 18px;
     }
-    .lecture-card {
-      padding: 1.5rem;
+
+    .qm-section-head {
+      align-items: flex-start;
+      flex-direction: column;
     }
-    .section-header {
-      font-size: 1.5rem;
+
+    .qm-section-kicker {
+      white-space: normal;
+    }
+
+    .qm-card {
+      padding: 1.3rem;
+      border-radius: 15px;
+    }
+
+    .qm-card h3 {
+      font-size: 1.48rem !important;
+    }
+  }
+
+  /* ---------- Dark-mode friendly ---------- */
+  @media (prefers-color-scheme: dark) {
+    .qm-page {
+      --qm-ink: #eef2ff;
+      --qm-muted: #aeb7c8;
+      --qm-line: #2b3447;
+      --qm-surface: #151b28;
+      --qm-soft: #111827;
+      --qm-shadow: none;
+    }
+
+    .qm-hero {
+      border-color: #2b3550;
+      background:
+        radial-gradient(circle at 88% 14%, rgba(124, 58, 237, 0.20), transparent 30%),
+        radial-gradient(circle at 10% 88%, rgba(14, 165, 233, 0.12), transparent 32%),
+        linear-gradient(135deg, #121827 0%, #151827 48%, #111827 100%);
+    }
+
+    .qm-eyebrow,
+    .qm-meta span {
+      border-color: #313a50;
+      background: rgba(17, 24, 39, 0.72);
+    }
+
+    .qm-hero-title,
+    .qm-section-head h2,
+    .qm-card h3 {
+      color: #f5f7ff;
+    }
+
+    .qm-hero-lead,
+    .qm-desc,
+    .qm-intro,
+    .qm-path span,
+    .qm-footer-note {
+      color: #aeb7c8;
+    }
+
+    .qm-intro,
+    .qm-footer-note {
+      background: #141b2a;
+    }
+
+    .qm-path span,
+    .qm-card {
+      background: #151b28;
+      box-shadow: none;
     }
   }
 </style>
 
-<!-- ====== 简短总介绍 ====== -->
-<div class="lecture-intro">
-  <p>
-    This page collects lecture notes from <strong>Prof. Fengcheng Wu</strong> (Wuhan University), <strong>Prof. K.T. Law</strong>, and additional contributors on topics including topological moiré bands, fractional Chern insulators, quantum Monte Carlo sign problems, higher‑form symmetries, quantum anomalies, conformal field theory, BCS superconductivity, quantum geometry, Anderson localization, and Friedel oscillations. All PDFs are stored in the <code>PPTX/</code> folder.
-  </p>
-</div>
+<div class="qm-page">
 
-<!-- ============================================================ -->
-<!-- Section 1: 吴冯成课程                                         -->
-<!-- ============================================================ -->
-
-<h2 class="section-header">I. Topological Moiré Bands &amp; Fractional Chern Insulators</h2>
-
-<div class="section-intro">
-  Lecture notes from Prof. Fengcheng Wu's series at the <strong>2026 Greater Bay Area Quantum Science Summer School</strong>. Topics include topological moiré bands, integer and fractional quantum anomalous Hall effects, collective excitations, and non‑Abelian fractional quantum states.
-</div>
-
-<div class="lecture-list">
-
-  <div class="lecture-card card-blue">
-    <h3 class="lecture-title">📘 Lecture 2.2 – Topological Moiré Bands</h3>
-    <p class="lecture-desc">Theory of topological bands in moiré superlattices, including continuum models, layer‑pseudospin skyrmions, quantum geometry, and Wilson loop methods.</p>
-    <a href="https://maggiexheuw.github.io/PPTX/Lecture%202.2.pdf" target="_blank" class="download-btn btn-blue">📄 Download PDF</a>
-  </div>
-
-  <div class="lecture-card card-orange">
-    <h3 class="lecture-title">📘 Lecture 3.1 – Integer Chern Insulators &amp; Competing States in tMoTe₂</h3>
-    <p class="lecture-desc">Quantum anomalous Hall insulators based on the Kane‑Mele‑Hubbard model, Hartree‑Fock approximation, and phase diagrams with competing orders in tMoTe₂.</p>
-    <a href="https://maggiexheuw.github.io/PPTX/Lecture%203.1.pdf" target="_blank" class="download-btn btn-orange">📄 Download PDF</a>
-  </div>
-
-  <div class="lecture-card card-purple">
-    <h3 class="lecture-title">📘 Lecture 3.2 – Collective Excitations</h3>
-    <p class="lecture-desc">Collective excitations in integer QAHIs: excitonic optical response (Bethe‑Salpeter equation) and topological magnons, plus spin models and domain walls.</p>
-    <a href="https://maggiexheuw.github.io/PPTX/Lecture%203.2.pdf" target="_blank" class="download-btn btn-purple">📄 Download PDF</a>
-  </div>
-
-  <div class="lecture-card card-red">
-    <h3 class="lecture-title">📘 Lecture 4 – Abelian &amp; Non‑Abelian Fractional Chern Insulators in tMoTe₂</h3>
-    <p class="lecture-desc">Lattice analogs of fractional quantum Hall effects: skyrmion picture, generalized Landau levels, ideal vs. nonideal quantum geometry, and Abelian (Jain sequences) as well as non‑Abelian (\(\nu = 5/2\)) fractional states.</p>
-    <a href="https://maggiexheuw.github.io/PPTX/Lecture%204.pdf" target="_blank" class="download-btn btn-red">📄 Download PDF</a>
-  </div>
-
-</div>
-
-<!-- ============================================================ -->
-<!-- Section 2: 补充讲义                                          -->
-<!-- ============================================================ -->
-
-<h2 class="section-header">II. Supplementary Lecture Notes</h2>
-
-<div class="section-intro">
-  Additional notes from various sources, covering <strong>quantum Monte Carlo sign problems, higher‑form symmetries, quantum anomalies, and conformal field theory</strong>.
-</div>
-
-<!-- 2.1 QMC & Sign Problem -->
-<h3 class="subsection-header">II-A. Quantum Monte Carlo &amp; The Sign Problem</h3>
-
-<div class="section-intro" style="border-left-color:#2ecc71;">
-  A comprehensive review of the fermion sign problem in QMC, its origin, mitigation strategies, and complexity‑theoretic limits.
-</div>
-
-<div class="lecture-list">
-  <div class="lecture-card card-green">
-    <h3 class="lecture-title">📘 The Sign Problem in Quantum Monte Carlo</h3>
-    <p class="lecture-desc">
-      <strong>Author:</strong> Xiao Yan Xu<br><br>
-      Pedagogical exposition covering negative/complex weights in SSE, world‑line, and DQMC; average sign and reweighting cost; structural cures (Marshall rotations, determinant pairing, fermion bags, merons, Majorana positivity); and fundamental limits (NP‑hardness, stoquastic‑basis search, topological obstructions).
+  <section class="qm-hero">
+    <div class="qm-eyebrow">Quantum Many-Body Physics · Lectures 01–10</div>
+    <h1 class="qm-hero-title">From Fields to Emergent Collective Physics</h1>
+    <p class="qm-hero-lead">
+      A compact collection of lecture notes on quantum many-body theory: quantum-mechanical and spin path integrals, field formulations and response functions, collective modes and Fermi-liquid theory, BCS superconductivity, neutral superfluids, and renormalization-group methods.
     </p>
-    <a href="https://maggiexheuw.github.io/PPTX/sign_problem.pdf" target="_blank" class="download-btn btn-green">📄 Download PDF</a>
-  </div>
-</div>
+    <div class="qm-meta">
+      <span>10 lectures</span>
+      <span>PDF notes</span>
+      <span>Many-body field theory</span>
+      <span>Updated Sep 14, 2026</span>
+    </div>
+  </section>
 
-<!-- 2.2 Higher-Form Symmetry & Anomalies -->
-<h3 class="subsection-header">II-B. Higher‑Form Symmetry &amp; Quantum Anomalies</h3>
-
-<div class="section-intro" style="border-left-color:#1abc9c;">
-  Modern generalized symmetries and 't Hooft anomalies, illustrated via the compact boson, Maxwell theory, and a (0+1)‑dimensional Dirac fermion.
-</div>
-
-<div class="lecture-list">
-  <div class="lecture-card card-teal">
-    <h3 class="lecture-title">📘 Compact Boson, Duality, Gauging, and Anomalies</h3>
-    <p class="lecture-desc">
-      <strong>Source:</strong> Summer school handout<br><br>
-      Self‑contained tour of 1+1D compact boson: momentum/winding \(\mathrm{U}(1)\) symmetries, mixed anomaly, T‑duality, discrete gauging, emergent dual symmetries, BF pairing, Kramers‑Wannier duality, and generalization to higher‑form symmetries in Maxwell theory (electric/magnetic 1‑form symmetries, Coulomb/Higgs/confined phases).
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/higher_form_symmetry.pdf" target="_blank" class="download-btn btn-teal">📄 Download PDF</a>
+  <div class="qm-section-head">
+    <h2>Lecture Notes</h2>
+    <div class="qm-section-kicker">A conceptual route through many-body physics</div>
   </div>
 
-  <div class="lecture-card card-gold">
-    <h3 class="lecture-title">📘 量子反常简介（'t Hooft Anomaly）</h3>
-    <p class="lecture-desc">
-      <strong>Author:</strong> 姚元 (Yuan Yao)<br><br>
-      Elementary introduction using a (0+1)‑dimensional Dirac fermion on a thermal circle. Shows the conflict between local \(\mathrm{U}(1)\) gauge invariance and global charge conjugation, leading to a mixed anomaly; demonstrates anomaly inflow and proves that anomalous symmetries imply ingappability.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/anomaly.pdf" target="_blank" class="download-btn btn-gold">📄 Download PDF</a>
-  </div>
-</div>
-
-<!-- 2.3 Conformal Field Theory -->
-<h3 class="subsection-header">II-C. Conformal Field Theory</h3>
-
-<div class="section-intro" style="border-left-color:#9b59b6;">
-  A pedagogical introduction to 2D CFT, from conformal transformations and the Virasoro algebra to unitary minimal models and the critical Ising model.
-</div>
-
-<div class="lecture-list">
-  <div class="lecture-card card-violet">
-    <h3 class="lecture-title">📘 Conformal Field Theory – From Basics to Minimal Models</h3>
-    <p class="lecture-desc">
-      <strong>Author:</strong> 朱伟 (Wei Zhu)<br><br>
-      Self‑contained notes covering: conformal transformations in \(d\) dimensions, primary fields and correlation functions, holomorphic nature in 2D, Witt and Virasoro algebras, central charge, radial quantization, state‑operator correspondence, OPE, highest‑weight representations, Kac determinant, unitary minimal models, and the critical Ising model as a worked example (fusion rules, critical exponents).
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/cft.pdf" target="_blank" class="download-btn btn-violet">📄 Download PDF</a>
-  </div>
-</div>
-
-<!-- ============================================================ -->
-<!-- Section 3: K.T. Law 系列课程                                 -->
-<!-- ============================================================ -->
-
-<h2 class="section-header">III. K.T. Law Lecture Series – Superconductivity, Quantum Geometry, and Disorder</h2>
-
-<div class="section-intro">
-  Graduate lecture series by <strong>Prof. K.T. Law</strong> covering the microscopic theory of superconductivity (Cooper problem &amp; BCS), quantum geometry in flat‑band superconductivity, Fermi‑velocity‑controlled length scales, Friedel oscillations, and Anderson localization in one dimension. Includes both Beamer slides and detailed lecture notes.
-</div>
-
-<!-- 3.1 Cooper Problem & BCS -->
-<h3 class="subsection-header">III-A. Cooper Problem &amp; BCS Theory of Superconductivity</h3>
-
-<div class="section-intro" style="border-left-color:#2980b9;">
-  The two pillars of microscopic superconductivity: Cooper's instability and the BCS variational ground state.
-</div>
-
-<div class="lecture-list">
-
-  <div class="lecture-card card-cooper">
-    <h3 class="lecture-title">📊 Beamer – The Cooper Problem</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Presentation slides<br><br>
-      Introduction to the Cooper problem: physical setup, trial wavefunction, two‑body Schrödinger equation, model interaction, self‑consistency, and bound‑state energy \( \Delta = 2\hbar\omega_D e^{-2/N(0)V} \). Emphasizes the essential singularity and instability of the normal state.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer1.pdf" target="_blank" class="download-btn btn-cooper">📄 Download PDF</a>
+  <div class="qm-intro">
+    The sequence begins with path integrals in quantum mechanics and spin systems, then moves to field formulations of interacting matter and their emergent low-energy descriptions: response and collective excitations, quasiparticles, pairing, superfluidity, and finally long-wavelength renormalization-group physics.
   </div>
 
-  <div class="lecture-card card-cooper">
-    <h3 class="lecture-title">📊 Beamer – From the Cooper Pair Problem to the BCS Ground State</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Presentation slides<br><br>
-      Bridge from single‑pair Cooper problem to full BCS many‑body state: reduced BCS Hamiltonian, variational wavefunction \( |\Psi_{\mathrm{BCS}}\rangle = \prod_k (u_k + v_k c_{k\uparrow}^\dagger c_{-k\downarrow}^\dagger)|0\rangle \), energy minimization, gap parameter, coherence factors, pair amplitude \( g_k \), gap equation, and condensation energy.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer2.pdf" target="_blank" class="download-btn btn-cooper">📄 Download PDF</a>
+  <div class="qm-path">
+    <span>QM path integral</span>
+    <span>Spin path integral</span>
+    <span>Field path integrals</span>
+    <span>Linear response</span>
+    <span>RPA &amp; collective modes</span>
+    <span>Fermi liquid</span>
+    <span>BCS theory</span>
+    <span>Superfluidity</span>
+    <span>RG &amp; KT physics</span>
   </div>
 
-  <div class="lecture-card card-cooper">
-    <h3 class="lecture-title">📘 Lecture Note – The Cooper Problem (Concise)</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Lecture notes<br><br>
-      Concise written derivation of the Cooper problem: motivation, trial wavefunction, amplitude equation, model interaction, bound‑state energy, and physical significance.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law1.pdf" target="_blank" class="download-btn btn-cooper">📄 Download PDF</a>
+  <div class="qm-grid">
+
+    <article class="qm-card c1">
+      <div class="qm-card-top">
+        <span class="qm-number">L01</span>
+        <span class="qm-topic">Quantum mechanics</span>
+      </div>
+      <h3>Path Integrals in Quantum Mechanics</h3>
+      <p class="qm-desc">
+        Introduction to the path-integral formulation of quantum mechanics: amplitudes as sums over histories, the action principle, imaginary-time methods, and the bridge from operator quantum mechanics to functional integration.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture1_Path_integral_QM.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c2">
+      <div class="qm-card-top">
+        <span class="qm-number">L02</span>
+        <span class="qm-topic">Quantum spins</span>
+      </div>
+      <h3>Spin Path Integrals &amp; the Theta Term</h3>
+      <p class="qm-desc">
+        Path-integral formulation for quantum spins, including spin coherent states, Berry-phase structure, continuum descriptions, and the appearance and physical role of the topological theta term.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture2_Path_integral_spin_theta_term.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c3">
+      <div class="qm-card-top">
+        <span class="qm-number">L03</span>
+        <span class="qm-topic">Field formulation</span>
+      </div>
+      <h3>Path Integrals &amp; Fields</h3>
+      <p class="qm-desc">
+        Path-integral formulation of quantum many-body systems and the introduction of field variables as the foundation for diagrammatic and effective-field-theory methods.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture3_Path_integral_fields.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c4">
+      <div class="qm-card-top">
+        <span class="qm-number">L04</span>
+        <span class="qm-topic">Response theory</span>
+      </div>
+      <h3>Operator Formalism &amp; Response</h3>
+      <p class="qm-desc">
+        Operator methods for interacting many-body systems together with response-function techniques describing how a quantum system reacts to external perturbations.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture4_Operator_formalism_Response.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c5">
+      <div class="qm-card-top">
+        <span class="qm-number">L05</span>
+        <span class="qm-topic">Collective modes</span>
+      </div>
+      <h3>RPA, Plasmons &amp; Ferromagnetic Spin Waves</h3>
+      <p class="qm-desc">
+        Random-phase approximation and collective excitations in interacting systems, including density oscillations, plasmons, and ferromagnetic spin-wave modes.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture5_RPA_Plasmon_FMspinwave.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c6">
+      <div class="qm-card-top">
+        <span class="qm-number">L06</span>
+        <span class="qm-topic">Interactions</span>
+      </div>
+      <h3>Lifetime &amp; Correlation Energy</h3>
+      <p class="qm-desc">
+        Interaction effects beyond the simplest mean-field picture, with emphasis on quasiparticle lifetime, decay processes, and many-body correlation energy.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture6_lifetime_correlationenergy.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c7">
+      <div class="qm-card-top">
+        <span class="qm-number">L07</span>
+        <span class="qm-topic">Quasiparticles</span>
+      </div>
+      <h3>Fermi Liquid Theory</h3>
+      <p class="qm-desc">
+        Landau's low-energy description of interacting fermions: quasiparticles, phenomenological interaction parameters, and the organization of physics near the Fermi surface.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture7_Fermi_Liquid_theory.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c8">
+      <div class="qm-card-top">
+        <span class="qm-number">L08</span>
+        <span class="qm-topic">Superconductivity</span>
+      </div>
+      <h3>BCS Theory &amp; Charged Superfluids</h3>
+      <p class="qm-desc">
+        BCS pairing and the physics of charged superfluids, connecting microscopic Cooper pairing with collective electromagnetic response.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture8_BCS_charged_SF.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c9">
+      <div class="qm-card-top">
+        <span class="qm-number">L09</span>
+        <span class="qm-topic">Superfluidity</span>
+      </div>
+      <h3>Neutral Superfluids</h3>
+      <p class="qm-desc">
+        Neutral-superfluid physics and its low-energy collective behavior, providing a complementary perspective to charged condensates and superconductors.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture9_neutral_superfluid.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c10">
+      <div class="qm-card-top">
+        <span class="qm-number">L10</span>
+        <span class="qm-topic">Long wavelengths</span>
+      </div>
+      <h3>RG, Nonlinear Sigma Model &amp; Kosterlitz–Thouless Physics</h3>
+      <p class="qm-desc">
+        Renormalization-group ideas, nonlinear sigma models, and Kosterlitz–Thouless physics as long-wavelength tools for interacting, ordered, and topological systems.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture10_RG_nonlinearsigma_KT.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
   </div>
 
-  <div class="lecture-card card-cooper">
-    <h3 class="lecture-title">📘 Lecture Note – Cooper Problem &amp; BCS Theory (Full)</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Comprehensive lecture notes<br><br>
-      Complete written version covering both Cooper problem and full BCS variational treatment: two‑body Schrödinger equation, model interaction, bound‑state energy, reduced BCS Hamiltonian, BCS trial wavefunction, energy minimization, coherence factors, pair amplitude, gap equation, and condensation energy.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law2.pdf" target="_blank" class="download-btn btn-cooper">📄 Download PDF</a>
-  </div>
-
-</div>
-
-<!-- 3.2 Quantum Geometry & Flat-Band SC -->
-<h3 class="subsection-header">III-B. Quantum Geometry &amp; Flat‑Band Superconductivity</h3>
-
-<div class="section-intro" style="border-left-color:#8e44ad;">
-  How quantum geometry — the quantum metric of Bloch wavefunctions — sets the Cooper pair size in flat bands where \( v_F \to 0 \).
-</div>
-
-<div class="lecture-list">
-
-  <div class="lecture-card card-geometry">
-    <h3 class="lecture-title">📊 Beamer – The Size of a Cooper Pair in a Flat Band</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Presentation slides<br><br>
-      Resolves the paradox of flat‑band superconductivity: introduces the quantum metric \( g_{\mu\nu}(\mathbf{k}) \), derives \( \xi_{\mathrm{pair}}^2 = 2\langle \operatorname{tr} g \rangle_{\mathrm{BZ}} \), and proves the topological lower bound \( \xi_{\mathrm{pair}}^2 \gtrsim |C| a^2/\pi \) for Chern bands.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer3.pdf" target="_blank" class="download-btn btn-geometry">📄 Download PDF</a>
-  </div>
-
-  <div class="lecture-card card-geometry">
-    <h3 class="lecture-title">📘 Lecture Note – The Size of a Cooper Pair in a Flat Band</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Comprehensive lecture notes<br><br>
-      Self‑contained pedagogical introduction: conventional BCS coherence length, flat‑band Cooper problem with band projection, binding energy \( E_b = -U/N_{\mathrm{orb}} \), quantum geometric tensor \( Q_{\mu\nu} = g_{\mu\nu} - \frac{i}{2}\Omega_{\mu\nu} \), pair size \( \xi_{\mathrm{pair}}^2 = 2\langle \operatorname{tr} g \rangle_{\mathrm{BZ}} \), topological lower bound, and equivalence to Wannier spread.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Lwa3.pdf" target="_blank" class="download-btn btn-geometry">📄 Download PDF</a>
-  </div>
-
-</div>
-
-<!-- 3.3 Fermi-Velocity Length Scales -->
-<h3 class="subsection-header">III-C. Fermi‑Velocity‑Controlled Length Scales in Solids</h3>
-
-<div class="section-intro" style="border-left-color:#d35400;">
-  The master formula \( L_E \sim \hbar v_F / E \) unifying thermal length, BCS coherence, Kondo cloud, mean free path, and localization.
-</div>
-
-<div class="lecture-list">
-
-  <div class="lecture-card card-length">
-    <h3 class="lecture-title">📊 Beamer – Fermi-Velocity-Controlled Length Scales in Solids</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Presentation slides<br><br>
-      Unified framework: \( L_T = \hbar v_F/2\pi k_B T \), \( \xi_0 = \hbar v_F/\pi\Delta \), \( \xi_K = \hbar v_F/k_B T_K \), \( \ell = v_F\tau \), diffusive generalization \( L_E \to \sqrt{\hbar D/E} \), and Thouless energy \( E_{\mathrm{Th}} = \hbar D/L^2 \).
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer4.pdf" target="_blank" class="download-btn btn-length">📄 Download PDF</a>
-  </div>
-
-  <div class="lecture-card card-length">
-    <h3 class="lecture-title">📘 Lecture Note – Fermi-Velocity-Controlled Length Scales in Solids</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Comprehensive lecture notes<br><br>
-      Full derivations: linearization at Fermi surface, three readings of \( L_E = \hbar v_F/E \), thermal length via Matsubara poles, SNS Josephson decay, BCS coherence from pair wavefunction, Kondo cloud from Yosida variational state, mean free path and 1D localization, diffusive generalization, and Thouless energy.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer4%20Lecture%20Note.pdf" target="_blank" class="download-btn btn-length">📄 Download PDF</a>
-  </div>
-
-</div>
-
-<!-- 3.4 Friedel Oscillations -->
-<h3 class="subsection-header">III-D. Friedel Oscillations in One Dimension</h3>
-
-<div class="section-intro" style="border-left-color:#27ae60;">
-  Green's function / \( T \)-matrix derivation of the \( 2k_F \) density oscillation and its thermal cutoff.
-</div>
-
-<div class="lecture-list">
-
-  <div class="lecture-card card-friedel">
-    <h3 class="lecture-title">📊 Beamer – Friedel Oscillations in One Dimension</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Presentation slides<br><br>
-      Green's function derivation: Lehmann representation, free Green's function \( G_0^R(x,x';E) = -\dfrac{i}{\hbar v_E} e^{ik_E|x-x'|} \), Dyson equation, separable \( T \)-matrix \( t(E) = u/(1 + iu/\hbar v_E) \), zero‑temperature result \( \delta n(x) \sim -\dfrac{u\nu_F}{2}\dfrac{\cos(2k_F x)}{|x|} \), and finite‑temperature thermal length \( \xi_T = \hbar v_F/2\pi k_B T \).
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/Friedel.pdf" target="_blank" class="download-btn btn-friedel">📄 Download PDF</a>
-  </div>
-
-  <div class="lecture-card card-friedel">
-    <h3 class="lecture-title">📘 Lecture Note – Friedel Oscillations in One Dimension</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Detailed lecture notes<br><br>
-      Six‑section written note: physical setup, Lehmann representation and spectral function, free Green's function, Dyson equation and separable \( T \)-matrix, charge density from Green's function, zero‑temperature result, and finite‑temperature thermal envelope \( (x/\xi_T)/\sinh(x/\xi_T) \).
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer5.pdf" target="_blank" class="download-btn btn-friedel">📄 Download PDF</a>
-  </div>
-
-</div>
-
-<!-- 3.5 Anderson Localization -->
-<h3 class="subsection-header">III-E. Anderson Localization in One Dimension</h3>
-
-<div class="section-intro" style="border-left-color:#c0392b;">
-  Transfer‑matrix derivation of exponential localization, Lyapunov exponent, and the Thouless formula.
-</div>
-
-<div class="lecture-list">
-
-  <div class="lecture-card card-local">
-    <h3 class="lecture-title">📊 Beamer – Anderson Localization in One Dimension</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Presentation slides<br><br>
-      1D Anderson model: tight‑binding Hamiltonian, three‑term recurrence, transfer matrix \( T_n \in \mathrm{SL}(2,\mathbb{R}) \), Lyapunov exponent \( \gamma(E) = \lim_{N\to\infty} \frac{1}{N}\ln\|\mathcal{M}_N\| \), localization length \( \xi(E) = 1/\gamma(E) \), clean‑chain limit, weak‑disorder Thouless formula \( \xi(E) = 2(4t^2 - E^2)/\sigma^2 \), Prüfer variables, and numerical QR re‑orthogonalization.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/Anderrson-loc.pdf" target="_blank" class="download-btn btn-local">📄 Download PDF</a>
-  </div>
-
-  <div class="lecture-card card-local">
-    <h3 class="lecture-title">📘 Lecture Note – Anderson Localization in One Dimension</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Detailed lecture notes<br><br>
-      Complete written derivation: tight‑binding Hamiltonian, transfer matrix, Furstenberg and Oseledec theorems, clean‑chain limit, weak‑disorder expansion in Prüfer variables, Thouless formula, numerical implementation, and connection to scaling theory of localization.
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer7.pdf" target="_blank" class="download-btn btn-local">📄 Download PDF</a>
-  </div>
-
-</div>
-
-<!-- 3.6 Solid-State Length Scale Overview -->
-<h3 class="subsection-header">III-F. Solid‑State Length Scale Overview</h3>
-
-<div class="section-intro" style="border-left-color:#16a085;">
-  A master overview of the hierarchy of length scales in solids, unifying the entire course.
-</div>
-
-<div class="lecture-list">
-
-  <div class="lecture-card card-scale">
-    <h3 class="lecture-title">📊 Beamer – Solid-State Length Scale Overview</h3>
-    <p class="lecture-desc">
-      <strong>Type:</strong> Presentation slides<br><br>
-      High‑level summary: hierarchy of length scales from \( \lambda_F \) to \( \xi_K \), diffusive generalization, Thouless energy as the inverse dictionary, and limits of the framework (flat bands, non‑Fermi liquids, Dirac materials).
-    </p>
-    <a href="https://maggiexheuw.github.io/PPTX/Solid-state.pdf" target="_blank" class="download-btn btn-scale">📄 Download PDF</a>
+  <div class="qm-footer-note">
+    PDFs are served from the <code>Wu-note/</code> directory. The layout is responsive, so the cards appear in two columns on larger screens and collapse to a single column on mobile devices.
   </div>
 
 </div>
