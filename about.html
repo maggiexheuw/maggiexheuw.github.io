@@ -27,7 +27,7 @@ permalink: /about/
     --mx-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Noto Serif", Georgia, serif;
     --mx-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif;
 
-    width: min(1080px, calc(100% - 28px));
+    width: min(1160px, calc(100% - 28px));
     margin: 44px auto 90px;
     color: var(--mx-ink);
     font-family: var(--mx-sans);
@@ -78,7 +78,7 @@ permalink: /about/
   .mx-about-kicker {
     margin: 0 0 14px;
     color: var(--mx-rust);
-    font-size: 0.72rem;
+    font-size: 0.86rem;
     font-weight: 800;
     letter-spacing: 0.17em;
     text-transform: uppercase;
@@ -104,7 +104,7 @@ permalink: /about/
     margin: 25px 0 0;
     color: var(--mx-muted);
     font-family: var(--mx-serif);
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-size: clamp(1.28rem, 2.2vw, 1.55rem);
     line-height: 1.72;
   }
 
@@ -115,7 +115,7 @@ permalink: /about/
     border-left: 2px solid var(--mx-gold);
     color: var(--mx-green);
     font-family: var(--mx-serif);
-    font-size: 1.24rem;
+    font-size: 1.42rem;
     font-style: italic;
     line-height: 1.65;
   }
@@ -125,7 +125,7 @@ permalink: /about/
     margin-top: 11px;
     color: var(--mx-muted);
     font-family: var(--mx-sans);
-    font-size: 0.72rem;
+    font-size: 0.86rem;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -144,8 +144,8 @@ permalink: /about/
   .mx-about-copy {
     min-width: 0;
     font-family: var(--mx-serif);
-    font-size: 1.14rem;
-    line-height: 1.9;
+    font-size: 1.30rem;
+    line-height: 1.88;
   }
 
   .mx-about-copy p {
@@ -167,7 +167,7 @@ permalink: /about/
     margin: 0 0 22px;
     color: var(--mx-ink);
     font-family: var(--mx-serif);
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 600;
     letter-spacing: -0.025em;
   }
@@ -195,8 +195,8 @@ permalink: /about/
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.56);
     font-family: var(--mx-sans);
-    font-size: 0.94rem;
-    line-height: 1.58;
+    font-size: 1.08rem;
+    line-height: 1.68;
   }
 
   .mx-about-list li::before {
@@ -222,7 +222,7 @@ permalink: /about/
   .mx-about-panel-label {
     margin: 0 0 13px;
     color: var(--mx-rust);
-    font-size: 0.68rem;
+    font-size: 0.82rem;
     font-weight: 850;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -231,8 +231,8 @@ permalink: /about/
   .mx-about-panel p {
     margin: 0;
     color: var(--mx-muted);
-    font-size: 0.88rem;
-    line-height: 1.7;
+    font-size: 1.02rem;
+    line-height: 1.75;
   }
 
   .mx-about-chip-list {
@@ -247,7 +247,7 @@ permalink: /about/
     border-radius: 999px;
     color: var(--mx-green);
     background: var(--mx-green-soft);
-    font-size: 0.72rem;
+    font-size: 0.86rem;
     font-weight: 750;
   }
 
@@ -271,7 +271,7 @@ permalink: /about/
     color: var(--mx-ink);
     background: var(--mx-card);
     text-decoration: none;
-    font-size: 0.82rem;
+    font-size: 0.98rem;
     font-weight: 720;
     transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
   }
@@ -319,7 +319,7 @@ permalink: /about/
     max-width: 720px;
     margin: 0 0 10px;
     font-family: var(--mx-serif);
-    font-size: clamp(1.42rem, 3vw, 2.02rem);
+    font-size: clamp(1.68rem, 3.2vw, 2.30rem);
     font-weight: 600;
     line-height: 1.18;
   }
@@ -329,8 +329,35 @@ permalink: /about/
     margin: 6px 0;
     color: rgba(246, 241, 231, 0.76);
     font-family: var(--mx-sans);
-    font-size: 0.79rem;
-    line-height: 1.55;
+    font-size: 0.96rem;
+    line-height: 1.62;
+  }
+
+  .mx-publication-summary {
+    margin: 15px 0 0;
+    max-width: 760px;
+    color: rgba(246, 241, 231, 0.84);
+    font-family: var(--mx-serif);
+    font-size: 1.05rem;
+    line-height: 1.72;
+  }
+
+  .mx-publication.mx-second-chern {
+    background:
+      radial-gradient(circle at 100% 0%, rgba(116, 161, 214, 0.16), transparent 24rem),
+      #1c3047;
+  }
+
+  .mx-publication.mx-second-chern::after {
+    content: "C2";
+  }
+
+  .mx-publication.mx-second-chern .mx-publication-journal {
+    color: rgba(230, 239, 250, 0.78);
+  }
+
+  .mx-publication.mx-second-chern .mx-publication-summary {
+    color: rgba(238, 245, 252, 0.84);
   }
 
   .mx-publication-links {
@@ -350,7 +377,7 @@ permalink: /about/
     color: #fff8e9;
     text-decoration: none;
     font-family: var(--mx-sans);
-    font-size: 0.72rem;
+    font-size: 0.88rem;
     font-weight: 760;
   }
 
@@ -394,12 +421,12 @@ permalink: /about/
     }
 
     .mx-about-copy {
-      font-size: 1.04rem;
+      font-size: 1.17rem;
     }
 
     .mx-about-quote {
       padding-left: 18px;
-      font-size: 1.1rem;
+      font-size: 1.26rem;
     }
 
     .mx-publication {
@@ -415,8 +442,9 @@ permalink: /about/
         <p class="mx-about-kicker">Theoretical physics · Research notebook</p>
         <h1 class="mx-about-title">Hello, I’m <em>Maggie.</em></h1>
         <p class="mx-about-lead">
-          I study topological quantum matter, strongly correlated systems, and
-          high-dimensional generalizations of the quantum Hall effect.
+          I study topological quantum matter, strongly correlated systems,
+          non-Abelian quantum geometry, and high-dimensional generalizations
+          of the quantum Hall effect.
         </p>
       </div>
 
@@ -455,6 +483,17 @@ permalink: /about/
           dimensions.
         </p>
 
+        <p>
+          More recently, I have also been working on
+          <strong>second-Chern bounds in non-Abelian quantum geometry</strong>,
+          where quantum-metric inequalities are connected to non-Abelian Berry curvature
+          and second-Chern topology in four-dimensional parameter spaces
+          <sup><a href="https://arxiv.org/abs/2608.12221" target="_blank" rel="noopener noreferrer">[2]</a></sup>.
+          The saturation of the geometric bound reveals a quaternionic structure,
+          providing a higher-dimensional analogue of ideal-band geometry in
+          two-dimensional Chern systems.
+        </p>
+
         <section class="mx-about-section">
           <h2 class="mx-about-section-title">What lives in this notebook</h2>
           <p>
@@ -470,7 +509,7 @@ permalink: /about/
         </section>
 
         <section class="mx-about-section">
-          <h2 class="mx-about-section-title">Selected publication</h2>
+          <h2 class="mx-about-section-title">Selected publications</h2>
           <div class="mx-publication">
             <h3 class="mx-publication-title">Incompressible Quantum Hall Liquid on the Four-Dimensional Sphere</h3>
             <p class="mx-publication-authors">Junwen Zhao, Xue Meng, <strong>Maggie Xheuw</strong>, Wei Zhu, Congjun Wu</p>
@@ -478,6 +517,19 @@ permalink: /about/
             <div class="mx-publication-links">
               <a href="https://journals.aps.org/prl/abstract/10.1103/qygs-j2ys" target="_blank" rel="noopener noreferrer">Journal article ↗</a>
               <a href="https://arxiv.org/abs/2508.17989" target="_blank" rel="noopener noreferrer">arXiv preprint ↗</a>
+            </div>
+          </div>
+
+          <div class="mx-publication mx-second-chern">
+            <h3 class="mx-publication-title">Second-Chern Bounds in Non-Abelian Quantum Geometry</h3>
+            <p class="mx-publication-journal"><em>arXiv:2608.12221</em> (2026) · Preprint</p>
+            <p class="mx-publication-summary">
+              Geometric bounds linking the quantum metric to non-Abelian Berry curvature
+              and second-Chern topology for doubly degenerate quantum states in four dimensions,
+              with bound saturation tied to a quaternionic geometric structure.
+            </p>
+            <div class="mx-publication-links">
+              <a href="https://arxiv.org/abs/2608.12221" target="_blank" rel="noopener noreferrer">arXiv preprint ↗</a>
             </div>
           </div>
         </section>
@@ -491,6 +543,8 @@ permalink: /about/
             <span class="mx-about-chip">Quantum Hall physics</span>
             <span class="mx-about-chip">Many-body theory</span>
             <span class="mx-about-chip">Geometry &amp; topology</span>
+            <span class="mx-about-chip">Non-Abelian geometry</span>
+            <span class="mx-about-chip">Second Chern number</span>
             <span class="mx-about-chip">Scientific computing</span>
           </div>
         </div>
@@ -515,6 +569,7 @@ permalink: /about/
             {% endif %}
             <li><a href="https://wucj.lab.westlake.edu.cn/" target="_blank" rel="noopener noreferrer">Wu Group</a></li>
             <li><a href="https://journals.aps.org/prl/abstract/10.1103/qygs-j2ys" target="_blank" rel="noopener noreferrer">PRL publication</a></li>
+            <li><a href="https://arxiv.org/abs/2608.12221" target="_blank" rel="noopener noreferrer">Second-Chern preprint</a></li>
           </ul>
         </div>
       </aside>
