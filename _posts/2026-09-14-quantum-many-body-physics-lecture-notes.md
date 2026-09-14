@@ -1,5 +1,3 @@
-
-
 ---
 layout: post
 title: "Quantum Many-Body Physics — Lecture Notes"
@@ -8,10 +6,12 @@ date: 2026-09-14
 author: Maggie
 header-img: img/EdWitten.jpg
 catalog: true
+published: true
+permalink: /quantum-many-body-physics-lecture-notes/
 ---
 
 <!-- ========================================================== -->
-<!-- Quantum Many-Body Physics · Lectures 03–10                 -->
+<!-- Quantum Many-Body Physics · Lectures 01-10                 -->
 <!-- PDFs are stored in the Wu-note/ folder.                     -->
 <!-- ========================================================== -->
 
@@ -27,6 +27,8 @@ catalog: true
     --qm-accent-2: #7c3aed;
     --qm-shadow: 0 18px 45px rgba(24, 32, 51, 0.08);
     color: var(--qm-ink);
+    font-size: 20px;
+    line-height: 1.78;
   }
 
   .qm-page * {
@@ -57,6 +59,7 @@ catalog: true
       linear-gradient(rgba(79, 70, 229, 0.035) 1px, transparent 1px),
       linear-gradient(90deg, rgba(79, 70, 229, 0.035) 1px, transparent 1px);
     background-size: 28px 28px;
+    -webkit-mask-image: linear-gradient(to bottom right, rgba(0,0,0,.75), transparent 72%);
     mask-image: linear-gradient(to bottom right, rgba(0,0,0,.75), transparent 72%);
   }
 
@@ -72,7 +75,7 @@ catalog: true
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.74);
     color: #5145cd;
-    font-size: 0.82rem;
+    font-size: 1.02rem;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -84,7 +87,7 @@ catalog: true
     max-width: 900px;
     margin: 0 0 1rem !important;
     color: #111827;
-    font-size: clamp(2.15rem, 5vw, 4rem) !important;
+    font-size: clamp(2.45rem, 5.4vw, 4.45rem) !important;
     line-height: 1.06;
     font-weight: 850;
     letter-spacing: -0.045em;
@@ -96,7 +99,7 @@ catalog: true
     max-width: 820px;
     margin: 0;
     color: #596275;
-    font-size: clamp(1.08rem, 2.1vw, 1.34rem);
+    font-size: clamp(1.22rem, 2.35vw, 1.52rem);
     line-height: 1.75;
   }
 
@@ -115,7 +118,7 @@ catalog: true
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.76);
     color: #4b5565;
-    font-size: 0.93rem;
+    font-size: 1.12rem;
     font-weight: 650;
   }
 
@@ -133,14 +136,14 @@ catalog: true
   .qm-section-head h2 {
     margin: 0 !important;
     color: #151a28;
-    font-size: clamp(1.65rem, 3vw, 2.15rem) !important;
+    font-size: clamp(1.95rem, 3.4vw, 2.55rem) !important;
     line-height: 1.2;
     letter-spacing: -0.025em;
   }
 
   .qm-section-kicker {
     color: #8a93a4;
-    font-size: 0.9rem;
+    font-size: 1.08rem;
     font-weight: 750;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -154,7 +157,7 @@ catalog: true
     border-radius: 0 12px 12px 0;
     background: #f8f9ff;
     color: #566074;
-    font-size: 1.05rem;
+    font-size: 1.22rem;
     line-height: 1.75;
   }
 
@@ -175,7 +178,7 @@ catalog: true
     border-radius: 10px;
     background: var(--qm-surface);
     color: #5e6677;
-    font-size: 0.9rem;
+    font-size: 1.08rem;
     font-weight: 650;
     box-shadow: 0 4px 12px rgba(17, 24, 39, 0.035);
   }
@@ -201,8 +204,8 @@ catalog: true
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 290px;
-    padding: 1.55rem 1.55rem 1.45rem;
+    min-height: 330px;
+    padding: 1.85rem 1.85rem 1.7rem;
     border: 1px solid var(--qm-line);
     border-radius: 18px;
     background: linear-gradient(180deg, #ffffff 0%, #fdfdff 100%);
@@ -222,7 +225,7 @@ catalog: true
 
   .qm-card:hover {
     transform: translateY(-4px);
-    border-color: color-mix(in srgb, var(--card-accent) 24%, #e7eaf0);
+    border-color: var(--card-accent);
     box-shadow: 0 18px 38px rgba(17, 24, 39, 0.095);
   }
 
@@ -242,16 +245,16 @@ catalog: true
     height: 2rem;
     padding: 0 0.7rem;
     border-radius: 999px;
-    background: color-mix(in srgb, var(--card-accent) 10%, white);
+    background: #f5f7ff;
     color: var(--card-accent);
-    font-size: 0.82rem;
+    font-size: 1.02rem;
     font-weight: 850;
     letter-spacing: 0.08em;
   }
 
   .qm-topic {
     color: #9299a8;
-    font-size: 0.82rem;
+    font-size: 1.02rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -260,7 +263,7 @@ catalog: true
   .qm-card h3 {
     margin: 0 0 0.8rem !important;
     color: #1b2232;
-    font-size: 1.38rem !important;
+    font-size: 1.72rem !important;
     line-height: 1.35;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -270,7 +273,7 @@ catalog: true
     flex: 1;
     margin: 0 0 1.35rem;
     color: #687184;
-    font-size: 1rem;
+    font-size: 1.18rem;
     line-height: 1.72;
   }
 
@@ -281,18 +284,18 @@ catalog: true
     align-self: flex-start;
     gap: 0.5rem;
     padding: 0.68rem 0.95rem;
-    border: 1px solid color-mix(in srgb, var(--card-accent) 18%, #e7eaf0);
+    border: 1px solid #dfe4ee;
     border-radius: 10px;
-    background: color-mix(in srgb, var(--card-accent) 7%, white);
+    background: #f7f8fc;
     color: var(--card-accent) !important;
     text-decoration: none !important;
-    font-size: 0.93rem;
+    font-size: 1.12rem;
     font-weight: 800;
     transition: background 0.18s ease, transform 0.18s ease;
   }
 
   .qm-btn:hover {
-    background: color-mix(in srgb, var(--card-accent) 12%, white);
+    background: #eef2ff;
     transform: translateY(-1px);
   }
 
@@ -301,14 +304,16 @@ catalog: true
     font-size: 0.95rem;
   }
 
-  .qm-card.c1 { --card-accent: #2563eb; }
-  .qm-card.c2 { --card-accent: #0891b2; }
-  .qm-card.c3 { --card-accent: #7c3aed; }
-  .qm-card.c4 { --card-accent: #ea580c; }
-  .qm-card.c5 { --card-accent: #059669; }
-  .qm-card.c6 { --card-accent: #dc2626; }
-  .qm-card.c7 { --card-accent: #ca8a04; }
-  .qm-card.c8 { --card-accent: #9333ea; }
+  .qm-card.c1  { --card-accent: #1d4ed8; }
+  .qm-card.c2  { --card-accent: #0f766e; }
+  .qm-card.c3  { --card-accent: #2563eb; }
+  .qm-card.c4  { --card-accent: #0891b2; }
+  .qm-card.c5  { --card-accent: #7c3aed; }
+  .qm-card.c6  { --card-accent: #ea580c; }
+  .qm-card.c7  { --card-accent: #059669; }
+  .qm-card.c8  { --card-accent: #dc2626; }
+  .qm-card.c9  { --card-accent: #ca8a04; }
+  .qm-card.c10 { --card-accent: #9333ea; }
 
   /* ---------- Footer note ---------- */
   .qm-footer-note {
@@ -318,17 +323,8 @@ catalog: true
     border-radius: 14px;
     background: #fafbfc;
     color: #7a8394;
-    font-size: 0.9rem;
+    font-size: 1.08rem;
     line-height: 1.7;
-  }
-
-  /* ---------- Compatibility fallback ---------- */
-  @supports not (color: color-mix(in srgb, red 50%, white)) {
-    .qm-number,
-    .qm-btn {
-      background: #f6f7fb;
-      border-color: #e6e8ef;
-    }
   }
 
   /* ---------- Responsive ---------- */
@@ -343,6 +339,10 @@ catalog: true
   }
 
   @media (max-width: 600px) {
+    .qm-page {
+      font-size: 18px;
+    }
+
     .qm-hero {
       margin-top: 1rem;
       padding: 1.55rem;
@@ -364,7 +364,7 @@ catalog: true
     }
 
     .qm-card h3 {
-      font-size: 1.24rem !important;
+      font-size: 1.48rem !important;
     }
   }
 
@@ -423,13 +423,13 @@ catalog: true
 <div class="qm-page">
 
   <section class="qm-hero">
-    <div class="qm-eyebrow">Quantum Many-Body Physics · Lectures 03–10</div>
+    <div class="qm-eyebrow">Quantum Many-Body Physics · Lectures 01–10</div>
     <h1 class="qm-hero-title">From Fields to Emergent Collective Physics</h1>
     <p class="qm-hero-lead">
-      A compact collection of lecture notes on quantum many-body theory: path integrals and response functions, collective modes and Fermi-liquid theory, BCS superconductivity, neutral superfluids, and renormalization-group methods.
+      A compact collection of lecture notes on quantum many-body theory: quantum-mechanical and spin path integrals, field formulations and response functions, collective modes and Fermi-liquid theory, BCS superconductivity, neutral superfluids, and renormalization-group methods.
     </p>
     <div class="qm-meta">
-      <span>8 lectures</span>
+      <span>10 lectures</span>
       <span>PDF notes</span>
       <span>Many-body field theory</span>
       <span>Updated Sep 14, 2026</span>
@@ -442,11 +442,13 @@ catalog: true
   </div>
 
   <div class="qm-intro">
-    The sequence moves from microscopic formulations of interacting quantum systems to their emergent low-energy descriptions: field variables, response and collective excitations, quasiparticles, pairing, superfluidity, and finally long-wavelength renormalization-group physics.
+    The sequence begins with path integrals in quantum mechanics and spin systems, then moves to field formulations of interacting matter and their emergent low-energy descriptions: response and collective excitations, quasiparticles, pairing, superfluidity, and finally long-wavelength renormalization-group physics.
   </div>
 
   <div class="qm-path">
-    <span>Path integrals</span>
+    <span>QM path integral</span>
+    <span>Spin path integral</span>
+    <span>Field path integrals</span>
     <span>Linear response</span>
     <span>RPA &amp; collective modes</span>
     <span>Fermi liquid</span>
@@ -459,6 +461,30 @@ catalog: true
 
     <article class="qm-card c1">
       <div class="qm-card-top">
+        <span class="qm-number">L01</span>
+        <span class="qm-topic">Quantum mechanics</span>
+      </div>
+      <h3>Path Integrals in Quantum Mechanics</h3>
+      <p class="qm-desc">
+        Introduction to the path-integral formulation of quantum mechanics: amplitudes as sums over histories, the action principle, imaginary-time methods, and the bridge from operator quantum mechanics to functional integration.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture1_Path_integral_QM.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c2">
+      <div class="qm-card-top">
+        <span class="qm-number">L02</span>
+        <span class="qm-topic">Quantum spins</span>
+      </div>
+      <h3>Spin Path Integrals &amp; the Theta Term</h3>
+      <p class="qm-desc">
+        Path-integral formulation for quantum spins, including spin coherent states, Berry-phase structure, continuum descriptions, and the appearance and physical role of the topological theta term.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture2_Path_integral_spin_theta_term.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c3">
+      <div class="qm-card-top">
         <span class="qm-number">L03</span>
         <span class="qm-topic">Field formulation</span>
       </div>
@@ -469,7 +495,7 @@ catalog: true
       <a href="https://maggiexheuw.github.io/Wu-note/Lecture3_Path_integral_fields.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
-    <article class="qm-card c2">
+    <article class="qm-card c4">
       <div class="qm-card-top">
         <span class="qm-number">L04</span>
         <span class="qm-topic">Response theory</span>
@@ -481,7 +507,7 @@ catalog: true
       <a href="https://maggiexheuw.github.io/Wu-note/Lecture4_Operator_formalism_Response.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
-    <article class="qm-card c3">
+    <article class="qm-card c5">
       <div class="qm-card-top">
         <span class="qm-number">L05</span>
         <span class="qm-topic">Collective modes</span>
@@ -493,7 +519,7 @@ catalog: true
       <a href="https://maggiexheuw.github.io/Wu-note/Lecture5_RPA_Plasmon_FMspinwave.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
-    <article class="qm-card c4">
+    <article class="qm-card c6">
       <div class="qm-card-top">
         <span class="qm-number">L06</span>
         <span class="qm-topic">Interactions</span>
@@ -505,7 +531,7 @@ catalog: true
       <a href="https://maggiexheuw.github.io/Wu-note/Lecture6_lifetime_correlationenergy.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
-    <article class="qm-card c5">
+    <article class="qm-card c7">
       <div class="qm-card-top">
         <span class="qm-number">L07</span>
         <span class="qm-topic">Quasiparticles</span>
@@ -517,7 +543,7 @@ catalog: true
       <a href="https://maggiexheuw.github.io/Wu-note/Lecture7_Fermi_Liquid_theory.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
-    <article class="qm-card c6">
+    <article class="qm-card c8">
       <div class="qm-card-top">
         <span class="qm-number">L08</span>
         <span class="qm-topic">Superconductivity</span>
@@ -529,7 +555,7 @@ catalog: true
       <a href="https://maggiexheuw.github.io/Wu-note/Lecture8_BCS_charged_SF.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
-    <article class="qm-card c7">
+    <article class="qm-card c9">
       <div class="qm-card-top">
         <span class="qm-number">L09</span>
         <span class="qm-topic">Superfluidity</span>
@@ -541,7 +567,7 @@ catalog: true
       <a href="https://maggiexheuw.github.io/Wu-note/Lecture9_neutral_superfluid.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
-    <article class="qm-card c8">
+    <article class="qm-card c10">
       <div class="qm-card-top">
         <span class="qm-number">L10</span>
         <span class="qm-topic">Long wavelengths</span>
