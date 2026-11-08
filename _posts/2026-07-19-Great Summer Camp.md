@@ -405,7 +405,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         In 1956 Leon Cooper showed that the normal Fermi sea of a metal is unstable against the formation of a bound pair of electrons, provided there is any net attractive interaction. This note provides the full derivation of the bound-state energy.
       </p>
-      <a href="./PPTX/KT-Law1.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law1.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c2">
@@ -417,7 +417,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Lecture slides covering the physical setup, trial wave function, Schrödinger equation, and Cooper's model interaction leading to the bound-state energy of the pair.
       </p>
-      <a href="./PPTX/KT-Law-beamer1.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer1.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c3">
@@ -429,7 +429,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         A document developing both the single-pair instability and the full BCS variational treatment, working in the language of second quantization.
       </p>
-      <a href="./PPTX/KT-Law2.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law2.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c4">
@@ -441,7 +441,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Slides illustrating the promotion of the single-pair instability into a self-consistent many-body ground state of a coherent condensate of pairs.
       </p>
-      <a href="./PPTX/KT-Law-beamer2.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer2.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
   </div>
@@ -465,7 +465,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         In a flat band, electrons do not move, and the familiar estimate predicts a vanishing pair size. These notes resolve the paradox by showing a new length scale encoded in the quantum metric \(g_{\mu\nu}(\mathbf{k})\).
       </p>
-      <a href="./PPTX/KT-Lwa3.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Lwa3.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c6">
@@ -477,7 +477,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Graduate lecture slides on quantum geometry and superconductivity, demonstrating how the quantum metric governs the physical size of pairs in flat bands.
       </p>
-      <a href="./PPTX/KT-Law-beamer3.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer3.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
   </div>
@@ -501,7 +501,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Every energy scale \(E\) in a metal defines a characteristic length \(L_E \sim \hbar v_F / E\). These notes develop this master relation and tour its realizations in superconductors, Kondo screening, and localization.
       </p>
-      <a href="./PPTX/KT-Law-beamer4.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer4.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c8">
@@ -513,7 +513,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Lecture slides explaining how \(\hbar v_F \approx 0.66 \text{ eV} \cdot \text{nm}\) converts every energy scale in a metal into a length, unifying Josephson junctions and Kondo physics.
       </p>
-      <a href="./PPTX/L2P1SolidStateLengthScaleBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/L2P1SolidStateLengthScaleBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c9">
@@ -525,7 +525,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         A self-contained derivation of Friedel oscillations produced by a single delta-function impurity in a 1D gas of non-interacting electrons, using the T-matrix/Green's function approach.
       </p>
-      <a href="./PPTX/KT-Law-beamer5.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer5.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c10">
@@ -537,7 +537,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Slides on the Lehmann representation, Dyson equation, and the thermal length cutoff for Friedel oscillations in one dimension.
       </p>
-      <a href="./PPTX/L2P2FriedelOscillationsBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/L2P2FriedelOscillationsBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c11">
@@ -549,7 +549,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         An introduction to Anderson localization through the exactly tractable 1D tight-binding model, deriving the transfer-matrix formulation and computing the localization length in the weak-disorder limit.
       </p>
-      <a href="./PPTX/KT-Law-beamer7.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/KT-Law-beamer7.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c12">
@@ -561,7 +561,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Lecture slides covering transfer matrices, Lyapunov exponents, numerical QR re-orthogonalization, and the scaling theory of localization.
       </p>
-      <a href="./PPTX/L2P3Andersonlocalization1DBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/L2P3Andersonlocalization1DBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
   </div>
@@ -585,7 +585,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         An overview of topological superconductivity, covering the 1D Kitaev model, realizing p-wave SC in condensed matter, and detection schemes like selective equal spin Andreev reflections.
       </p>
-      <a href="./PPTX/3b05a110-03e0-49e9-8dba-674de5ac3de2.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/3b05a110-03e0-49e9-8dba-674de5ac3de2.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c14">
@@ -597,7 +597,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         A detailed presentation on the selective equal spin Andreev reflections induced by Majorana fermions in topological superconductors, exploring the underlying scattering matrices.
       </p>
-      <a href="./PPTX/b967d75c-aec2-4c62-8266-a8d4335ced0c.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/b967d75c-aec2-4c62-8266-a8d4335ced0c.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c15">
@@ -609,7 +609,7 @@ permalink: /great-summer-camp-lecture-series/
       <p class="qm-desc">
         Exploring Quantum Anomalous Hall Insulators (QAHI) as Majorana platforms. Covers quasi-1D QAHI/SC junctions, devices with cuts, and flat-band topological superconductors.
       </p>
-      <a href="./PPTX/60dfd905-fe36-4173-8bfe-c6be461c113c.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/PPTX/60dfd905-fe36-4173-8bfe-c6be461c113c.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
   </div>
