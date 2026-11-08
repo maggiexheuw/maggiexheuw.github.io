@@ -30,10 +30,10 @@ permalink: /greater-bay-area-summer-school-lecture-series/
   --asl-soft: #f1efe8;
   --asl-shadow: 0 14px 36px rgba(28, 39, 49, .07);
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1160px, calc(100vw - 42px));
-  max-width: none;
+  left: auto;
+  transform: none;
+  width: 100%;
+  max-width: 100%;
   margin: 36px 0 100px;
   padding: 0;
   background: var(--asl-paper);
@@ -341,7 +341,7 @@ permalink: /greater-bay-area-summer-school-lecture-series/
   .asl-page .asl-card { padding: 23px; }
 }
 @media (max-width: 670px) {
-  .asl-page { width: calc(100vw - 24px); font-size: 18px; margin-top: 12px; }
+  .asl-page { width: 100%; font-size: 18px; margin-top: 12px; }
   .asl-page .asl-cover { padding: 32px 23px 38px; min-height: unset; }
   .asl-page .asl-cover:before { inset: 9px; }
   .asl-page h1.asl-cover-title { font-size: clamp(40px, 10vw, 56px) !important; }
@@ -379,6 +379,107 @@ permalink: /greater-bay-area-summer-school-lecture-series/
   .asl-page .asl-section { break-before: auto; }
   .asl-page .asl-figure { display: none; }
 }
+
+/* ======================================================================
+   HUX BLOG / BOOTSTRAP 3 — PAGE-LOCAL LAYOUT BRIDGE
+
+   WHY: Hux renders this post in .col-lg-8 + .col-lg-offset-2 and places
+   .catalog-container beside it. A viewport-wide .asl-page overflowed
+   its parent and covered the right sidebar. The fix reserves a real
+   sidebar column and keeps the article within its allocated column.
+
+   :has(.asl-page) deliberately limits the fix to THIS post. Other blog
+   entries retain their original theme. Unsupported older browsers use
+   the safe 100%-width article above as a fallback (without overflow).
+   ====================================================================== */
+
+/* Match only the article carrying this specific lecture archive. */
+@media screen and (min-width: 1200px) {
+  article:has(.asl-page) > .container {
+    width: calc(100% - 72px) !important;
+    max-width: 1540px !important;
+  }
+
+  article:has(.asl-page) .post-container:has(.asl-page) {
+    float: left;
+    width: calc(100% - 284px) !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  article:has(.asl-page) .catalog-container {
+    float: left;
+    clear: none;
+    width: 244px !important;
+    max-width: 244px !important;
+    margin-left: 40px !important;
+    padding: 0 !important;
+  }
+
+  article:has(.asl-page) .side-catalog {
+    width: 240px !important;
+    max-width: 100%;
+  }
+
+  /* Show chapter-level navigation in the right rail. The full set of
+     15 resources remains visible and linked inside the article itself. */
+  article:has(.asl-page) .side-catalog .catalog-body .h3_nav {
+    display: none !important;
+  }
+
+  article:has(.asl-page) .side-catalog .catalog-body .h2_nav {
+    margin: 0 0 12px;
+    line-height: 1.5;
+  }
+
+  article:has(.asl-page) .side-catalog .catalog-body .h2_nav a {
+    color: #536276 !important;
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.5;
+  }
+
+  article:has(.asl-page) .side-catalog .catalog-body .h2_nav.active a {
+    color: #7e4144 !important;
+  }
+}
+
+/* At medium widths, Hux hides its catalog; give the article full width. */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  article:has(.asl-page) > .container {
+    width: calc(100% - 52px) !important;
+    max-width: 1100px !important;
+  }
+
+  article:has(.asl-page) .post-container:has(.asl-page) {
+    float: none;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Small-screen gutters are provided by Hux's own Bootstrap container. */
+@media screen and (max-width: 767px) {
+  article:has(.asl-page) .post-container:has(.asl-page) {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
+
+/* Footer meta / featured tags follow the same page alignment. */
+@media screen and (min-width: 768px) {
+  article:has(.asl-page) .sidebar-container:not(.catalog-container) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
 </style>
 
 <div class="asl-page">
