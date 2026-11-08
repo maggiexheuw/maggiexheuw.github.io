@@ -1,592 +1,624 @@
 ---
-layout: post
-title: "Quantum Many-Body Physics — Lecture Notes"
-subtitle: "Field Theory, Fermi Liquids, Superconductivity, Superfluidity & Renormalization Group"
-date: 2026-09-14
-author: Maggie
+layout:     post
+title:      "Great Summer Camp"
+subtitle:   "A Curated Archive: BCS, Quantum Geometry, and Topological Phases"
+date:       2025-11-04
+author:     Maggie
 header-img: img/EdWitten.jpg
 catalog: true
+tags: 
+- Physics
+- Summer Camp
+- Notes
+- Superconductivity
+- Majorana
 ---
 
-<!-- ========================================================== -->
-<!-- Quantum Many-Body Physics · Lectures 01–10                 -->
-<!-- PDFs are stored in the Wu-note/ folder.                     -->
-<!-- ========================================================== -->
+<!-- ============================================================
+     Great Summer Camp — Academic Editorial Layout
+     ============================================================ -->
+
+<header class="catalog-hero">
+    <span class="hero-eyebrow">Summer Camp Archive · Theoretical Physics</span>
+    <h2 class="hero-title">Great Summer Camp<br>Lecture Series</h2>
+    <p class="hero-desc">
+        A curated collection of lecture notes and beamer presentations from the Great Summer Camp. 
+        Delving into the Cooper problem, BCS theory, flat-band superconductivity via quantum geometry, 
+        mesoscopic phenomena, and the frontiers of topological superconductivity & Majorana fermions.
+    </p>
+    <div class="hero-meta">
+        <span>04 Topics</span>
+        <span class="hero-meta-dot">·</span>
+        <span>15 Files</span>
+        <span class="hero-meta-dot">·</span>
+        <span>Summer 2026</span>
+    </div>
+</header>
 
 <style>
-  /* ---------- Page scope ---------- */
-  .qm-page {
-    --qm-ink: #172033;
-    --qm-muted: #667085;
-    --qm-line: #e7eaf0;
-    --qm-surface: #ffffff;
-    --qm-soft: #f7f8fb;
-    --qm-accent: #4f46e5;
-    --qm-accent-2: #7c3aed;
-    --qm-shadow: 0 18px 45px rgba(24, 32, 51, 0.08);
-    color: var(--qm-ink);
+/* ============================================================
+   Design Tokens — paper, ink, copper, navy (Academic Style)
+   ============================================================ */
+:root {
+    --paper:        #f5f2e9;
+    --paper-soft:   #fbf9f2;
+    --surface:      #ffffff;
+
+    --ink:          #1b1a17;
+    --ink-muted:    #55524a;
+    --ink-subtle:   #8f8a7e;
+
+    --rule:         rgba(27, 26, 23, 0.10);
+    --rule-strong:  rgba(27, 26, 23, 0.20);
+
+    --navy:         #1f3350;
+    --copper:       #9a7b48;
+    --copper-soft:  rgba(154, 123, 72, 0.12);
+
+    --radius-xl: 22px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 2px rgba(27, 26, 23, 0.04);
+    --shadow-md: 0 12px 32px rgba(27, 26, 23, 0.07);
+    --shadow-lg: 0 22px 48px rgba(31, 51, 80, 0.10);
+
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                 Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --font-display: "Iowan Old Style", "Palatino Linotype", Palatino,
+                    "Book Antiqua", Georgia, "Times New Roman", serif;
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+body {
+    background-color: var(--paper);
+    font-family: var(--font-sans);
     font-size: 18px;
-    line-height: 1.75;
-  }
+    line-height: 1.72;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-  .qm-page * {
-    box-sizing: border-box;
-  }
-
-  /* ---------- Hero ---------- */
-  .qm-hero {
+/* ============================================================
+   Hero — journal masthead
+   ============================================================ */
+.catalog-hero {
     position: relative;
-    overflow: hidden;
-    margin: 1.5rem 0 2.4rem;
-    padding: clamp(2rem, 5vw, 4.2rem);
-    border: 1px solid rgba(79, 70, 229, 0.13);
-    border-radius: 24px;
+    padding: 54px 48px 44px;
+    margin-bottom: 14px;
+    border-radius: var(--radius-xl);
     background:
-      radial-gradient(circle at 88% 14%, rgba(124, 58, 237, 0.16), transparent 30%),
-      radial-gradient(circle at 10% 88%, rgba(14, 165, 233, 0.12), transparent 32%),
-      linear-gradient(135deg, #fafaff 0%, #f7f8ff 48%, #fbfdff 100%);
-    box-shadow: var(--qm-shadow);
-  }
+        radial-gradient(95% 130% at 100% 0%, rgba(154, 123, 72, 0.10), transparent 58%),
+        linear-gradient(165deg, #fdfcf7 0%, #f6f2e6 100%);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    isolation: isolate;
+}
 
-  .qm-hero::after {
-    content: "";
+.catalog-hero::before {
+    content: '';
     position: absolute;
     inset: 0;
-    pointer-events: none;
     background-image:
-      linear-gradient(rgba(79, 70, 229, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(79, 70, 229, 0.035) 1px, transparent 1px);
+        linear-gradient(rgba(27, 26, 23, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27, 26, 23, 0.035) 1px, transparent 1px);
     background-size: 28px 28px;
-    mask-image: linear-gradient(to bottom right, rgba(0,0,0,.75), transparent 72%);
-  }
+    -webkit-mask-image: radial-gradient(circle at 88% 12%, black, transparent 70%);
+    mask-image: radial-gradient(circle at 88% 12%, black, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
 
-  .qm-eyebrow {
-    position: relative;
-    z-index: 1;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.1rem;
-    padding: 0.45rem 0.8rem;
-    border: 1px solid rgba(79, 70, 229, 0.15);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.74);
-    color: #5145cd;
-    font-size: 0.98rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .qm-hero-title {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    margin: 0 0 1rem !important;
-    color: #111827;
-    font-size: clamp(2.45rem, 5.4vw, 4.45rem) !important;
-    line-height: 1.06;
-    font-weight: 850;
-    letter-spacing: -0.045em;
-  }
-
-  .qm-hero-lead {
-    position: relative;
-    z-index: 1;
-    max-width: 820px;
-    margin: 0;
-    color: #596275;
-    font-size: clamp(1.22rem, 2.35vw, 1.52rem);
-    line-height: 1.75;
-  }
-
-  .qm-meta {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-top: 1.7rem;
-  }
-
-  .qm-meta span {
-    padding: 0.48rem 0.78rem;
-    border: 1px solid #e6e8f1;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.76);
-    color: #4b5565;
-    font-size: 1.06rem;
-    font-weight: 650;
-  }
-
-  /* ---------- Section intro ---------- */
-  .qm-section-head {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 3rem 0 1rem;
-    padding-bottom: 0.85rem;
-    border-bottom: 1px solid var(--qm-line);
-  }
-
-  .qm-section-head h2 {
-    margin: 0 !important;
-    color: #151a28;
-    font-size: clamp(1.95rem, 3.4vw, 2.55rem) !important;
-    line-height: 1.2;
-    letter-spacing: -0.025em;
-  }
-
-  .qm-section-kicker {
-    color: #8a93a4;
-    font-size: 1.03rem;
-    font-weight: 750;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
-  .qm-intro {
-    margin: 0 0 2rem;
-    padding: 1rem 1.15rem;
-    border-left: 3px solid #6366f1;
-    border-radius: 0 12px 12px 0;
-    background: #f8f9ff;
-    color: #566074;
-    font-size: 1.2rem;
-    line-height: 1.75;
-  }
-
-  /* ---------- Topic path ---------- */
-  .qm-path {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    margin: 0 0 2.2rem;
-  }
-
-  .qm-path span {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.48rem 0.78rem;
-    border: 1px solid var(--qm-line);
-    border-radius: 10px;
-    background: var(--qm-surface);
-    color: #5e6677;
-    font-size: 1.03rem;
-    font-weight: 650;
-    box-shadow: 0 4px 12px rgba(17, 24, 39, 0.035);
-  }
-
-  .qm-path span::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--qm-accent), var(--qm-accent-2));
-  }
-
-  /* ---------- Lecture cards ---------- */
-  .qm-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.15rem;
-  }
-
-  .qm-card {
-    --card-accent: #4f46e5;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 330px;
-    padding: 1.85rem 1.85rem 1.7rem;
-    border: 1px solid var(--qm-line);
-    border-radius: 18px;
-    background: linear-gradient(180deg, #ffffff 0%, #fdfdff 100%);
-    box-shadow: 0 9px 28px rgba(17, 24, 39, 0.055);
-    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-  }
-
-  .qm-card::before {
-    content: "";
+.catalog-hero::after {
+    content: '';
     position: absolute;
     top: 0;
+    left: 48px;
+    right: 48px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--copper) 0%, rgba(154, 123, 72, 0.10) 65%, transparent 100%);
+}
+
+.hero-eyebrow {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 1.4vw + 1.7rem, 2.9rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+    margin: 0 0 20px;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.hero-desc {
+    font-size: 1.04rem;
+    line-height: 1.74;
+    color: var(--ink-muted);
+    margin: 0 0 26px;
+    max-width: 660px;
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-subtle);
+}
+
+.hero-meta-dot {
+    color: var(--copper);
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+/* ============================================================
+   Section Titles
+   ============================================================ */
+h3.section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 68px 0 26px;
+    padding: 0 !important;
+    border: none !important;
+    background: none;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.section-num {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink-subtle);
+    flex-shrink: 0;
+}
+
+.section-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow-sm);
+    font-size: 15px;
+    line-height: 1;
+}
+
+.section-label {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    white-space: nowrap;
+}
+
+.section-rule {
+    position: relative;
+    flex: 1;
+    height: 1px;
+    margin-left: 8px;
+    background: var(--rule);
+}
+
+.section-rule::after {
+    content: '';
+    position: absolute;
     left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--card-accent);
-  }
+    top: 0;
+    width: 44px;
+    height: 1px;
+    background: var(--copper);
+}
 
-  .qm-card:hover {
+/* ============================================================
+   Grid
+   ============================================================ */
+.note-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+    gap: 18px;
+    margin-bottom: 8px;
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.note-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 26px 26px 20px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, #ffffff 0%, #fefdfa 100%);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none !important;
+    color: var(--ink);
+    overflow: hidden;
+    isolation: isolate;
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+        opacity 0.55s ease var(--delay, 0ms),
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms),
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.note-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.note-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    bottom: 16px;
+    width: 2px;
+    border-radius: 2px;
+    background: var(--copper);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+}
+
+.note-card.is-visible:hover {
     transform: translateY(-4px);
-    border-color: color-mix(in srgb, var(--card-accent) 24%, #e7eaf0);
-    box-shadow: 0 18px 38px rgba(17, 24, 39, 0.095);
-  }
+    border-color: rgba(31, 51, 80, 0.22);
+    box-shadow: var(--shadow-lg);
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s cubic-bezier(0.34, 1.25, 0.64, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
 
-  .qm-card-top {
+.note-card:hover::before { transform: scaleY(1); }
+
+.card-title {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.42;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    padding-right: 36px;
+    transition: color 0.25s ease;
+}
+
+.card-title em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--ink-subtle);
+}
+
+.note-card:hover .card-title {
+    color: var(--navy);
+}
+
+.card-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translate(-4px, 4px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.35s cubic-bezier(0.34, 1.25, 0.64, 1),
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.note-card:hover .card-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #ffffff;
+}
+
+.card-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1.1rem;
-  }
+    gap: 14px;
+    padding-top: 16px;
+    margin-top: auto;
+    border-top: 1px solid var(--rule);
+}
 
-  .qm-number {
+.card-author {
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    letter-spacing: -0.005em;
+}
+
+/* ============================================================
+   Badges
+   ============================================================ */
+.badge {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    min-width: 3.1rem;
-    height: 2rem;
-    padding: 0 0.7rem;
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--card-accent) 10%, white);
-    color: var(--card-accent);
-    font-size: 0.98rem;
-    font-weight: 850;
-    letter-spacing: 0.08em;
-  }
-
-  .qm-topic {
-    color: #9299a8;
-    font-size: 0.96rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-  }
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
 
-  .qm-card h3 {
-    margin: 0 0 0.8rem !important;
-    color: #1b2232;
-    font-size: 1.66rem !important;
-    line-height: 1.35;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
+.badge--note         { background: rgba(31, 51, 80, 0.07);  color: #1f3350; border-color: rgba(31, 51, 80, 0.16); }
+.badge--lecture      { background: rgba(109, 40, 217, 0.08); color: #6d28d9; border-color: rgba(109, 40, 217, 0.18); }
+.badge--beamer       { background: rgba(190, 18, 60, 0.07);  color: #be123c; border-color: rgba(190, 18, 60, 0.16); }
 
-  .qm-desc {
-    flex: 1;
-    margin: 0 0 1.35rem;
-    color: #687184;
-    font-size: 1.16rem;
-    line-height: 1.72;
-  }
-
-  .qm-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-start;
-    gap: 0.5rem;
-    padding: 0.68rem 0.95rem;
-    border: 1px solid color-mix(in srgb, var(--card-accent) 18%, #e7eaf0);
-    border-radius: 10px;
-    background: color-mix(in srgb, var(--card-accent) 7%, white);
-    color: var(--card-accent) !important;
-    text-decoration: none !important;
-    font-size: 1.06rem;
-    font-weight: 800;
-    transition: background 0.18s ease, transform 0.18s ease;
-  }
-
-  .qm-btn:hover {
-    background: color-mix(in srgb, var(--card-accent) 12%, white);
-    transform: translateY(-1px);
-  }
-
-  .qm-btn::after {
-    content: "↗";
-    font-size: 0.95rem;
-  }
-
-  .qm-card.c1  { --card-accent: #1d4ed8; }
-  .qm-card.c2  { --card-accent: #0f766e; }
-  .qm-card.c3  { --card-accent: #2563eb; }
-  .qm-card.c4  { --card-accent: #0891b2; }
-  .qm-card.c5  { --card-accent: #7c3aed; }
-  .qm-card.c6  { --card-accent: #ea580c; }
-  .qm-card.c7  { --card-accent: #059669; }
-  .qm-card.c8  { --card-accent: #dc2626; }
-  .qm-card.c9  { --card-accent: #ca8a04; }
-  .qm-card.c10 { --card-accent: #9333ea; }
-
-  /* ---------- Footer note ---------- */
-  .qm-footer-note {
-    margin-top: 2.4rem;
-    padding: 1rem 1.2rem;
-    border: 1px dashed #d9deea;
-    border-radius: 14px;
-    background: #fafbfc;
-    color: #7a8394;
-    font-size: 1.03rem;
-    line-height: 1.7;
-  }
-
-  /* ---------- Compatibility fallback ---------- */
-  @supports not (color: color-mix(in srgb, red 50%, white)) {
-    .qm-number,
-    .qm-btn {
-      background: #f6f7fb;
-      border-color: #e6e8ef;
+/* ============================================================
+   Motion Preferences
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
     }
-  }
+    .note-card { opacity: 1 !important; transform: none !important; }
+}
 
-  /* ---------- Responsive ---------- */
-  @media (max-width: 820px) {
-    .qm-grid {
-      grid-template-columns: 1fr;
-    }
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 640px) {
+    body { font-size: 17px; }
 
-    .qm-card {
-      min-height: auto;
-    }
-  }
+    .catalog-hero { padding: 36px 24px 30px; border-radius: 18px; }
+    .catalog-hero::after { left: 24px; right: 24px; }
+    .hero-title { font-size: 1.85rem; }
+    .hero-meta { font-size: 0.7rem; letter-spacing: 0.1em; }
 
-  @media (max-width: 600px) {
-    .qm-page {
-      font-size: 17px;
-    }
+    .section-title { gap: 12px; margin: 54px 0 20px; }
+    .section-num { font-size: 1.35rem; }
+    .section-label { font-size: 1.24rem; white-space: normal; }
+    .section-icon { width: 30px; height: 30px; font-size: 13px; }
 
-    .qm-hero {
-      margin-top: 1rem;
-      padding: 1.55rem;
-      border-radius: 18px;
-    }
-
-    .qm-section-head {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    .qm-section-kicker {
-      white-space: normal;
-    }
-
-    .qm-card {
-      padding: 1.3rem;
-      border-radius: 15px;
-    }
-
-    .qm-card h3 {
-      font-size: 1.48rem !important;
-    }
-  }
-
-  /* ---------- Dark-mode friendly ---------- */
-  @media (prefers-color-scheme: dark) {
-    .qm-page {
-      --qm-ink: #eef2ff;
-      --qm-muted: #aeb7c8;
-      --qm-line: #2b3447;
-      --qm-surface: #151b28;
-      --qm-soft: #111827;
-      --qm-shadow: none;
-    }
-
-    .qm-hero {
-      border-color: #2b3550;
-      background:
-        radial-gradient(circle at 88% 14%, rgba(124, 58, 237, 0.20), transparent 30%),
-        radial-gradient(circle at 10% 88%, rgba(14, 165, 233, 0.12), transparent 32%),
-        linear-gradient(135deg, #121827 0%, #151827 48%, #111827 100%);
-    }
-
-    .qm-eyebrow,
-    .qm-meta span {
-      border-color: #313a50;
-      background: rgba(17, 24, 39, 0.72);
-    }
-
-    .qm-hero-title,
-    .qm-section-head h2,
-    .qm-card h3 {
-      color: #f5f7ff;
-    }
-
-    .qm-hero-lead,
-    .qm-desc,
-    .qm-intro,
-    .qm-path span,
-    .qm-footer-note {
-      color: #aeb7c8;
-    }
-
-    .qm-intro,
-    .qm-footer-note {
-      background: #141b2a;
-    }
-
-    .qm-path span,
-    .qm-card {
-      background: #151b28;
-      box-shadow: none;
-    }
-  }
+    .note-card { padding: 22px 20px 18px; }
+    .card-title { font-size: 1.1rem; padding-right: 30px; }
+}
 </style>
 
-<div class="qm-page">
+---
 
-  <section class="qm-hero">
-    <div class="qm-eyebrow">Quantum Many-Body Physics · Lectures 01–10</div>
-    <h1 class="qm-hero-title">From Fields to Emergent Collective Physics</h1>
-    <p class="qm-hero-lead">
-      A compact collection of lecture notes on quantum many-body theory: quantum-mechanical and spin path integrals, field formulations and response functions, collective modes and Fermi-liquid theory, BCS superconductivity, neutral superfluids, and renormalization-group methods.
-    </p>
-    <div class="qm-meta">
-      <span>10 lectures</span>
-      <span>PDF notes</span>
-      <span>Many-body field theory</span>
-      <span>Updated Sep 14, 2026</span>
-    </div>
-  </section>
+<h3 class="section-title">
+    <span class="section-num">01</span>
+    <span class="section-icon">🔗</span>
+    <span class="section-label">Superconductivity: From Cooper Pairs to BCS</span>
+    <span class="section-rule"></span>
+</h3>
 
-  <div class="qm-section-head">
-    <h2>Lecture Notes</h2>
-    <div class="qm-section-kicker">A conceptual route through many-body physics</div>
-  </div>
-
-  <div class="qm-intro">
-    The sequence begins with path integrals in quantum mechanics and spin systems, then moves to field formulations of interacting matter and their emergent low-energy descriptions: response and collective excitations, quasiparticles, pairing, superfluidity, and finally long-wavelength renormalization-group physics.
-  </div>
-
-  <div class="qm-path">
-    <span>QM path integral</span>
-    <span>Spin path integral</span>
-    <span>Field path integrals</span>
-    <span>Linear response</span>
-    <span>RPA &amp; collective modes</span>
-    <span>Fermi liquid</span>
-    <span>BCS theory</span>
-    <span>Superfluidity</span>
-    <span>RG &amp; KT physics</span>
-  </div>
-
-  <div class="qm-grid">
-
-    <article class="qm-card c1">
-      <div class="qm-card-top">
-        <span class="qm-number">L01</span>
-        <span class="qm-topic">Quantum mechanics</span>
-      </div>
-      <h3>Path Integrals in Quantum Mechanics</h3>
-      <p class="qm-desc">
-        Introduction to the path-integral formulation of quantum mechanics: amplitudes as sums over histories, the action principle, imaginary-time methods, and the bridge from operator quantum mechanics to functional integration.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture1_Path_integral_QM.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c2">
-      <div class="qm-card-top">
-        <span class="qm-number">L02</span>
-        <span class="qm-topic">Quantum spins</span>
-      </div>
-      <h3>Spin Path Integrals &amp; the Theta Term</h3>
-      <p class="qm-desc">
-        Path-integral formulation for quantum spins, including spin coherent states, Berry-phase structure, continuum descriptions, and the appearance and physical role of the topological theta term.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture2_Path_integral_spin_theta_term.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c3">
-      <div class="qm-card-top">
-        <span class="qm-number">L03</span>
-        <span class="qm-topic">Field formulation</span>
-      </div>
-      <h3>Path Integrals &amp; Fields</h3>
-      <p class="qm-desc">
-        Path-integral formulation of quantum many-body systems and the introduction of field variables as the foundation for diagrammatic and effective-field-theory methods.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture3_Path_integral_fields.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c4">
-      <div class="qm-card-top">
-        <span class="qm-number">L04</span>
-        <span class="qm-topic">Response theory</span>
-      </div>
-      <h3>Operator Formalism &amp; Response</h3>
-      <p class="qm-desc">
-        Operator methods for interacting many-body systems together with response-function techniques describing how a quantum system reacts to external perturbations.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture4_Operator_formalism_Response.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c5">
-      <div class="qm-card-top">
-        <span class="qm-number">L05</span>
-        <span class="qm-topic">Collective modes</span>
-      </div>
-      <h3>RPA, Plasmons &amp; Ferromagnetic Spin Waves</h3>
-      <p class="qm-desc">
-        Random-phase approximation and collective excitations in interacting systems, including density oscillations, plasmons, and ferromagnetic spin-wave modes.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture5_RPA_Plasmon_FMspinwave.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c6">
-      <div class="qm-card-top">
-        <span class="qm-number">L06</span>
-        <span class="qm-topic">Interactions</span>
-      </div>
-      <h3>Lifetime &amp; Correlation Energy</h3>
-      <p class="qm-desc">
-        Interaction effects beyond the simplest mean-field picture, with emphasis on quasiparticle lifetime, decay processes, and many-body correlation energy.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture6_lifetime_correlationenergy.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c7">
-      <div class="qm-card-top">
-        <span class="qm-number">L07</span>
-        <span class="qm-topic">Quasiparticles</span>
-      </div>
-      <h3>Fermi Liquid Theory</h3>
-      <p class="qm-desc">
-        Landau's low-energy description of interacting fermions: quasiparticles, phenomenological interaction parameters, and the organization of physics near the Fermi surface.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture7_Fermi_Liquid_theory.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c8">
-      <div class="qm-card-top">
-        <span class="qm-number">L08</span>
-        <span class="qm-topic">Superconductivity</span>
-      </div>
-      <h3>BCS Theory &amp; Charged Superfluids</h3>
-      <p class="qm-desc">
-        BCS pairing and the physics of charged superfluids, connecting microscopic Cooper pairing with collective electromagnetic response.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture8_BCS_charged_SF.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c9">
-      <div class="qm-card-top">
-        <span class="qm-number">L09</span>
-        <span class="qm-topic">Superfluidity</span>
-      </div>
-      <h3>Neutral Superfluids</h3>
-      <p class="qm-desc">
-        Neutral-superfluid physics and its low-energy collective behavior, providing a complementary perspective to charged condensates and superconductors.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture9_neutral_superfluid.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-    <article class="qm-card c10">
-      <div class="qm-card-top">
-        <span class="qm-number">L10</span>
-        <span class="qm-topic">Long wavelengths</span>
-      </div>
-      <h3>RG, Nonlinear Sigma Model &amp; Kosterlitz–Thouless Physics</h3>
-      <p class="qm-desc">
-        Renormalization-group ideas, nonlinear sigma models, and Kosterlitz–Thouless physics as long-wavelength tools for interacting, ordered, and topological systems.
-      </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Lecture10_RG_nonlinearsigma_KT.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
-    </article>
-
-  </div>
-
-
-
+<div class="note-grid">
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">The Cooper Problem<br><em>Full Derivation Notes</em></span>
+        <span class="card-meta">
+            <span class="card-author">KT-Law1</span>
+            <span class="badge badge--note">Note</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">The Cooper Problem<br><em>Instability of the Fermi Sea</em></span>
+        <span class="card-meta">
+            <span class="card-author">KT-Law-beamer1</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">From Cooper Pair to BCS Ground State<br><em>Second Quantization</em></span>
+        <span class="card-meta">
+            <span class="card-author">KT-Law2</span>
+            <span class="badge badge--note">Note</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">From Cooper Pair to BCS Ground State<br><em>Coherent Condensate</em></span>
+        <span class="card-meta">
+            <span class="card-author">KT-Law-beamer2</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
 </div>
+
+<h3 class="section-title">
+    <span class="section-num">02</span>
+    <span class="section-icon">🌀</span>
+    <span class="section-label">Flat-Band &amp; Quantum Geometry</span>
+    <span class="section-rule"></span>
+</h3>
+
+<div class="note-grid">
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Size of a Cooper Pair in a Flat Band<br><em>Quantum Geometry &amp; Superconductivity</em></span>
+        <span class="card-meta">
+            <span class="card-author">KT-Lwa3</span>
+            <span class="badge badge--note">Note</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Size of a Cooper Pair in a Flat Band<br><em>Quantum Geometry &amp; Superconductivity</em></span>
+        <span class="card-meta">
+            <span class="card-author">KT-Law-beamer3</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+</div>
+
+<h3 class="section-title">
+    <span class="section-num">03</span>
+    <span class="section-icon">📡</span>
+    <span class="section-label">Mesoscopic Physics &amp; Localization</span>
+    <span class="section-rule"></span>
+</h3>
+
+<div class="note-grid">
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Fermi-Velocity-Controlled Length Scales<br><em>One Master Formula, Many Phenomena</em></span>
+        <span class="card-meta">
+            <span class="card-author">Lecture Notes</span>
+            <span class="badge badge--note">Note</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Solid State Length Scales<br><em>Master Formula Lecture (L2P1)</em></span>
+        <span class="card-meta">
+            <span class="card-author">Lecture Slides</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Friedel Oscillations in 1D<br><em>T-Matrix &amp; Green's Function Approach</em></span>
+        <span class="card-meta">
+            <span class="card-author">Lecture Notes</span>
+            <span class="badge badge--note">Note</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Friedel Oscillations in 1D<br><em>Dyson Equation &amp; Thermal Length (L2P2)</em></span>
+        <span class="card-meta">
+            <span class="card-author">Lecture Slides</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Anderson Localization in 1D<br><em>Transfer Matrices &amp; Lyapunov Exponents</em></span>
+        <span class="card-meta">
+            <span class="card-author">Lecture Notes</span>
+            <span class="badge badge--note">Note</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Anderson Localization in 1D<br><em>Localization Length Numerics (L2P3)</em></span>
+        <span class="card-meta">
+            <span class="card-author">Lecture Slides</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+</div>
+
+<h3 class="section-title">
+    <span class="section-num">04</span>
+    <span class="section-icon">🌌</span>
+    <span class="section-label">Topological Superconductivity &amp; Majorana</span>
+    <span class="section-rule"></span>
+</h3>
+
+<div class="note-grid">
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Introduction to Topological Superconductors<br><em>Fundamentals &amp; Realizations</em></span>
+        <span class="card-meta">
+            <span class="card-author">Vic K. T. Law</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Majorana Induced Equal Spin Andreev Reflections<br><em>Selective Spin Transport</em></span>
+        <span class="card-meta">
+            <span class="card-author">Vic K. T. Law</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+    <a class="note-card" href="#" target="_blank" rel="noopener noreferrer">
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <span class="card-title">Quantum Anomalous Hall Insulators<br><em>As Majorana Platforms</em></span>
+        <span class="card-meta">
+            <span class="card-author">Vic K. T. Law</span>
+            <span class="badge badge--beamer">Beamer</span>
+        </span>
+    </a>
+</div>
+
+<script>
+(function () {
+    /* Staggered reveal per grid */
+    document.querySelectorAll('.note-grid').forEach(function (grid) {
+        grid.querySelectorAll('.note-card').forEach(function (card, i) {
+            card.style.setProperty('--delay', (i * 70) + 'ms');
+        });
+    });
+
+    var cards = document.querySelectorAll('.note-card');
+
+    if (!('IntersectionObserver' in window)) {
+        cards.forEach(function (c) { c.classList.add('is-visible'); });
+        return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+    cards.forEach(function (c) { io.observe(c); });
+})();
+</script>
