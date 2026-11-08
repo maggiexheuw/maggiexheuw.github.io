@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Advanced Theoretical Physics — Lecture Notes & Summaries"
-subtitle: "Quantum Anomalies, Conformal Field Theory & Higher-Form Symmetries"
+title: "Quantum Many-Body Physics — Lecture Notes"
+subtitle: "Field Theory, Fermi Liquids, Superconductivity, Superfluidity & Renormalization Group"
 date: 2026-09-14
 author: Maggie
 header-img: img/EdWitten.jpg
@@ -9,7 +9,7 @@ catalog: true
 ---
 
 <!-- ========================================================== -->
-<!-- Advanced Theoretical Physics · Notes & Lectures            -->
+<!-- Quantum Many-Body Physics · Lectures 01–10                 -->
 <!-- PDFs are stored in the Wu-note/ folder.                     -->
 <!-- ========================================================== -->
 
@@ -301,10 +301,28 @@ catalog: true
     font-size: 0.95rem;
   }
 
-  .qm-card.c1 { --card-accent: #2563eb; }
-  .qm-card.c2 { --card-accent: #0f766e; }
-  .qm-card.c3 { --card-accent: #7c3aed; }
-  .qm-card.c4 { --card-accent: #dc2626; }
+  .qm-card.c1  { --card-accent: #1d4ed8; }
+  .qm-card.c2  { --card-accent: #0f766e; }
+  .qm-card.c3  { --card-accent: #2563eb; }
+  .qm-card.c4  { --card-accent: #0891b2; }
+  .qm-card.c5  { --card-accent: #7c3aed; }
+  .qm-card.c6  { --card-accent: #ea580c; }
+  .qm-card.c7  { --card-accent: #059669; }
+  .qm-card.c8  { --card-accent: #dc2626; }
+  .qm-card.c9  { --card-accent: #ca8a04; }
+  .qm-card.c10 { --card-accent: #9333ea; }
+
+  /* ---------- Footer note ---------- */
+  .qm-footer-note {
+    margin-top: 2.4rem;
+    padding: 1rem 1.2rem;
+    border: 1px dashed #d9deea;
+    border-radius: 14px;
+    background: #fafbfc;
+    color: #7a8394;
+    font-size: 1.03rem;
+    line-height: 1.7;
+  }
 
   /* ---------- Compatibility fallback ---------- */
   @supports not (color: color-mix(in srgb, red 50%, white)) {
@@ -390,11 +408,13 @@ catalog: true
     .qm-hero-lead,
     .qm-desc,
     .qm-intro,
-    .qm-path span {
+    .qm-path span,
+    .qm-footer-note {
       color: #aeb7c8;
     }
 
-    .qm-intro {
+    .qm-intro,
+    .qm-footer-note {
       background: #141b2a;
     }
 
@@ -409,85 +429,164 @@ catalog: true
 <div class="qm-page">
 
   <section class="qm-hero">
-    <div class="qm-eyebrow">Advanced Theoretical Physics · Selected Notes</div>
-    <h1 class="qm-hero-title">From Quantum Anomalies to Conformal &amp; Higher-Form Symmetries</h1>
+    <div class="qm-eyebrow">Quantum Many-Body Physics · Lectures 01–10</div>
+    <h1 class="qm-hero-title">From Fields to Emergent Collective Physics</h1>
     <p class="qm-hero-lead">
-      A collection of personal study notes focusing on modern theoretical physics: advanced quantum anomalies, quantum anomalous phenomena, conformal field theories (CFT), and generalized higher-form symmetries.
+      A compact collection of lecture notes on quantum many-body theory: quantum-mechanical and spin path integrals, field formulations and response functions, collective modes and Fermi-liquid theory, BCS superconductivity, neutral superfluids, and renormalization-group methods.
     </p>
     <div class="qm-meta">
-      <span>4 specialized files</span>
+      <span>10 lectures</span>
       <span>PDF notes</span>
-      <span>Quantum field theory</span>
+      <span>Many-body field theory</span>
       <span>Updated Sep 14, 2026</span>
     </div>
   </section>
 
   <div class="qm-section-head">
-    <h2>Lecture &amp; Study Notes</h2>
-    <div class="qm-section-kicker">Core topics in modern QFT &amp; condensed matter theory</div>
+    <h2>Lecture Notes</h2>
+    <div class="qm-section-kicker">A conceptual route through many-body physics</div>
   </div>
 
   <div class="qm-intro">
-    This collection brings together key topics bridging modern quantum field theory and theoretical condensed matter: topological and quantum anomalies, conformal field theory frameworks, and the modern perspective of higher-form global symmetries.
+    The sequence begins with path integrals in quantum mechanics and spin systems, then moves to field formulations of interacting matter and their emergent low-energy descriptions: response and collective excitations, quasiparticles, pairing, superfluidity, and finally long-wavelength renormalization-group physics.
   </div>
 
   <div class="qm-path">
-    <span>Quantum Anomalies</span>
-    <span>Quantum Anomalous Hall / Phases</span>
-    <span>Conformal Field Theory (CFT)</span>
-    <span>Higher-Form Symmetries</span>
+    <span>QM path integral</span>
+    <span>Spin path integral</span>
+    <span>Field path integrals</span>
+    <span>Linear response</span>
+    <span>RPA &amp; collective modes</span>
+    <span>Fermi liquid</span>
+    <span>BCS theory</span>
+    <span>Superfluidity</span>
+    <span>RG &amp; KT physics</span>
   </div>
 
   <div class="qm-grid">
 
     <article class="qm-card c1">
       <div class="qm-card-top">
-        <span class="qm-number">Note 01</span>
-        <span class="qm-topic">Advanced QFT</span>
+        <span class="qm-number">L01</span>
+        <span class="qm-topic">Quantum mechanics</span>
       </div>
-      <h3>许霄焱 — 讲义笔记</h3>
+      <h3>Path Integrals in Quantum Mechanics</h3>
       <p class="qm-desc">
-        深入探讨现代量子场论与多体物理中的核心理论推导与专题分析，涵盖前沿物理机制与严谨的数学结构。
+        Introduction to the path-integral formulation of quantum mechanics: amplitudes as sums over histories, the action principle, imaginary-time methods, and the bridge from operator quantum mechanics to functional integration.
       </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/许霄焱.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture1_Path_integral_QM.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c2">
       <div class="qm-card-top">
-        <span class="qm-number">Note 02</span>
-        <span class="qm-topic">Topological Physics</span>
+        <span class="qm-number">L02</span>
+        <span class="qm-topic">Quantum spins</span>
       </div>
-      <h3>姚元 — 量子反常专题</h3>
+      <h3>Spin Path Integrals &amp; the Theta Term</h3>
       <p class="qm-desc">
-        聚焦量子反常（Quantum Anomalies）及相关拓扑物态的物理内涵，讨论微观对称性破坏与宏观输运现象的深刻联系。
+        Path-integral formulation for quantum spins, including spin coherent states, Berry-phase structure, continuum descriptions, and the appearance and physical role of the topological theta term.
       </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/姚元-量子反常.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture2_Path_integral_spin_theta_term.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c3">
       <div class="qm-card-top">
-        <span class="qm-number">Note 03</span>
-        <span class="qm-topic">CFT</span>
+        <span class="qm-number">L03</span>
+        <span class="qm-topic">Field formulation</span>
       </div>
-      <h3>朱伟 — 共形场论 (CFT)</h3>
+      <h3>Path Integrals &amp; Fields</h3>
       <p class="qm-desc">
-        系统梳理共形场论（Conformal Field Theory）的基础与高级内容，包括算符乘积展开（OPE）、共形对称性及关联函数。
+        Path-integral formulation of quantum many-body systems and the introduction of field variables as the foundation for diagrammatic and effective-field-theory methods.
       </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/朱伟-CFT.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture3_Path_integral_fields.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c4">
       <div class="qm-card-top">
-        <span class="qm-number">Note 04</span>
-        <span class="qm-topic">Symmetry</span>
+        <span class="qm-number">L04</span>
+        <span class="qm-topic">Response theory</span>
       </div>
-      <h3>Higher-Form Symmetries</h3>
+      <h3>Operator Formalism &amp; Response</h3>
       <p class="qm-desc">
-        现代量子场论中高阶对称性（Higher-Form Symmetries）的理论框架，探索其在规范理论、禁闭及拓扑相分类中的应用。
+        Operator methods for interacting many-body systems together with response-function techniques describing how a quantum system reacts to external perturbations.
       </p>
-      <a href="https://maggiexheuw.github.io/Wu-note/Higher-form-symmetry.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture4_Operator_formalism_Response.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c5">
+      <div class="qm-card-top">
+        <span class="qm-number">L05</span>
+        <span class="qm-topic">Collective modes</span>
+      </div>
+      <h3>RPA, Plasmons &amp; Ferromagnetic Spin Waves</h3>
+      <p class="qm-desc">
+        Random-phase approximation and collective excitations in interacting systems, including density oscillations, plasmons, and ferromagnetic spin-wave modes.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture5_RPA_Plasmon_FMspinwave.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c6">
+      <div class="qm-card-top">
+        <span class="qm-number">L06</span>
+        <span class="qm-topic">Interactions</span>
+      </div>
+      <h3>Lifetime &amp; Correlation Energy</h3>
+      <p class="qm-desc">
+        Interaction effects beyond the simplest mean-field picture, with emphasis on quasiparticle lifetime, decay processes, and many-body correlation energy.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture6_lifetime_correlationenergy.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c7">
+      <div class="qm-card-top">
+        <span class="qm-number">L07</span>
+        <span class="qm-topic">Quasiparticles</span>
+      </div>
+      <h3>Fermi Liquid Theory</h3>
+      <p class="qm-desc">
+        Landau's low-energy description of interacting fermions: quasiparticles, phenomenological interaction parameters, and the organization of physics near the Fermi surface.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture7_Fermi_Liquid_theory.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c8">
+      <div class="qm-card-top">
+        <span class="qm-number">L08</span>
+        <span class="qm-topic">Superconductivity</span>
+      </div>
+      <h3>BCS Theory &amp; Charged Superfluids</h3>
+      <p class="qm-desc">
+        BCS pairing and the physics of charged superfluids, connecting microscopic Cooper pairing with collective electromagnetic response.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture8_BCS_charged_SF.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c9">
+      <div class="qm-card-top">
+        <span class="qm-number">L09</span>
+        <span class="qm-topic">Superfluidity</span>
+      </div>
+      <h3>Neutral Superfluids</h3>
+      <p class="qm-desc">
+        Neutral-superfluid physics and its low-energy collective behavior, providing a complementary perspective to charged condensates and superconductors.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture9_neutral_superfluid.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+    </article>
+
+    <article class="qm-card c10">
+      <div class="qm-card-top">
+        <span class="qm-number">L10</span>
+        <span class="qm-topic">Long wavelengths</span>
+      </div>
+      <h3>RG, Nonlinear Sigma Model &amp; Kosterlitz–Thouless Physics</h3>
+      <p class="qm-desc">
+        Renormalization-group ideas, nonlinear sigma models, and Kosterlitz–Thouless physics as long-wavelength tools for interacting, ordered, and topological systems.
+      </p>
+      <a href="https://maggiexheuw.github.io/Wu-note/Lecture10_RG_nonlinearsigma_KT.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
   </div>
+
+
 
 </div>
