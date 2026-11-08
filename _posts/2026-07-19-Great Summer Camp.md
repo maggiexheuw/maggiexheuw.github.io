@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Great Summer Camp — Lecture Series"
+title: "Greater Bay Area Summer School — Lecture Series"
 subtitle: "BCS, Quantum Geometry, Mesoscopic Physics & Topological Phases"
 date: 2025-11-04
 author: Maggie
 header-img: img/EdWitten.jpg
 catalog: true
 published: true
-permalink: /great-summer-camp-lecture-series/
+permalink: /greater-bay-area-summer-school-lecture-series/
 ---
 
 <!-- ========================================================== -->
-<!-- Great Summer Camp · Lectures 01-15                         -->
+<!-- Greater Bay Area Summer School · Lectures 01-15            -->
 <!-- PDFs are stored in the PPTX/ folder.                       -->
 <!-- ========================================================== -->
 
@@ -371,10 +371,10 @@ permalink: /great-summer-camp-lecture-series/
 <div class="qm-page">
 
   <section class="qm-hero">
-    <div class="qm-eyebrow">Summer Camp Archive · Theoretical Physics</div>
-    <h1 class="qm-hero-title">Great Summer Camp<br>Lecture Series</h1>
+    <div class="qm-eyebrow">Greater Bay Area Summer School · Theoretical Physics</div>
+    <h1 class="qm-hero-title">Greater Bay Area<br>Summer School</h1>
     <p class="qm-hero-lead">
-      A curated collection of lecture notes and beamer presentations from the Great Summer Camp. 
+      A curated collection of lecture notes and beamer presentations from the Greater Bay Area Summer School. 
       Delving into the Cooper problem, BCS theory, flat-band superconductivity via quantum geometry, 
       mesoscopic phenomena, and the frontiers of topological superconductivity & Majorana fermions.
     </p>
@@ -382,7 +382,7 @@ permalink: /great-summer-camp-lecture-series/
       <span>04 Topics</span>
       <span>15 Files</span>
       <span>Superconductivity & Majorana</span>
-      <span>Summer 2026</span>
+      <span>Summer School 2026</span>
     </div>
   </section>
 
