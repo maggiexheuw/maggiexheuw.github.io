@@ -513,7 +513,8 @@ permalink: /greater-bay-area-summer-school-lecture-series/
       <p class="qm-desc">
         Lecture slides explaining how \(\hbar v_F \approx 0.66 \text{ eV} \cdot \text{nm}\) converts every energy scale in a metal into a length, unifying Josephson junctions and Kondo physics.
       </p>
-      <a href="https://maggiexheuw.github.io/PPTX/L2P1SolidStateLengthScaleBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
+      <!-- 修正这里的文件名 -->
+      <a href="https://maggiexheuw.github.io/PPTX/L2P1SolidStateLengthScaleBeamerL2P1SolidStateLengthScaleBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
     <article class="qm-card c9">
@@ -537,6 +538,7 @@ permalink: /greater-bay-area-summer-school-lecture-series/
       <p class="qm-desc">
         Slides on the Lehmann representation, Dyson equation, and the thermal length cutoff for Friedel oscillations in one dimension.
       </p>
+      <!-- 修正这里的文件名，去掉了非法的 displayName= 尾巴 -->
       <a href="https://maggiexheuw.github.io/PPTX/L2P2FriedelOscillationsBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
@@ -561,6 +563,7 @@ permalink: /greater-bay-area-summer-school-lecture-series/
       <p class="qm-desc">
         Lecture slides covering transfer matrices, Lyapunov exponents, numerical QR re-orthogonalization, and the scaling theory of localization.
       </p>
+      <!-- 修正这里的文件名 -->
       <a href="https://maggiexheuw.github.io/PPTX/L2P3Andersonlocalization1DBeamer.pdf" target="_blank" rel="noopener noreferrer" class="qm-btn">Open PDF</a>
     </article>
 
